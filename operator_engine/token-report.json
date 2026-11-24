@@ -1,0 +1,335 @@
+{
+  "unit": "o200k_base tokens (independent rank implementation)",
+  "scope": "Static reference text; no model inference or framing; token chunk optimization is approximate across boundaries",
+  "tables": {
+    "compact": {
+      "interval:high": "compact-rle",
+      "interval:low": "compact-seq",
+      "inventory:high": "compact-seq",
+      "inventory:low": "dense"
+    },
+    "atl": {
+      "interval:high": "atl-rle",
+      "interval:low": "atl-seq",
+      "inventory:high": "atl-seq",
+      "inventory:low": "dense"
+    }
+  },
+  "summary": [
+    {
+      "profile": "all",
+      "arm": "dense",
+      "n": 240,
+      "system": 11160,
+      "input": 118592,
+      "output": 61350,
+      "total": 191102
+    },
+    {
+      "profile": "all",
+      "arm": "compact-rle",
+      "n": 240,
+      "system": 14040,
+      "input": 118592,
+      "output": 45824,
+      "total": 178456
+    },
+    {
+      "profile": "all",
+      "arm": "atl-rle",
+      "n": 240,
+      "system": 14040,
+      "input": 118592,
+      "output": 45584,
+      "total": 178216
+    },
+    {
+      "profile": "all",
+      "arm": "compact-seq",
+      "n": 240,
+      "system": 19320,
+      "input": 118592,
+      "output": 33692,
+      "total": 171604
+    },
+    {
+      "profile": "all",
+      "arm": "atl-seq",
+      "n": 240,
+      "system": 19320,
+      "input": 118592,
+      "output": 33452,
+      "total": 171364
+    },
+    {
+      "profile": "all",
+      "arm": "compact-adaptive",
+      "n": 240,
+      "system": 15960,
+      "input": 118592,
+      "output": 33848,
+      "total": 168400
+    },
+    {
+      "profile": "all",
+      "arm": "atl-adaptive",
+      "n": 240,
+      "system": 15960,
+      "input": 118592,
+      "output": 33668,
+      "total": 168220
+    },
+    {
+      "profile": "interval-overlap",
+      "arm": "dense",
+      "n": 60,
+      "system": 2820,
+      "input": 43092,
+      "output": 14584,
+      "total": 60496
+    },
+    {
+      "profile": "interval-overlap",
+      "arm": "compact-rle",
+      "n": 60,
+      "system": 3540,
+      "input": 43092,
+      "output": 3902,
+      "total": 50534
+    },
+    {
+      "profile": "interval-overlap",
+      "arm": "atl-rle",
+      "n": 60,
+      "system": 3540,
+      "input": 43092,
+      "output": 3842,
+      "total": 50474
+    },
+    {
+      "profile": "interval-overlap",
+      "arm": "compact-seq",
+      "n": 60,
+      "system": 4860,
+      "input": 43092,
+      "output": 3902,
+      "total": 51854
+    },
+    {
+      "profile": "interval-overlap",
+      "arm": "atl-seq",
+      "n": 60,
+      "system": 4860,
+      "input": 43092,
+      "output": 3842,
+      "total": 51794
+    },
+    {
+      "profile": "interval-overlap",
+      "arm": "compact-adaptive",
+      "n": 60,
+      "system": 3540,
+      "input": 43092,
+      "output": 3902,
+      "total": 50534
+    },
+    {
+      "profile": "interval-overlap",
+      "arm": "atl-adaptive",
+      "n": 60,
+      "system": 3540,
+      "input": 43092,
+      "output": 3842,
+      "total": 50474
+    },
+    {
+      "profile": "interval-chain",
+      "arm": "dense",
+      "n": 60,
+      "system": 2820,
+      "input": 43968,
+      "output": 16132,
+      "total": 62920
+    },
+    {
+      "profile": "interval-chain",
+      "arm": "compact-rle",
+      "n": 60,
+      "system": 3540,
+      "input": 43968,
+      "output": 16132,
+      "total": 63640
+    },
+    {
+      "profile": "interval-chain",
+      "arm": "atl-rle",
+      "n": 60,
+      "system": 3540,
+      "input": 43968,
+      "output": 16072,
+      "total": 63580
+    },
+    {
+      "profile": "interval-chain",
+      "arm": "compact-seq",
+      "n": 60,
+      "system": 4860,
+      "input": 43968,
+      "output": 11310,
+      "total": 60138
+    },
+    {
+      "profile": "interval-chain",
+      "arm": "atl-seq",
+      "n": 60,
+      "system": 4860,
+      "input": 43968,
+      "output": 11250,
+      "total": 60078
+    },
+    {
+      "profile": "interval-chain",
+      "arm": "compact-adaptive",
+      "n": 60,
+      "system": 4860,
+      "input": 43968,
+      "output": 11310,
+      "total": 60138
+    },
+    {
+      "profile": "interval-chain",
+      "arm": "atl-adaptive",
+      "n": 60,
+      "system": 4860,
+      "input": 43968,
+      "output": 11250,
+      "total": 60078
+    },
+    {
+      "profile": "inventory-steady",
+      "arm": "dense",
+      "n": 60,
+      "system": 2760,
+      "input": 15619,
+      "output": 15170,
+      "total": 33549
+    },
+    {
+      "profile": "inventory-steady",
+      "arm": "compact-rle",
+      "n": 60,
+      "system": 3480,
+      "input": 15619,
+      "output": 10462,
+      "total": 29561
+    },
+    {
+      "profile": "inventory-steady",
+      "arm": "atl-rle",
+      "n": 60,
+      "system": 3480,
+      "input": 15619,
+      "output": 10402,
+      "total": 29501
+    },
+    {
+      "profile": "inventory-steady",
+      "arm": "compact-seq",
+      "n": 60,
+      "system": 4800,
+      "input": 15619,
+      "output": 3172,
+      "total": 23591
+    },
+    {
+      "profile": "inventory-steady",
+      "arm": "atl-seq",
+      "n": 60,
+      "system": 4800,
+      "input": 15619,
+      "output": 3112,
+      "total": 23531
+    },
+    {
+      "profile": "inventory-steady",
+      "arm": "compact-adaptive",
+      "n": 60,
+      "system": 4800,
+      "input": 15619,
+      "output": 3172,
+      "total": 23591
+    },
+    {
+      "profile": "inventory-steady",
+      "arm": "atl-adaptive",
+      "n": 60,
+      "system": 4800,
+      "input": 15619,
+      "output": 3112,
+      "total": 23531
+    },
+    {
+      "profile": "inventory-variable",
+      "arm": "dense",
+      "n": 60,
+      "system": 2760,
+      "input": 15913,
+      "output": 15464,
+      "total": 34137
+    },
+    {
+      "profile": "inventory-variable",
+      "arm": "compact-rle",
+      "n": 60,
+      "system": 3480,
+      "input": 15913,
+      "output": 15328,
+      "total": 34721
+    },
+    {
+      "profile": "inventory-variable",
+      "arm": "atl-rle",
+      "n": 60,
+      "system": 3480,
+      "input": 15913,
+      "output": 15268,
+      "total": 34661
+    },
+    {
+      "profile": "inventory-variable",
+      "arm": "compact-seq",
+      "n": 60,
+      "system": 4800,
+      "input": 15913,
+      "output": 15308,
+      "total": 36021
+    },
+    {
+      "profile": "inventory-variable",
+      "arm": "atl-seq",
+      "n": 60,
+      "system": 4800,
+      "input": 15913,
+      "output": 15248,
+      "total": 35961
+    },
+    {
+      "profile": "inventory-variable",
+      "arm": "compact-adaptive",
+      "n": 60,
+      "system": 2760,
+      "input": 15913,
+      "output": 15464,
+      "total": 34137
+    },
+    {
+      "profile": "inventory-variable",
+      "arm": "atl-adaptive",
+      "n": 60,
+      "system": 2760,
+      "input": 15913,
+      "output": 15464,
+      "total": 34137
+    }
+  ]
+}
