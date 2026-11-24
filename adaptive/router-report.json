@@ -1,0 +1,398 @@
+{
+  "encoding": "o200k_base",
+  "rank_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "scope": "Static input-token-only routing, no output or LLM accuracy measurement. Codebooks trained on dev prompts only. Dictionary overhead once per hypothetical batch; separate-string token counts exclude framing/separators. Router computational overhead not measured. Test input-only selection is allowed; test labels/answers are never used.",
+  "bank": [
+    {
+      "name": "identity",
+      "dict": []
+    },
+    {
+      "name": "global",
+      "dict": [
+        ": true/false/unknown?",
+        "); pairs usage,price.",
+        "possible. No independent readings.",
+        "% discount; final price?"
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 9807
+        },
+        {
+          "dict": [
+            ": true/false/unknown?"
+          ],
+          "cost": 9735
+        },
+        {
+          "dict": [
+            ": true/false/unknown?",
+            "); pairs usage,price."
+          ],
+          "cost": 9591
+        },
+        {
+          "dict": [
+            ": true/false/unknown?",
+            "); pairs usage,price.",
+            "possible. No independent readings."
+          ],
+          "cost": 9447
+        },
+        {
+          "dict": [
+            ": true/false/unknown?",
+            "); pairs usage,price.",
+            "possible. No independent readings.",
+            "% discount; final price?"
+          ],
+          "cost": 9303
+        }
+      ],
+      "train_cases": 600
+    },
+    {
+      "name": "domain:constraints",
+      "dict": [
+        "); pairs usage,price.",
+        "Min price; usage<="
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 1814
+        },
+        {
+          "dict": [
+            "); pairs usage,price."
+          ],
+          "cost": 1661
+        },
+        {
+          "dict": [
+            "); pairs usage,price.",
+            "Min price; usage<="
+          ],
+          "cost": 1547
+        }
+      ],
+      "train_cases": 60
+    },
+    {
+      "name": "domain:discount",
+      "dict": [
+        "30% discount; final price",
+        "10% discount; final price",
+        "20% discount; final price"
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 800
+        },
+        {
+          "dict": [
+            "% discount; final price?"
+          ],
+          "cost": 647
+        },
+        {
+          "dict": [
+            "% discount; final price?",
+            "10% discount; final price"
+          ],
+          "cost": 634
+        },
+        {
+          "dict": [
+            "% discount; final price?",
+            "10% discount; final price",
+            "20% discount; final price"
+          ],
+          "cost": 621
+        },
+        {
+          "dict": [
+            "30% discount; final price",
+            "10% discount; final price",
+            "20% discount; final price"
+          ],
+          "cost": 601
+        }
+      ],
+      "train_cases": 60
+    },
+    {
+      "name": "domain:implication",
+      "dict": [
+        ": true/false/unknown?"
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 1154
+        },
+        {
+          "dict": [
+            ": true/false/unknown?"
+          ],
+          "cost": 942
+        }
+      ],
+      "train_cases": 60
+    },
+    {
+      "name": "domain:proportion",
+      "dict": [
+        "Same unit price:",
+        "RUB; cost of",
+        "RUB; cost of 10?",
+        "RUB; cost of 4?"
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 1043
+        },
+        {
+          "dict": [
+            "Same unit price:"
+          ],
+          "cost": 1008
+        },
+        {
+          "dict": [
+            "Same unit price:",
+            "RUB; cost of"
+          ],
+          "cost": 954
+        },
+        {
+          "dict": [
+            "Same unit price:",
+            "RUB; cost of",
+            "RUB; cost of 10?"
+          ],
+          "cost": 936
+        },
+        {
+          "dict": [
+            "Same unit price:",
+            "RUB; cost of",
+            "RUB; cost of 10?",
+            "RUB; cost of 4?"
+          ],
+          "cost": 918
+        }
+      ],
+      "train_cases": 60
+    },
+    {
+      "name": "domain:uncertainty",
+      "dict": [
+        "possible. No independent readings."
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 1154
+        },
+        {
+          "dict": [
+            "possible. No independent readings."
+          ],
+          "cost": 1001
+        }
+      ],
+      "train_cases": 60
+    },
+    {
+      "name": "domain:units",
+      "dict": [
+        "min to m3/h."
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 662
+        },
+        {
+          "dict": [
+            "min to m3/h."
+          ],
+          "cost": 509
+        }
+      ],
+      "train_cases": 60
+    },
+    {
+      "name": "domain:weighted",
+      "dict": [
+        "for 3 h",
+        "for 1 h.",
+        "Time weighted mean:"
+      ],
+      "history": [
+        {
+          "dict": [],
+          "cost": 1094
+        },
+        {
+          "dict": [
+            "for 3 h"
+          ],
+          "cost": 999
+        },
+        {
+          "dict": [
+            "for 3 h",
+            "for 1 h."
+          ],
+          "cost": 885
+        },
+        {
+          "dict": [
+            "for 3 h",
+            "for 1 h.",
+            "Time weighted mean:"
+          ],
+          "cost": 829
+        }
+      ],
+      "train_cases": 60
+    }
+  ],
+  "reports": {
+    "old": [
+      {
+        "cases": 400,
+        "batch": 1,
+        "order": "mixed",
+        "groups": 400,
+        "compressed_groups": 0,
+        "baseline": 12087,
+        "evolved": 12087,
+        "saving_pct": 0,
+        "selected": {
+          "identity": 400
+        }
+      },
+      {
+        "cases": 400,
+        "batch": 1,
+        "order": "domain",
+        "groups": 400,
+        "compressed_groups": 0,
+        "baseline": 12087,
+        "evolved": 12087,
+        "saving_pct": 0,
+        "selected": {
+          "identity": 400
+        }
+      },
+      {
+        "cases": 400,
+        "batch": 10,
+        "order": "mixed",
+        "groups": 40,
+        "compressed_groups": 0,
+        "baseline": 7047,
+        "evolved": 7047,
+        "saving_pct": 0,
+        "selected": {
+          "identity": 40
+        }
+      },
+      {
+        "cases": 400,
+        "batch": 10,
+        "order": "domain",
+        "groups": 40,
+        "compressed_groups": 20,
+        "baseline": 7047,
+        "evolved": 6847,
+        "saving_pct": 2.838087129274869,
+        "selected": {
+          "domain:constraints": 4,
+          "identity": 20,
+          "domain:implication": 4,
+          "domain:uncertainty": 4,
+          "domain:units": 4,
+          "domain:weighted": 4
+        }
+      },
+      {
+        "cases": 400,
+        "batch": 100,
+        "order": "mixed",
+        "groups": 4,
+        "compressed_groups": 4,
+        "baseline": 6543,
+        "evolved": 6207,
+        "saving_pct": 5.1352590554791355,
+        "selected": {
+          "global": 4
+        }
+      },
+      {
+        "cases": 400,
+        "batch": 100,
+        "order": "domain",
+        "groups": 4,
+        "compressed_groups": 4,
+        "baseline": 6543,
+        "evolved": 5988,
+        "saving_pct": 8.482347546996793,
+        "selected": {
+          "global": 1,
+          "domain:implication": 1,
+          "domain:proportion": 1,
+          "domain:weighted": 1
+        }
+      }
+    ],
+    "complex": [
+      {
+        "cases": 36,
+        "batch": 1,
+        "order": "mixed",
+        "groups": 36,
+        "compressed_groups": 0,
+        "baseline": 7375,
+        "evolved": 7375,
+        "saving_pct": 0,
+        "selected": {
+          "identity": 36
+        }
+      },
+      {
+        "cases": 36,
+        "batch": 10,
+        "order": "mixed",
+        "groups": 4,
+        "compressed_groups": 0,
+        "baseline": 6927,
+        "evolved": 6927,
+        "saving_pct": 0,
+        "selected": {
+          "identity": 4
+        }
+      },
+      {
+        "cases": 36,
+        "batch": 36,
+        "order": "mixed",
+        "groups": 1,
+        "compressed_groups": 0,
+        "baseline": 6885,
+        "evolved": 6885,
+        "saving_pct": 0,
+        "selected": {
+          "identity": 1
+        }
+      }
+    ]
+  }
+}

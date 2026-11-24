@@ -1,0 +1,126 @@
+{
+  "encoding": "o200k_base",
+  "vocabulary_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "vocabulary_blob_sha": "fbc14c2e1e71f5f666d5513d8a94da81381fe0be",
+  "vocabulary_source": "niieani/gpt-tokenizer/data/o200k_base.tiktoken",
+  "official_regex_source": "openai/tiktoken/tiktoken_ext/openai_public.py blob 02c9ee20fa186223145da1de759bdf001f1f1e1c",
+  "golden_source": "openai/openai-cookbook/examples/How_to_count_tokens_with_tiktoken.ipynb",
+  "golden_vectors_passed": 3,
+  "scope": "Ordinary text tokenization using independently implemented BPE and official ranks; golden vectors pass. Not full cross-library parity, not chat framing or actual inference/hidden reasoning usage.",
+  "results": {
+    "nano": {
+      "draft": {
+        "n": 8,
+        "instruction": 208,
+        "input": 443,
+        "output": 357,
+        "total": 1008,
+        "saving_vs_draft_pct": 0,
+        "output_saving_vs_draft_pct": 0
+      },
+      "nano": {
+        "n": 8,
+        "instruction": 184,
+        "input": 443,
+        "output": 274,
+        "total": 901,
+        "saving_vs_draft_pct": 10.61507936507936,
+        "output_saving_vs_draft_pct": 23.24929971988795
+      },
+      "nano-ascii": {
+        "n": 8,
+        "instruction": 192,
+        "input": 443,
+        "output": 245,
+        "total": 880,
+        "saving_vs_draft_pct": 12.698412698412698,
+        "output_saving_vs_draft_pct": 31.372549019607842
+      },
+      "nano-state": {
+        "n": 8,
+        "instruction": 216,
+        "input": 443,
+        "output": 258,
+        "total": 917,
+        "saving_vs_draft_pct": 9.027777777777779,
+        "output_saving_vs_draft_pct": 27.73109243697479
+      }
+    },
+    "long": {
+      "draft": {
+        "n": 12,
+        "instruction": 336,
+        "input": 552,
+        "output": 497,
+        "total": 1385,
+        "saving_vs_draft_pct": 0,
+        "output_saving_vs_draft_pct": 0
+      },
+      "nano": {
+        "n": 12,
+        "instruction": 300,
+        "input": 552,
+        "output": 473,
+        "total": 1325,
+        "saving_vs_draft_pct": 4.332129963898912,
+        "output_saving_vs_draft_pct": 4.828973843058348
+      },
+      "replay": {
+        "n": 12,
+        "instruction": 2028,
+        "input": 552,
+        "output": 199,
+        "total": 2779,
+        "saving_vs_draft_pct": -100.64981949458485,
+        "output_saving_vs_draft_pct": 59.95975855130784
+      }
+    },
+    "compression": {
+      "baseline": {
+        "n": 8,
+        "instruction": 248,
+        "input": 374,
+        "output": 364,
+        "total": 986,
+        "saving_vs_draft_pct": -9.191583610188259,
+        "output_saving_vs_draft_pct": -37.35849056603773
+      },
+      "draft": {
+        "n": 8,
+        "instruction": 264,
+        "input": 374,
+        "output": 265,
+        "total": 903,
+        "saving_vs_draft_pct": 0,
+        "output_saving_vs_draft_pct": 0
+      },
+      "native": {
+        "n": 8,
+        "instruction": 304,
+        "input": 374,
+        "output": 284,
+        "total": 962,
+        "saving_vs_draft_pct": -6.533776301218164,
+        "output_saving_vs_draft_pct": -7.169811320754715
+      },
+      "micro": {
+        "n": 8,
+        "instruction": 432,
+        "input": 374,
+        "output": 228,
+        "total": 1034,
+        "saving_vs_draft_pct": -14.50719822812847,
+        "output_saving_vs_draft_pct": 13.962264150943394
+      },
+      "adaptive": {
+        "n": 8,
+        "instruction": 373,
+        "input": 374,
+        "output": 209,
+        "total": 956,
+        "saving_vs_draft_pct": -5.8693244739756345,
+        "output_saving_vs_draft_pct": 21.13207547169811
+      }
+    }
+  }
+}
