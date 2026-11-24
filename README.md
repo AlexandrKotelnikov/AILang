@@ -13,6 +13,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.4.2: [Semantic Compiler](semantic/README.md), lossless typed-family wire representation, strong compact-English control, 72 verified roundtrips, four-arm independent inference harness.
 
+- v0.4.3: [Verifiable Reasoning Certificates](certificate/README.md), two new task families, 200 solver-checked instances, compact executable witnesses and static token measurements against a strong compact control.
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
