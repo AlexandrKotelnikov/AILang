@@ -18,11 +18,33 @@ All 72 cases passed data roundtrip and both reference solvers; malformed wire fi
 | atl-input | 13956 | 6322 | 20278 |
 | atl-io | 18096 | 6322 | 24418 |
 
-Characters are NOT tokens. These figures exclude output and chat framing. Compare against compact, not merely draft. Per-family breakdown is in char-report.json. Official tiktoken counting script is included but was not run in the development environment (library unavailable); no model inference or hidden reasoning token measurements were made.
+Characters are NOT tokens. These figures exclude output and chat framing. Compare against compact, not merely draft. Per-family breakdown is in char-report.json. No model inference or hidden reasoning token measurements were made.
+
+## Measured static token counts (36 test cases)
+The existing independent JavaScript o200k_base encoder used the SHA-256-verified official rank file (see adaptive/README.md). All three golden token-ID sequences passed. This is not API usage or official Python tiktoken parity, which remains pending.
+
+| Mode | Instructions | Input | Total |
+|---|---:|---:|---:|
+| draft | 1080 | 6871 | 7951 |
+| compact | 1080 | 5542 | 6622 |
+| atl-input | 3450 | 4324 | 7774 |
+| atl-io | 4206 | 4324 | 8530 |
+
+| Family (6 cases each) | Draft total | Compact total | ATL-input total | ATL-io total |
+|---|---:|---:|---:|---:|
+| graph | 1639 | 1362 | 1524 | 1650 |
+| subset | 1254 | 984 | 1230 | 1356 |
+| bayes | 906 | 690 | 894 | 1020 |
+| schedule | 2360 | 2056 | 2182 | 2308 |
+| inventory | 684 | 612 | 876 | 1002 |
+| logic | 1108 | 918 | 1068 | 1194 |
+
+The primary comparison includes per-request schema cost. A smaller wire payload alone is not evidence of a smaller complete prompt. See token-report.json for full dev/test results. The original compact-English control uses a hand-authored template and has not been optimized on test results. No adaptive mode was chosen from test outcomes.
 
 ## Run from root
 ```sh
 node semantic/static.mjs
+node semantic/tokens.mjs /path/to/o200k_base.tiktoken
 python -m pip install tiktoken
 python semantic/count_tokens.py --encoding o200k_base
 node semantic/run.mjs --model YOUR_MODEL

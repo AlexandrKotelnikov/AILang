@@ -52,6 +52,16 @@ function finish(){
    total_saving_pct:d.total_tokens?100*(1-x.total_tokens/d.total_tokens):null};
  }
  summary.comparisons_vs_draft=vsDraft;
+ const compare=(a,b)=>{
+  const x=summary.paired[a],y=summary.paired[b];
+  if(!x?.attempts||!y?.attempts)return null;
+  return {accuracy_delta_pp:100*(y.accuracy-x.accuracy),
+   output_saving_pct:x.output_tokens>0?100*(1-y.output_tokens/x.output_tokens):null,
+   total_saving_pct:x.total_tokens>0?100*(1-y.total_tokens/x.total_tokens):null,
+   tre_delta:y.tre!=null&&x.tre!=null?y.tre-x.tre:null};
+ };
+ summary.primary_compact_vs_atl_input=compare("compact","atl-input");
+ summary.secondary_atl_input_vs_atl_io=compare("atl-input","atl-io");
  writeFileSync(v.out+"/summary.json",JSON.stringify(summary,null,2)+"\n");
 }
 for(let trial=0;trial<trials;trial++)for(let i=0;i<tasks.length;i++){
