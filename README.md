@@ -7,6 +7,7 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 - v0.3: [Reasoning Engine](reasoning/README.md), five real-inference modes, [logic macros](reasoning/macros.md), deterministic scoring and token/latency accounting.
 - v0.3.1: [Compression Research](compression/README.md), Native/Micro/Adaptive modes, eight multi-step development tasks, single-chat pilot and independent API harness.
 - v0.3.2: [ATL-Nano](nano/README.md), zero-dictionary notation, ASCII/Unicode comparison, new multi-step development pilot and API harness.
+- v0.3.3: [Long Reasoning](long/README.md), 12 recurrence/branch/inventory/dependency cases, bounded replay DSL, exact state replay and static pilot.
 
 Quick start:
 ```sh
