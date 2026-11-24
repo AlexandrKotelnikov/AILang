@@ -1,0 +1,186 @@
+{
+  "unit": "o200k_base tokens (independent rank implementation)",
+  "scope": "Static oracle-authored certificates, no chat framing, inference or hidden reasoning",
+  "summary": [
+    {
+      "split": "dev",
+      "family": "all",
+      "mode": "english",
+      "n": 40,
+      "system": 2120,
+      "input": 7026,
+      "output": 2816,
+      "total": 11962
+    },
+    {
+      "split": "dev",
+      "family": "all",
+      "mode": "compact",
+      "n": 40,
+      "system": 2040,
+      "input": 7026,
+      "output": 1992,
+      "total": 11058
+    },
+    {
+      "split": "dev",
+      "family": "all",
+      "mode": "atl",
+      "n": 40,
+      "system": 1800,
+      "input": 7026,
+      "output": 1932,
+      "total": 10758
+    },
+    {
+      "split": "dev",
+      "family": "flow",
+      "mode": "english",
+      "n": 20,
+      "system": 1060,
+      "input": 3894,
+      "output": 1028,
+      "total": 5982
+    },
+    {
+      "split": "dev",
+      "family": "flow",
+      "mode": "compact",
+      "n": 20,
+      "system": 1060,
+      "input": 3894,
+      "output": 1028,
+      "total": 5982
+    },
+    {
+      "split": "dev",
+      "family": "flow",
+      "mode": "atl",
+      "n": 20,
+      "system": 940,
+      "input": 3894,
+      "output": 988,
+      "total": 5822
+    },
+    {
+      "split": "dev",
+      "family": "interval",
+      "mode": "english",
+      "n": 20,
+      "system": 1060,
+      "input": 3132,
+      "output": 1788,
+      "total": 5980
+    },
+    {
+      "split": "dev",
+      "family": "interval",
+      "mode": "compact",
+      "n": 20,
+      "system": 980,
+      "input": 3132,
+      "output": 964,
+      "total": 5076
+    },
+    {
+      "split": "dev",
+      "family": "interval",
+      "mode": "atl",
+      "n": 20,
+      "system": 860,
+      "input": 3132,
+      "output": 944,
+      "total": 4936
+    },
+    {
+      "split": "pilot",
+      "family": "all",
+      "mode": "english",
+      "n": 160,
+      "system": 8480,
+      "input": 27156,
+      "output": 11912,
+      "total": 47548
+    },
+    {
+      "split": "pilot",
+      "family": "all",
+      "mode": "compact",
+      "n": 160,
+      "system": 8160,
+      "input": 27156,
+      "output": 8520,
+      "total": 43836
+    },
+    {
+      "split": "pilot",
+      "family": "all",
+      "mode": "atl",
+      "n": 160,
+      "system": 7200,
+      "input": 27156,
+      "output": 8280,
+      "total": 42636
+    },
+    {
+      "split": "pilot",
+      "family": "flow",
+      "mode": "english",
+      "n": 80,
+      "system": 4240,
+      "input": 14340,
+      "output": 4568,
+      "total": 23148
+    },
+    {
+      "split": "pilot",
+      "family": "flow",
+      "mode": "compact",
+      "n": 80,
+      "system": 4240,
+      "input": 14340,
+      "output": 4568,
+      "total": 23148
+    },
+    {
+      "split": "pilot",
+      "family": "flow",
+      "mode": "atl",
+      "n": 80,
+      "system": 3760,
+      "input": 14340,
+      "output": 4408,
+      "total": 22508
+    },
+    {
+      "split": "pilot",
+      "family": "interval",
+      "mode": "english",
+      "n": 80,
+      "system": 4240,
+      "input": 12816,
+      "output": 7344,
+      "total": 24400
+    },
+    {
+      "split": "pilot",
+      "family": "interval",
+      "mode": "compact",
+      "n": 80,
+      "system": 3920,
+      "input": 12816,
+      "output": 3952,
+      "total": 20688
+    },
+    {
+      "split": "pilot",
+      "family": "interval",
+      "mode": "atl",
+      "n": 80,
+      "system": 3440,
+      "input": 12816,
+      "output": 3872,
+      "total": 20128
+    }
+  ]
+}
