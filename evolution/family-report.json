@@ -1,0 +1,155 @@
+{
+  "scope": "Character proxy, leave-one-family-out. Train only dev cases of other nine families. Each test fold has 40 cases and pays full instruction once. No inference or token claim.",
+  "folds": [
+    {
+      "family": "constraints",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 4387,
+      "evolved": 4637,
+      "saving_pct": -5.698655117392293
+    },
+    {
+      "family": "discount",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        ": true/false/unknown?",
+        "); pairs usage,price."
+      ],
+      "baseline": 2714,
+      "evolved": 2985,
+      "saving_pct": -9.985261606484897
+    },
+    {
+      "family": "disjunction",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 2165,
+      "evolved": 2415,
+      "saving_pct": -11.547344110854496
+    },
+    {
+      "family": "equation",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 2165,
+      "evolved": 2415,
+      "saving_pct": -11.547344110854496
+    },
+    {
+      "family": "implication",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 3179,
+      "evolved": 3429,
+      "saving_pct": -7.864108210128973
+    },
+    {
+      "family": "interval",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 1903,
+      "evolved": 2153,
+      "saving_pct": -13.137151865475571
+    },
+    {
+      "family": "proportion",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 2897,
+      "evolved": 3147,
+      "saving_pct": -8.62961684501209
+    },
+    {
+      "family": "uncertainty",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "% discount; final price?",
+        ": true/false/unknown?",
+        "); pairs usage,price.",
+        "invalid; B,C valid;",
+        "Time weighted mean:",
+        "Min price; usage<=",
+        "Same unit price:"
+      ],
+      "baseline": 6217,
+      "evolved": 6513,
+      "saving_pct": -4.761138812932275
+    },
+    {
+      "family": "units",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 2003,
+      "evolved": 2253,
+      "saving_pct": -12.48127808287569
+    },
+    {
+      "family": "weighted",
+      "train_cases": 540,
+      "test_cases": 40,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "baseline": 2426,
+      "evolved": 2676,
+      "saving_pct": -10.305028854080799
+    }
+  ],
+  "total_baseline": 30056,
+  "total_evolved": 32623,
+  "total_saving_pct": -8.540723981900445,
+  "corpus_git_blob_sha": {
+    "lab/data/constraints.jsonl": "d0c157a6544796acb14cb16c2bfcc7843ff49583",
+    "lab/data/discount.jsonl": "5585555b04d8a48fe094fda6ca90afbaa3ee698e",
+    "lab/data/disjunction.jsonl": "d52df493dd78e5d1bb6a41c744e3ee3cce477358",
+    "lab/data/equation.jsonl": "c90380d61c1e1cc3ca5f723124c9b7a6e695d87e",
+    "lab/data/implication.jsonl": "4b42e76c6243067b18e1da6a7162ffe1bad746b3",
+    "lab/data/interval.jsonl": "279f3b015a622e007b7d532ce8541926b9cbfd11",
+    "lab/data/proportion.jsonl": "1c905acfaa0dcccab7a121bd9d134f176c93b779",
+    "lab/data/uncertainty.jsonl": "f892e306044aba065c04f3c5d17e311d8397ccb0",
+    "lab/data/units.jsonl": "121a1451fc89abfa8f2e9e702df0d1e516d72ce6",
+    "lab/data/weighted.jsonl": "3574fb547aee75486ecffc8a031e671e9a893bc7"
+  }
+}

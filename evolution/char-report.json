@@ -1,0 +1,182 @@
+{
+  "version": "0.4",
+  "unit": "unicode_code_points",
+  "scope": "Lossless static compact reference text compression; no LLM inference, no accuracy or internal reasoning claim; within-template split; batch count is hypothetical instruction reuse, not API billing.",
+  "candidates": [
+    "independent readings; fault unconfirmed.",
+    "independent readings. Fault established?",
+    "independent readings; fault unconfirmed",
+    "independent readings. Fault established",
+    "independent readings",
+    "possible; no independent readings;",
+    "possible. No independent readings.",
+    "possible; no independent readings",
+    "possible. No independent readings",
+    "no independent readings; fault",
+    "No independent readings. Fault",
+    "Both possible; no independent",
+    "rise possible. No independent",
+    "readings; fault unconfirmed.",
+    "readings. Fault established?",
+    "independent readings; fault",
+    "independent readings. Fault",
+    "readings; fault unconfirmed",
+    "readings. Fault established",
+    "; no independent readings;",
+    ". No independent readings.",
+    "; no independent readings",
+    ". No independent readings",
+    "% discount; final price?",
+    "no independent readings;",
+    "No independent readings.",
+    "possible; no independent",
+    "possible. No independent",
+    "% discount; final price",
+    "no independent readings",
+    "No independent readings",
+    "discount; final price?"
+  ],
+  "dev_cases": 600,
+  "test_cases": 400,
+  "results": [
+    {
+      "batch": 1,
+      "dict": [],
+      "history": [
+        {
+          "op": "identity",
+          "cost": 85324,
+          "dict": []
+        }
+      ],
+      "dev_baseline": 85324,
+      "dev_evolved": 85324,
+      "test_baseline": {
+        "cases": 400,
+        "batch": 1,
+        "instruction_copies": 400,
+        "input": 18447,
+        "output": 10919,
+        "instruction": 27600,
+        "total": 56966
+      },
+      "test_evolved": {
+        "cases": 400,
+        "batch": 1,
+        "instruction_copies": 400,
+        "input": 18447,
+        "output": 10919,
+        "instruction": 27600,
+        "total": 56966
+      },
+      "test_saving_pct": 0,
+      "roundtrip_strings": 2000
+    },
+    {
+      "batch": 10,
+      "dict": [],
+      "history": [
+        {
+          "op": "identity",
+          "cost": 48064,
+          "dict": []
+        }
+      ],
+      "dev_baseline": 48064,
+      "dev_evolved": 48064,
+      "test_baseline": {
+        "cases": 400,
+        "batch": 10,
+        "instruction_copies": 40,
+        "input": 18447,
+        "output": 10919,
+        "instruction": 2760,
+        "total": 32126
+      },
+      "test_evolved": {
+        "cases": 400,
+        "batch": 10,
+        "instruction_copies": 40,
+        "input": 18447,
+        "output": 10919,
+        "instruction": 2760,
+        "total": 32126
+      },
+      "test_saving_pct": 0,
+      "roundtrip_strings": 2000
+    },
+    {
+      "batch": 100,
+      "dict": [
+        "independent readings; fault unconfirmed.",
+        "independent readings. Fault established?",
+        "% discount; final price?"
+      ],
+      "history": [
+        {
+          "op": "identity",
+          "cost": 44338,
+          "dict": []
+        },
+        {
+          "op": "add",
+          "cost": 43198,
+          "dict": [
+            "independent readings; fault unconfirmed."
+          ]
+        },
+        {
+          "op": "add",
+          "cost": 41236,
+          "dict": [
+            "independent readings; fault unconfirmed.",
+            "independent readings. Fault established?"
+          ]
+        },
+        {
+          "op": "add",
+          "cost": 40138,
+          "dict": [
+            "independent readings; fault unconfirmed.",
+            "independent readings. Fault established?",
+            "% discount; final price?"
+          ]
+        }
+      ],
+      "dev_baseline": 44338,
+      "dev_evolved": 40138,
+      "test_baseline": {
+        "cases": 400,
+        "batch": 100,
+        "instruction_copies": 4,
+        "input": 18447,
+        "output": 10919,
+        "instruction": 276,
+        "total": 29642
+      },
+      "test_evolved": {
+        "cases": 400,
+        "batch": 100,
+        "instruction_copies": 4,
+        "input": 16127,
+        "output": 9439,
+        "instruction": 1276,
+        "total": 26842
+      },
+      "test_saving_pct": 9.446056271506642,
+      "roundtrip_strings": 2000
+    }
+  ],
+  "corpus_git_blob_sha": {
+    "lab/data/constraints.jsonl": "d0c157a6544796acb14cb16c2bfcc7843ff49583",
+    "lab/data/discount.jsonl": "5585555b04d8a48fe094fda6ca90afbaa3ee698e",
+    "lab/data/disjunction.jsonl": "d52df493dd78e5d1bb6a41c744e3ee3cce477358",
+    "lab/data/equation.jsonl": "c90380d61c1e1cc3ca5f723124c9b7a6e695d87e",
+    "lab/data/implication.jsonl": "4b42e76c6243067b18e1da6a7162ffe1bad746b3",
+    "lab/data/interval.jsonl": "279f3b015a622e007b7d532ce8541926b9cbfd11",
+    "lab/data/proportion.jsonl": "1c905acfaa0dcccab7a121bd9d134f176c93b779",
+    "lab/data/uncertainty.jsonl": "f892e306044aba065c04f3c5d17e311d8397ccb0",
+    "lab/data/units.jsonl": "121a1451fc89abfa8f2e9e702df0d1e516d72ce6",
+    "lab/data/weighted.jsonl": "3574fb547aee75486ecffc8a031e671e9a893bc7"
+  }
+}
