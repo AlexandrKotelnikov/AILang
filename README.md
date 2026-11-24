@@ -15,9 +15,11 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.4.3: [Verifiable Reasoning Certificates](certificate/README.md), two new task families, 200 solver-checked instances, compact executable witnesses and static token measurements against a strong compact control.
 
-- v0.4.4: [Executable Repeat Operators](operators/README.md), 240 independently checked interval tasks, lossless bounded repeat syntax, strong RLE control and static character benchmark (token/inference results pending).
+- v0.4.4: [Executable Repeat Operators](operators/README.md), 240 independently checked interval tasks, lossless bounded repeat syntax, strong RLE control and static character and verified-rank token benchmarks (inference pending).
 
-- v0.4.5: [Adaptive Operator Engine](operator_engine/README.md), bounded arithmetic runs, input-only routing, 320 checked tasks and seven-arm static benchmark (provider/token experiments pending).
+- v0.4.5: [Adaptive Operator Engine](operator_engine/README.md), bounded arithmetic runs, input-only routing, 320 checked tasks and seven-arm static character and token benchmarks (inference pending).
+
+- v0.4.6: [Recursive Engine](recursive/README.md), bounded recurrence identification, 240 checked tasks and checksum-verified token counts with equivalent recurrence and final-only controls.
 
 Quick start:
 ```sh
