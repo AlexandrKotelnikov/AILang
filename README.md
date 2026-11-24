@@ -1,23 +1,17 @@
-# ATL v0.1 starter kit
+# ATL — Artificial Thought Language
 
-- ATL-spec.md: language specification and examples.
-- system-prompt.txt: experimental instruction for existing models.
-- cases.json: four smoke-test cases with ordinary, compact English and ATL versions, reference traces and expected answers.
-- bench.py: static token-count comparison, including ATL instruction overhead.
+An experimental language for compact prompts, generated reasoning notes, memory and agent communication. Goal: improve correct tasks per million tokens, not merely shorten text.
 
-Run Python 3.9+:
+## Status
+- v0.1: experimental [language specification](ATL-spec.md), [system prompt](system-prompt.txt), four smoke tests and original static benchmark.
+- v0.2: [Tokenizer Lab](lab/README.md), 1,000 synthetic cases across ten task templates, development-only alias search, held-out token accounting.
+- v0.3: planned actual model evaluation, including generated reasoning-token usage where observable, answer quality and latency.
 
-```
+## Quick start
+```sh
+python -m unittest discover -s lab -p 'test_*.py'
 python -m pip install tiktoken
-python bench.py --encoding o200k_base
-python bench.py --encoding cl100k_base
+python lab/lab.py --encoding o200k_base --out results/o200k
 ```
 
-For an alternative tokenizer:
-
-```
-python -m pip install transformers
-python bench.py --hf /path/to/local/tokenizer
-```
-
-The script measures reference text only. It does not call a model, train one, measure accuracy, or inspect hidden reasoning. Real evaluation requires running comparable tasks through a model, counting its actual generated tokens and checking its answers independently. For reproducibility, pin tokenizer/model revisions and library versions. Chat template and API-specific overhead are not included in these counts. The idealized once-only overhead assumes the instruction is represented once in the measured context, not that repeated requests avoid billed input tokens.
+The tokenizer lab compares reference text, not model performance. No validated compression or accuracy claim yet. A closed model's hidden reasoning is not observable through a prompt. See [methodology](lab/README.md) for exact scope, overhead assumptions and other tokenizer support.

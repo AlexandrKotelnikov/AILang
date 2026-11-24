@@ -1,0 +1,48 @@
+{
+  "version": "0.2",
+  "count": 1000,
+  "families": {
+    "equation": {
+      "dev": 60,
+      "test": 40
+    },
+    "proportion": {
+      "dev": 60,
+      "test": 40
+    },
+    "discount": {
+      "dev": 60,
+      "test": 40
+    },
+    "weighted": {
+      "dev": 60,
+      "test": 40
+    },
+    "units": {
+      "dev": 60,
+      "test": 40
+    },
+    "implication": {
+      "dev": 60,
+      "test": 40
+    },
+    "disjunction": {
+      "dev": 60,
+      "test": 40
+    },
+    "interval": {
+      "dev": 60,
+      "test": 40
+    },
+    "constraints": {
+      "dev": 60,
+      "test": 40
+    },
+    "uncertainty": {
+      "dev": 60,
+      "test": 40
+    }
+  },
+  "split": "within-template parameter split; not independent unseen task families",
+  "kind": "synthetic reference texts, not generated model traces"
+}

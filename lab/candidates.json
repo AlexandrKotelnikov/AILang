@@ -1,0 +1,37 @@
+{
+  "goal": [
+    "goal",
+    "task",
+    "g"
+  ],
+  "given": [
+    "given",
+    "data",
+    "d"
+  ],
+  "must": [
+    "must",
+    "require",
+    "m"
+  ],
+  "unknown": [
+    "unknown",
+    "missing",
+    "u"
+  ],
+  "infer": [
+    "infer",
+    "derive",
+    "i"
+  ],
+  "check": [
+    "check",
+    "verify",
+    "c"
+  ],
+  "result": [
+    "result",
+    "answer",
+    "r"
+  ]
+}
