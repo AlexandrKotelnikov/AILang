@@ -1,0 +1,114 @@
+{
+  "unit": "o200k_base tokens (independent rank implementation)",
+  "scope": "Static oracle-generated reference strings; no framing or inference",
+  "summary": [
+    {
+      "profile": "all",
+      "mode": "dense",
+      "n": 180,
+      "system": 8820,
+      "input": 135288,
+      "output": 53315,
+      "total": 197423
+    },
+    {
+      "profile": "all",
+      "mode": "compact-rle",
+      "n": 180,
+      "system": 11880,
+      "input": 135288,
+      "output": 33510,
+      "total": 180678
+    },
+    {
+      "profile": "all",
+      "mode": "atl-rle",
+      "n": 180,
+      "system": 11160,
+      "input": 135288,
+      "output": 33330,
+      "total": 179778
+    },
+    {
+      "profile": "sparse",
+      "mode": "dense",
+      "n": 60,
+      "system": 2940,
+      "input": 45150,
+      "output": 14970,
+      "total": 63060
+    },
+    {
+      "profile": "sparse",
+      "mode": "compact-rle",
+      "n": 60,
+      "system": 3960,
+      "input": 45150,
+      "output": 3292,
+      "total": 52402
+    },
+    {
+      "profile": "sparse",
+      "mode": "atl-rle",
+      "n": 60,
+      "system": 3720,
+      "input": 45150,
+      "output": 3232,
+      "total": 52102
+    },
+    {
+      "profile": "mixed",
+      "mode": "dense",
+      "n": 60,
+      "system": 2940,
+      "input": 45096,
+      "output": 17389,
+      "total": 65425
+    },
+    {
+      "profile": "mixed",
+      "mode": "compact-rle",
+      "n": 60,
+      "system": 3960,
+      "input": 45096,
+      "output": 9262,
+      "total": 58318
+    },
+    {
+      "profile": "mixed",
+      "mode": "atl-rle",
+      "n": 60,
+      "system": 3720,
+      "input": 45096,
+      "output": 9202,
+      "total": 58018
+    },
+    {
+      "profile": "dense",
+      "mode": "dense",
+      "n": 60,
+      "system": 2940,
+      "input": 45042,
+      "output": 20956,
+      "total": 68938
+    },
+    {
+      "profile": "dense",
+      "mode": "compact-rle",
+      "n": 60,
+      "system": 3960,
+      "input": 45042,
+      "output": 20956,
+      "total": 69958
+    },
+    {
+      "profile": "dense",
+      "mode": "atl-rle",
+      "n": 60,
+      "system": 3720,
+      "input": 45042,
+      "output": 20896,
+      "total": 69658
+    }
+  ]
+}
