@@ -1,0 +1,122 @@
+{
+  "checks": {
+    "tasks": 240,
+    "valid_certificates": 720,
+    "invalid_certificates_rejected": 2885,
+    "final_only_checks": 240
+  },
+  "rank_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "golden": 3,
+  "unit": "o200k_base tokens (independent rank implementation)",
+  "scope": "Static oracle-authored text; recursive witness delegates expansion to interpreter; final-only has no certificate; no inference or hidden reasoning",
+  "summary": [
+    {
+      "family": "all",
+      "mode": "dense",
+      "n": 180,
+      "system": 12870,
+      "input": 58643,
+      "output": 48930,
+      "total": 120443
+    },
+    {
+      "family": "all",
+      "mode": "compact-rec",
+      "n": 180,
+      "system": 15030,
+      "input": 58643,
+      "output": 2880,
+      "total": 76553
+    },
+    {
+      "family": "all",
+      "mode": "atl-rec",
+      "n": 180,
+      "system": 14130,
+      "input": 58643,
+      "output": 2160,
+      "total": 74933
+    },
+    {
+      "family": "all",
+      "mode": "final-only",
+      "n": 180,
+      "system": 9090,
+      "input": 58643,
+      "output": 720,
+      "total": 68453
+    },
+    {
+      "family": "modular",
+      "mode": "dense",
+      "n": 90,
+      "system": 6660,
+      "input": 29268,
+      "output": 24412,
+      "total": 60340
+    },
+    {
+      "family": "modular",
+      "mode": "compact-rec",
+      "n": 90,
+      "system": 7740,
+      "input": 29268,
+      "output": 1440,
+      "total": 38448
+    },
+    {
+      "family": "modular",
+      "mode": "atl-rec",
+      "n": 90,
+      "system": 7290,
+      "input": 29268,
+      "output": 1080,
+      "total": 37638
+    },
+    {
+      "family": "modular",
+      "mode": "final-only",
+      "n": 90,
+      "system": 4770,
+      "input": 29268,
+      "output": 360,
+      "total": 34398
+    },
+    {
+      "family": "clipped",
+      "mode": "dense",
+      "n": 90,
+      "system": 6210,
+      "input": 29375,
+      "output": 24518,
+      "total": 60103
+    },
+    {
+      "family": "clipped",
+      "mode": "compact-rec",
+      "n": 90,
+      "system": 7290,
+      "input": 29375,
+      "output": 1440,
+      "total": 38105
+    },
+    {
+      "family": "clipped",
+      "mode": "atl-rec",
+      "n": 90,
+      "system": 6840,
+      "input": 29375,
+      "output": 1080,
+      "total": 37295
+    },
+    {
+      "family": "clipped",
+      "mode": "final-only",
+      "n": 90,
+      "system": 4320,
+      "input": 29375,
+      "output": 360,
+      "total": 34055
+    }
+  ]
+}
