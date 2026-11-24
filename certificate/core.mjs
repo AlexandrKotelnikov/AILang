@@ -113,7 +113,10 @@ function parse(t,mode,text){
  }catch{return null;}
 }
 function grade(t,mode,text){
- const r=parse(t,mode,text);return {format:!!r,answer:!!r&&r.answer===oracle(t),certificate:!!r&&verify(t,r.answer,r.cert)};
+ const r=parse(t,mode,text);
+ const final=typeof text==="string"&&text.length<=20000?text.trim().match(/(?:^|\n)FINAL: (0|[1-9][0-9]*)$/):null;
+ const a=final?Number(final[1]):null;
+ return {format:!!r,answer:int(a)&&a===oracle(t),certificate:!!r&&verify(t,r.answer,r.cert)};
 }
 function selfTest(){
  const cases=makeCases();let positives=0,negatives=0,oracles=0;
@@ -124,13 +127,16 @@ function selfTest(){
    const bad=render(t,mode,{...r,answer:r.answer+1});check(!grade(t,mode,bad).certificate,"wrong final");negatives++;
    check(!parse(t,mode,msg+"\nextra"),"trailing text");negatives++;
   }
+  check(grade(t,"atl","malformed witness\nFINAL: "+r.answer).answer&&!grade(t,"atl","malformed witness\nFINAL: "+r.answer).certificate,"answer independent of witness");
   const c=JSON.parse(JSON.stringify(r.cert));
   if(t.family==="flow")c[1]=[0,t.data.n-1];else c[c.length-1]++;
   check(!verify(t,r.answer,c),"tampered witness");negatives++;
  }
  const edgeCases=[{family:"flow",data:{n:2,edges:[]}},{family:"flow",data:{n:4,edges:[[0,1,4],[0,2,4],[1,2,3],[2,1,1],[1,3,2],[2,3,5]]}},{family:"interval",data:{jobs:[]}},{family:"interval",data:{jobs:[[0,2,3],[1,2,5],[2,3,7]]}}];
  for(const t of edgeCases){const r=solve(t);check(r.answer===oracle(t)&&verify(t,r.answer,r.cert),"edge case");}
- return {cases:cases.length,oracle_agreement:oracles,valid_renderings:positives,rejected_mutations:negatives,edge_cases:edgeCases.length};
+ const t={family:"flow",data:{n:3,edges:[[0,1,2],[1,2,2]]}};
+ for(const c of [[[[0,3],[1,2]],[0]],[[[0,2],[0,2],[1,2]],[0]],[[[0,2]],[0]],[[[0,2],[1,2]],[1]],[[[0,2],[1,2]],[0,0]],[[[0,2],[1,2]],[0,2]]]){check(!verify(t,2,c),"invalid flow proof");negatives++;}
+ return {cases:cases.length,oracle_agreement:oracles,valid_renderings:positives,rejected_mutations:negatives,edge_cases:edgeCases.length,answer_witness_separation:cases.length};
 }
 function staticReport(count,unit){
  const rows=[];
