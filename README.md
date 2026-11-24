@@ -6,6 +6,7 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 - v0.2: [Tokenizer Lab](lab/README.md), 1,000 synthetic cases, development-only alias search.
 - v0.3: [Reasoning Engine](reasoning/README.md), five real-inference modes, [logic macros](reasoning/macros.md), deterministic scoring and token/latency accounting.
 - v0.3.1: [Compression Research](compression/README.md), Native/Micro/Adaptive modes, eight multi-step development tasks, single-chat pilot and independent API harness.
+- v0.3.2: [ATL-Nano](nano/README.md), zero-dictionary notation, ASCII/Unicode comparison, new multi-step development pilot and API harness.
 
 Quick start:
 ```sh
