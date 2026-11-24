@@ -88,17 +88,18 @@ function prompt(t){
 }
 const common="Solve the task. Return exactly two lines: a certificate and FINAL: <nonnegative integer>.";
 function instruction(t,mode){
- if(!["english","atl"].includes(mode))throw Error("mode");
+ if(!["english","compact","atl"].includes(mode))throw Error("mode");
  if(t.family==="flow")return common+(mode==="atl"?" Certificate: C:"+`[[[edge,flow],...],[source-side vertices]]`+". Omit zero flows; sort edge IDs and cut vertices ascending.":" Certificate: Flow: edge=flow,...; Cut: vertex,... (use - for empty flow list). Omit zero flows; sort edge IDs and cut vertices ascending.");
+ if(mode==="compact")return common+" Certificate: DP: comma-separated optimal totals for first 1..n jobs, in order; d0=0 (use - if no jobs).";
  return common+(mode==="atl"?" Certificate: C:[d1,...,dn]. di is optimal total for first i jobs; d0=0.":" Certificate: DP: d1=...,d2=...,... (use - if no jobs). di is optimal total for first i jobs; d0=0.");
 }
 function render(t,mode,result){
  const {answer,cert}=result;
- const first=mode==="atl"?"C:"+JSON.stringify(cert):t.family==="flow"?"Flow: "+(cert[0].map(p=>p.join("=")).join(",")||"-")+"; Cut: "+cert[1].join(","):"DP: "+(cert.map((v,i)=>"d"+(i+1)+"="+v).join(",")||"-");
+ const first=mode==="atl"?"C:"+JSON.stringify(cert):t.family==="flow"?"Flow: "+(cert[0].map(p=>p.join("=")).join(",")||"-")+"; Cut: "+cert[1].join(","):"DP: "+((mode==="compact"?cert.join(","):cert.map((v,i)=>"d"+(i+1)+"="+v).join(","))||"-");
  return first+"\nFINAL: "+answer;
 }
 function parse(t,mode,text){
- if(!["english","atl"].includes(mode)||typeof text!=="string"||text.length>20000)return null;
+ if(!["english","compact","atl"].includes(mode)||typeof text!=="string"||text.length>20000)return null;
  const m=text.trim().match(/^([^\r\n]+)\r?\nFINAL: (0|[1-9][0-9]*)$/);if(!m)return null;const answer=Number(m[2]);if(!int(answer))return null;
  try{
   let cert;
@@ -106,7 +107,8 @@ function parse(t,mode,text){
   else if(t.family==="flow"){
    const a=m[1].match(/^Flow: (-|[0-9]+=[0-9]+(?:,[0-9]+=[0-9]+)*); Cut: ([0-9]+(?:,[0-9]+)*)$/);if(!a)return null;
    cert=[a[1]==="-"?[]:a[1].split(",").map(s=>s.split("=").map(Number)),a[2].split(",").map(Number)];
-  }else{const a=m[1].match(/^DP: (-|d[0-9]+=[0-9]+(?:,d[0-9]+=[0-9]+)*)$/);if(!a)return null;cert=a[1]==="-"?[]:a[1].split(",").map((s,i)=>{const [k,v]=s.split("=");if(k!=="d"+(i+1))throw Error("index");return Number(v);});}
+  }else if(mode==="compact"){const a=m[1].match(/^DP: (-|[0-9]+(?:,[0-9]+)*)$/);if(!a)return null;cert=a[1]==="-"?[]:a[1].split(",").map(Number);}
+  else{const a=m[1].match(/^DP: (-|d[0-9]+=[0-9]+(?:,d[0-9]+=[0-9]+)*)$/);if(!a)return null;cert=a[1]==="-"?[]:a[1].split(",").map((s,i)=>{const [k,v]=s.split("=");if(k!=="d"+(i+1))throw Error("index");return Number(v);});}
   return {answer,cert};
  }catch{return null;}
 }
@@ -118,7 +120,7 @@ function selfTest(){
  const check=(condition,msg)=>{if(!condition)throw Error(msg);};
  for(const t of cases){
   const r=solve(t);check(r.answer===oracle(t),"oracle "+t.id);oracles++;
-  for(const mode of ["english","atl"]){const msg=render(t,mode,r),g=grade(t,mode,msg);check(g.format&&g.answer&&g.certificate,"valid "+t.id);positives++;
+  for(const mode of ["english","compact","atl"]){const msg=render(t,mode,r),g=grade(t,mode,msg);check(g.format&&g.answer&&g.certificate,"valid "+t.id);positives++;
    const bad=render(t,mode,{...r,answer:r.answer+1});check(!grade(t,mode,bad).certificate,"wrong final");negatives++;
    check(!parse(t,mode,msg+"\nextra"),"trailing text");negatives++;
   }
@@ -132,11 +134,11 @@ function selfTest(){
 }
 function staticReport(count,unit){
  const rows=[];
- for(const t of makeCases())for(const mode of ["english","atl"]){
+ for(const t of makeCases())for(const mode of ["english","compact","atl"]){
   const r=solve(t),system=count(instruction(t,mode)),input=count(prompt(t)),output=count(render(t,mode,r));rows.push({id:t.id,split:t.split,family:t.family,mode,system,input,output,total:system+input+output});
  }
  const summary=[];
- for(const split of ["dev","pilot"])for(const family of ["all","flow","interval"])for(const mode of ["english","atl"]){
+ for(const split of ["dev","pilot"])for(const family of ["all","flow","interval"])for(const mode of ["english","compact","atl"]){
   const group=rows.filter(r=>r.split===split&&(family==="all"||r.family===family)&&r.mode===mode);
   summary.push({split,family,mode,n:group.length,...Object.fromEntries(["system","input","output","total"].map(k=>[k,group.reduce((a,r)=>a+r[k],0)]))});
  }
