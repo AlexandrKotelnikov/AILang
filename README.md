@@ -15,6 +15,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.4.3: [Verifiable Reasoning Certificates](certificate/README.md), two new task families, 200 solver-checked instances, compact executable witnesses and static token measurements against a strong compact control.
 
+- v0.4.4: [Executable Repeat Operators](operators/README.md), 240 independently checked interval tasks, lossless bounded repeat syntax, strong RLE control and static character benchmark (token/inference results pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
