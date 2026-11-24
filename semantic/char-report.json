@@ -1,0 +1,3104 @@
+{
+  "unit": "ASCII characters",
+  "scope": "Static input text only; instruction charged on each request; no chat framing, output or API usage",
+  "summary": [
+    {
+      "split": "dev",
+      "family": "all",
+      "mode": "draft",
+      "n": 36,
+      "instruction": 5148,
+      "input": 14928,
+      "total": 20076
+    },
+    {
+      "split": "dev",
+      "family": "all",
+      "mode": "compact",
+      "n": 36,
+      "instruction": 5148,
+      "input": 11287,
+      "total": 16435
+    },
+    {
+      "split": "dev",
+      "family": "all",
+      "mode": "atl-input",
+      "n": 36,
+      "instruction": 13956,
+      "input": 6041,
+      "total": 19997
+    },
+    {
+      "split": "dev",
+      "family": "all",
+      "mode": "atl-io",
+      "n": 36,
+      "instruction": 18096,
+      "input": 6041,
+      "total": 24137
+    },
+    {
+      "split": "dev",
+      "family": "graph",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2254,
+      "total": 3112
+    },
+    {
+      "split": "dev",
+      "family": "graph",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1865,
+      "total": 2723
+    },
+    {
+      "split": "dev",
+      "family": "graph",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 1932,
+      "input": 1281,
+      "total": 3213
+    },
+    {
+      "split": "dev",
+      "family": "graph",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 2622,
+      "input": 1281,
+      "total": 3903
+    },
+    {
+      "split": "dev",
+      "family": "subset",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2438,
+      "total": 3296
+    },
+    {
+      "split": "dev",
+      "family": "subset",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1826,
+      "total": 2684
+    },
+    {
+      "split": "dev",
+      "family": "subset",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2430,
+      "input": 974,
+      "total": 3404
+    },
+    {
+      "split": "dev",
+      "family": "subset",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 3120,
+      "input": 974,
+      "total": 4094
+    },
+    {
+      "split": "dev",
+      "family": "bayes",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2430,
+      "total": 3288
+    },
+    {
+      "split": "dev",
+      "family": "bayes",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1326,
+      "total": 2184
+    },
+    {
+      "split": "dev",
+      "family": "bayes",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2502,
+      "input": 378,
+      "total": 2880
+    },
+    {
+      "split": "dev",
+      "family": "bayes",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 3192,
+      "input": 378,
+      "total": 3570
+    },
+    {
+      "split": "dev",
+      "family": "schedule",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 3329,
+      "total": 4187
+    },
+    {
+      "split": "dev",
+      "family": "schedule",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 3179,
+      "total": 4037
+    },
+    {
+      "split": "dev",
+      "family": "schedule",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2136,
+      "input": 2363,
+      "total": 4499
+    },
+    {
+      "split": "dev",
+      "family": "schedule",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 2826,
+      "input": 2363,
+      "total": 5189
+    },
+    {
+      "split": "dev",
+      "family": "inventory",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 1763,
+      "total": 2621
+    },
+    {
+      "split": "dev",
+      "family": "inventory",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1367,
+      "total": 2225
+    },
+    {
+      "split": "dev",
+      "family": "inventory",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2694,
+      "input": 269,
+      "total": 2963
+    },
+    {
+      "split": "dev",
+      "family": "inventory",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 3384,
+      "input": 269,
+      "total": 3653
+    },
+    {
+      "split": "dev",
+      "family": "logic",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2714,
+      "total": 3572
+    },
+    {
+      "split": "dev",
+      "family": "logic",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1724,
+      "total": 2582
+    },
+    {
+      "split": "dev",
+      "family": "logic",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2262,
+      "input": 776,
+      "total": 3038
+    },
+    {
+      "split": "dev",
+      "family": "logic",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 2952,
+      "input": 776,
+      "total": 3728
+    },
+    {
+      "split": "test",
+      "family": "all",
+      "mode": "draft",
+      "n": 36,
+      "instruction": 5148,
+      "input": 15183,
+      "total": 20331
+    },
+    {
+      "split": "test",
+      "family": "all",
+      "mode": "compact",
+      "n": 36,
+      "instruction": 5148,
+      "input": 11570,
+      "total": 16718
+    },
+    {
+      "split": "test",
+      "family": "all",
+      "mode": "atl-input",
+      "n": 36,
+      "instruction": 13956,
+      "input": 6322,
+      "total": 20278
+    },
+    {
+      "split": "test",
+      "family": "all",
+      "mode": "atl-io",
+      "n": 36,
+      "instruction": 18096,
+      "input": 6322,
+      "total": 24418
+    },
+    {
+      "split": "test",
+      "family": "graph",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2476,
+      "total": 3334
+    },
+    {
+      "split": "test",
+      "family": "graph",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 2111,
+      "total": 2969
+    },
+    {
+      "split": "test",
+      "family": "graph",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 1932,
+      "input": 1525,
+      "total": 3457
+    },
+    {
+      "split": "test",
+      "family": "graph",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 2622,
+      "input": 1525,
+      "total": 4147
+    },
+    {
+      "split": "test",
+      "family": "subset",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2429,
+      "total": 3287
+    },
+    {
+      "split": "test",
+      "family": "subset",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1817,
+      "total": 2675
+    },
+    {
+      "split": "test",
+      "family": "subset",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2430,
+      "input": 965,
+      "total": 3395
+    },
+    {
+      "split": "test",
+      "family": "subset",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 3120,
+      "input": 965,
+      "total": 4085
+    },
+    {
+      "split": "test",
+      "family": "bayes",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2430,
+      "total": 3288
+    },
+    {
+      "split": "test",
+      "family": "bayes",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1326,
+      "total": 2184
+    },
+    {
+      "split": "test",
+      "family": "bayes",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2502,
+      "input": 378,
+      "total": 2880
+    },
+    {
+      "split": "test",
+      "family": "bayes",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 3192,
+      "input": 378,
+      "total": 3570
+    },
+    {
+      "split": "test",
+      "family": "schedule",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 3362,
+      "total": 4220
+    },
+    {
+      "split": "test",
+      "family": "schedule",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 3216,
+      "total": 4074
+    },
+    {
+      "split": "test",
+      "family": "schedule",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2136,
+      "input": 2400,
+      "total": 4536
+    },
+    {
+      "split": "test",
+      "family": "schedule",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 2826,
+      "input": 2400,
+      "total": 5226
+    },
+    {
+      "split": "test",
+      "family": "inventory",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 1772,
+      "total": 2630
+    },
+    {
+      "split": "test",
+      "family": "inventory",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1376,
+      "total": 2234
+    },
+    {
+      "split": "test",
+      "family": "inventory",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2694,
+      "input": 278,
+      "total": 2972
+    },
+    {
+      "split": "test",
+      "family": "inventory",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 3384,
+      "input": 278,
+      "total": 3662
+    },
+    {
+      "split": "test",
+      "family": "logic",
+      "mode": "draft",
+      "n": 6,
+      "instruction": 858,
+      "input": 2714,
+      "total": 3572
+    },
+    {
+      "split": "test",
+      "family": "logic",
+      "mode": "compact",
+      "n": 6,
+      "instruction": 858,
+      "input": 1724,
+      "total": 2582
+    },
+    {
+      "split": "test",
+      "family": "logic",
+      "mode": "atl-input",
+      "n": 6,
+      "instruction": 2262,
+      "input": 776,
+      "total": 3038
+    },
+    {
+      "split": "test",
+      "family": "logic",
+      "mode": "atl-io",
+      "n": 6,
+      "instruction": 2952,
+      "input": 776,
+      "total": 3728
+    }
+  ],
+  "rows": [
+    {
+      "id": "graph-00",
+      "family": "graph",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 348,
+      "total": 491
+    },
+    {
+      "id": "graph-00",
+      "family": "graph",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 280,
+      "total": 423
+    },
+    {
+      "id": "graph-00",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 184,
+      "total": 506
+    },
+    {
+      "id": "graph-00",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 184,
+      "total": 621
+    },
+    {
+      "id": "subset-00",
+      "family": "subset",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "subset-00",
+      "family": "subset",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 303,
+      "total": 446
+    },
+    {
+      "id": "subset-00",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 161,
+      "total": 566
+    },
+    {
+      "id": "subset-00",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 161,
+      "total": 681
+    },
+    {
+      "id": "bayes-00",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-00",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-00",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-00",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-00",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 517,
+      "total": 660
+    },
+    {
+      "id": "schedule-00",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 488,
+      "total": 631
+    },
+    {
+      "id": "schedule-00",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 352,
+      "total": 708
+    },
+    {
+      "id": "schedule-00",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 352,
+      "total": 823
+    },
+    {
+      "id": "inventory-00",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 293,
+      "total": 436
+    },
+    {
+      "id": "inventory-00",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 227,
+      "total": 370
+    },
+    {
+      "id": "inventory-00",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 44,
+      "total": 493
+    },
+    {
+      "id": "inventory-00",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 44,
+      "total": 608
+    },
+    {
+      "id": "logic-00",
+      "family": "logic",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 453,
+      "total": 596
+    },
+    {
+      "id": "logic-00",
+      "family": "logic",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 288,
+      "total": 431
+    },
+    {
+      "id": "logic-00",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 130,
+      "total": 507
+    },
+    {
+      "id": "logic-00",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 130,
+      "total": 622
+    },
+    {
+      "id": "graph-01",
+      "family": "graph",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 347,
+      "total": 490
+    },
+    {
+      "id": "graph-01",
+      "family": "graph",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 279,
+      "total": 422
+    },
+    {
+      "id": "graph-01",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 181,
+      "total": 503
+    },
+    {
+      "id": "graph-01",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 181,
+      "total": 618
+    },
+    {
+      "id": "subset-01",
+      "family": "subset",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 406,
+      "total": 549
+    },
+    {
+      "id": "subset-01",
+      "family": "subset",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 304,
+      "total": 447
+    },
+    {
+      "id": "subset-01",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 162,
+      "total": 567
+    },
+    {
+      "id": "subset-01",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 162,
+      "total": 682
+    },
+    {
+      "id": "bayes-01",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-01",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-01",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-01",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-01",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 535,
+      "total": 678
+    },
+    {
+      "id": "schedule-01",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 508,
+      "total": 651
+    },
+    {
+      "id": "schedule-01",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 372,
+      "total": 728
+    },
+    {
+      "id": "schedule-01",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 372,
+      "total": 843
+    },
+    {
+      "id": "inventory-01",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 293,
+      "total": 436
+    },
+    {
+      "id": "inventory-01",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 227,
+      "total": 370
+    },
+    {
+      "id": "inventory-01",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 44,
+      "total": 493
+    },
+    {
+      "id": "inventory-01",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 44,
+      "total": 608
+    },
+    {
+      "id": "logic-01",
+      "family": "logic",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 461,
+      "total": 604
+    },
+    {
+      "id": "logic-01",
+      "family": "logic",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 292,
+      "total": 435
+    },
+    {
+      "id": "logic-01",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 134,
+      "total": 511
+    },
+    {
+      "id": "logic-01",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 134,
+      "total": 626
+    },
+    {
+      "id": "graph-02",
+      "family": "graph",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 419,
+      "total": 562
+    },
+    {
+      "id": "graph-02",
+      "family": "graph",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 359,
+      "total": 502
+    },
+    {
+      "id": "graph-02",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 261,
+      "total": 583
+    },
+    {
+      "id": "graph-02",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 261,
+      "total": 698
+    },
+    {
+      "id": "subset-02",
+      "family": "subset",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 406,
+      "total": 549
+    },
+    {
+      "id": "subset-02",
+      "family": "subset",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 304,
+      "total": 447
+    },
+    {
+      "id": "subset-02",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 162,
+      "total": 567
+    },
+    {
+      "id": "subset-02",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 162,
+      "total": 682
+    },
+    {
+      "id": "bayes-02",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-02",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-02",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-02",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-02",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 532,
+      "total": 675
+    },
+    {
+      "id": "schedule-02",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 504,
+      "total": 647
+    },
+    {
+      "id": "schedule-02",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 368,
+      "total": 724
+    },
+    {
+      "id": "schedule-02",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 368,
+      "total": 839
+    },
+    {
+      "id": "inventory-02",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 294,
+      "total": 437
+    },
+    {
+      "id": "inventory-02",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 228,
+      "total": 371
+    },
+    {
+      "id": "inventory-02",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 45,
+      "total": 494
+    },
+    {
+      "id": "inventory-02",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 45,
+      "total": 609
+    },
+    {
+      "id": "logic-02",
+      "family": "logic",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 443,
+      "total": 586
+    },
+    {
+      "id": "logic-02",
+      "family": "logic",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 282,
+      "total": 425
+    },
+    {
+      "id": "logic-02",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 124,
+      "total": 501
+    },
+    {
+      "id": "logic-02",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 124,
+      "total": 616
+    },
+    {
+      "id": "graph-03",
+      "family": "graph",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 400,
+      "total": 543
+    },
+    {
+      "id": "graph-03",
+      "family": "graph",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 338,
+      "total": 481
+    },
+    {
+      "id": "graph-03",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 240,
+      "total": 562
+    },
+    {
+      "id": "graph-03",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 240,
+      "total": 677
+    },
+    {
+      "id": "subset-03",
+      "family": "subset",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "subset-03",
+      "family": "subset",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 303,
+      "total": 446
+    },
+    {
+      "id": "subset-03",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 161,
+      "total": 566
+    },
+    {
+      "id": "subset-03",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 161,
+      "total": 681
+    },
+    {
+      "id": "bayes-03",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-03",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-03",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-03",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-03",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 593,
+      "total": 736
+    },
+    {
+      "id": "schedule-03",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 572,
+      "total": 715
+    },
+    {
+      "id": "schedule-03",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 436,
+      "total": 792
+    },
+    {
+      "id": "schedule-03",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 436,
+      "total": 907
+    },
+    {
+      "id": "inventory-03",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 294,
+      "total": 437
+    },
+    {
+      "id": "inventory-03",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 228,
+      "total": 371
+    },
+    {
+      "id": "inventory-03",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 45,
+      "total": 494
+    },
+    {
+      "id": "inventory-03",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 45,
+      "total": 609
+    },
+    {
+      "id": "logic-03",
+      "family": "logic",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 453,
+      "total": 596
+    },
+    {
+      "id": "logic-03",
+      "family": "logic",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 288,
+      "total": 431
+    },
+    {
+      "id": "logic-03",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 130,
+      "total": 507
+    },
+    {
+      "id": "logic-03",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 130,
+      "total": 622
+    },
+    {
+      "id": "graph-04",
+      "family": "graph",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 327,
+      "total": 470
+    },
+    {
+      "id": "graph-04",
+      "family": "graph",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 256,
+      "total": 399
+    },
+    {
+      "id": "graph-04",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 160,
+      "total": 482
+    },
+    {
+      "id": "graph-04",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 160,
+      "total": 597
+    },
+    {
+      "id": "subset-04",
+      "family": "subset",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 408,
+      "total": 551
+    },
+    {
+      "id": "subset-04",
+      "family": "subset",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 306,
+      "total": 449
+    },
+    {
+      "id": "subset-04",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 164,
+      "total": 569
+    },
+    {
+      "id": "subset-04",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 164,
+      "total": 684
+    },
+    {
+      "id": "bayes-04",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-04",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-04",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-04",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-04",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 635,
+      "total": 778
+    },
+    {
+      "id": "schedule-04",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 619,
+      "total": 762
+    },
+    {
+      "id": "schedule-04",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 483,
+      "total": 839
+    },
+    {
+      "id": "schedule-04",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 483,
+      "total": 954
+    },
+    {
+      "id": "inventory-04",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 294,
+      "total": 437
+    },
+    {
+      "id": "inventory-04",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 228,
+      "total": 371
+    },
+    {
+      "id": "inventory-04",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 45,
+      "total": 494
+    },
+    {
+      "id": "inventory-04",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 45,
+      "total": 609
+    },
+    {
+      "id": "logic-04",
+      "family": "logic",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 461,
+      "total": 604
+    },
+    {
+      "id": "logic-04",
+      "family": "logic",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 292,
+      "total": 435
+    },
+    {
+      "id": "logic-04",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 134,
+      "total": 511
+    },
+    {
+      "id": "logic-04",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 134,
+      "total": 626
+    },
+    {
+      "id": "graph-05",
+      "family": "graph",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 413,
+      "total": 556
+    },
+    {
+      "id": "graph-05",
+      "family": "graph",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 353,
+      "total": 496
+    },
+    {
+      "id": "graph-05",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 255,
+      "total": 577
+    },
+    {
+      "id": "graph-05",
+      "family": "graph",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 255,
+      "total": 692
+    },
+    {
+      "id": "subset-05",
+      "family": "subset",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 408,
+      "total": 551
+    },
+    {
+      "id": "subset-05",
+      "family": "subset",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 306,
+      "total": 449
+    },
+    {
+      "id": "subset-05",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 164,
+      "total": 569
+    },
+    {
+      "id": "subset-05",
+      "family": "subset",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 164,
+      "total": 684
+    },
+    {
+      "id": "bayes-05",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-05",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-05",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-05",
+      "family": "bayes",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-05",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 517,
+      "total": 660
+    },
+    {
+      "id": "schedule-05",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 488,
+      "total": 631
+    },
+    {
+      "id": "schedule-05",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 352,
+      "total": 708
+    },
+    {
+      "id": "schedule-05",
+      "family": "schedule",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 352,
+      "total": 823
+    },
+    {
+      "id": "inventory-05",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 295,
+      "total": 438
+    },
+    {
+      "id": "inventory-05",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 229,
+      "total": 372
+    },
+    {
+      "id": "inventory-05",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 46,
+      "total": 495
+    },
+    {
+      "id": "inventory-05",
+      "family": "inventory",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 46,
+      "total": 610
+    },
+    {
+      "id": "logic-05",
+      "family": "logic",
+      "split": "dev",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 443,
+      "total": 586
+    },
+    {
+      "id": "logic-05",
+      "family": "logic",
+      "split": "dev",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 282,
+      "total": 425
+    },
+    {
+      "id": "logic-05",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 124,
+      "total": 501
+    },
+    {
+      "id": "logic-05",
+      "family": "logic",
+      "split": "dev",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 124,
+      "total": 616
+    },
+    {
+      "id": "graph-06",
+      "family": "graph",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 425,
+      "total": 568
+    },
+    {
+      "id": "graph-06",
+      "family": "graph",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 366,
+      "total": 509
+    },
+    {
+      "id": "graph-06",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 268,
+      "total": 590
+    },
+    {
+      "id": "graph-06",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 268,
+      "total": 705
+    },
+    {
+      "id": "subset-06",
+      "family": "subset",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 404,
+      "total": 547
+    },
+    {
+      "id": "subset-06",
+      "family": "subset",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 302,
+      "total": 445
+    },
+    {
+      "id": "subset-06",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 160,
+      "total": 565
+    },
+    {
+      "id": "subset-06",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 160,
+      "total": 680
+    },
+    {
+      "id": "bayes-06",
+      "family": "bayes",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-06",
+      "family": "bayes",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-06",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-06",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-06",
+      "family": "schedule",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 574,
+      "total": 717
+    },
+    {
+      "id": "schedule-06",
+      "family": "schedule",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 552,
+      "total": 695
+    },
+    {
+      "id": "schedule-06",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 416,
+      "total": 772
+    },
+    {
+      "id": "schedule-06",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 416,
+      "total": 887
+    },
+    {
+      "id": "inventory-06",
+      "family": "inventory",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 295,
+      "total": 438
+    },
+    {
+      "id": "inventory-06",
+      "family": "inventory",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 229,
+      "total": 372
+    },
+    {
+      "id": "inventory-06",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 46,
+      "total": 495
+    },
+    {
+      "id": "inventory-06",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 46,
+      "total": 610
+    },
+    {
+      "id": "logic-06",
+      "family": "logic",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 453,
+      "total": 596
+    },
+    {
+      "id": "logic-06",
+      "family": "logic",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 288,
+      "total": 431
+    },
+    {
+      "id": "logic-06",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 130,
+      "total": 507
+    },
+    {
+      "id": "logic-06",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 130,
+      "total": 622
+    },
+    {
+      "id": "graph-07",
+      "family": "graph",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 491,
+      "total": 634
+    },
+    {
+      "id": "graph-07",
+      "family": "graph",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 439,
+      "total": 582
+    },
+    {
+      "id": "graph-07",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 341,
+      "total": 663
+    },
+    {
+      "id": "graph-07",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 341,
+      "total": 778
+    },
+    {
+      "id": "subset-07",
+      "family": "subset",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 403,
+      "total": 546
+    },
+    {
+      "id": "subset-07",
+      "family": "subset",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 301,
+      "total": 444
+    },
+    {
+      "id": "subset-07",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 159,
+      "total": 564
+    },
+    {
+      "id": "subset-07",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 159,
+      "total": 679
+    },
+    {
+      "id": "bayes-07",
+      "family": "bayes",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-07",
+      "family": "bayes",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-07",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-07",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-07",
+      "family": "schedule",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 550,
+      "total": 693
+    },
+    {
+      "id": "schedule-07",
+      "family": "schedule",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 524,
+      "total": 667
+    },
+    {
+      "id": "schedule-07",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 388,
+      "total": 744
+    },
+    {
+      "id": "schedule-07",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 388,
+      "total": 859
+    },
+    {
+      "id": "inventory-07",
+      "family": "inventory",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 296,
+      "total": 439
+    },
+    {
+      "id": "inventory-07",
+      "family": "inventory",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 230,
+      "total": 373
+    },
+    {
+      "id": "inventory-07",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 47,
+      "total": 496
+    },
+    {
+      "id": "inventory-07",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 47,
+      "total": 611
+    },
+    {
+      "id": "logic-07",
+      "family": "logic",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 461,
+      "total": 604
+    },
+    {
+      "id": "logic-07",
+      "family": "logic",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 292,
+      "total": 435
+    },
+    {
+      "id": "logic-07",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 134,
+      "total": 511
+    },
+    {
+      "id": "logic-07",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 134,
+      "total": 626
+    },
+    {
+      "id": "graph-08",
+      "family": "graph",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 326,
+      "total": 469
+    },
+    {
+      "id": "graph-08",
+      "family": "graph",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 255,
+      "total": 398
+    },
+    {
+      "id": "graph-08",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 159,
+      "total": 481
+    },
+    {
+      "id": "graph-08",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 159,
+      "total": 596
+    },
+    {
+      "id": "subset-08",
+      "family": "subset",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 407,
+      "total": 550
+    },
+    {
+      "id": "subset-08",
+      "family": "subset",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 305,
+      "total": 448
+    },
+    {
+      "id": "subset-08",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 163,
+      "total": 568
+    },
+    {
+      "id": "subset-08",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 163,
+      "total": 683
+    },
+    {
+      "id": "bayes-08",
+      "family": "bayes",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-08",
+      "family": "bayes",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-08",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-08",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-08",
+      "family": "schedule",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 601,
+      "total": 744
+    },
+    {
+      "id": "schedule-08",
+      "family": "schedule",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 581,
+      "total": 724
+    },
+    {
+      "id": "schedule-08",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 445,
+      "total": 801
+    },
+    {
+      "id": "schedule-08",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 445,
+      "total": 916
+    },
+    {
+      "id": "inventory-08",
+      "family": "inventory",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 295,
+      "total": 438
+    },
+    {
+      "id": "inventory-08",
+      "family": "inventory",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 229,
+      "total": 372
+    },
+    {
+      "id": "inventory-08",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 46,
+      "total": 495
+    },
+    {
+      "id": "inventory-08",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 46,
+      "total": 610
+    },
+    {
+      "id": "logic-08",
+      "family": "logic",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 443,
+      "total": 586
+    },
+    {
+      "id": "logic-08",
+      "family": "logic",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 282,
+      "total": 425
+    },
+    {
+      "id": "logic-08",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 124,
+      "total": 501
+    },
+    {
+      "id": "logic-08",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 124,
+      "total": 616
+    },
+    {
+      "id": "graph-09",
+      "family": "graph",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 376,
+      "total": 519
+    },
+    {
+      "id": "graph-09",
+      "family": "graph",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 311,
+      "total": 454
+    },
+    {
+      "id": "graph-09",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 213,
+      "total": 535
+    },
+    {
+      "id": "graph-09",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 213,
+      "total": 650
+    },
+    {
+      "id": "subset-09",
+      "family": "subset",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 406,
+      "total": 549
+    },
+    {
+      "id": "subset-09",
+      "family": "subset",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 304,
+      "total": 447
+    },
+    {
+      "id": "subset-09",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 162,
+      "total": 567
+    },
+    {
+      "id": "subset-09",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 162,
+      "total": 682
+    },
+    {
+      "id": "bayes-09",
+      "family": "bayes",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-09",
+      "family": "bayes",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-09",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-09",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-09",
+      "family": "schedule",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 587,
+      "total": 730
+    },
+    {
+      "id": "schedule-09",
+      "family": "schedule",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 565,
+      "total": 708
+    },
+    {
+      "id": "schedule-09",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 429,
+      "total": 785
+    },
+    {
+      "id": "schedule-09",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 429,
+      "total": 900
+    },
+    {
+      "id": "inventory-09",
+      "family": "inventory",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 295,
+      "total": 438
+    },
+    {
+      "id": "inventory-09",
+      "family": "inventory",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 229,
+      "total": 372
+    },
+    {
+      "id": "inventory-09",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 46,
+      "total": 495
+    },
+    {
+      "id": "inventory-09",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 46,
+      "total": 610
+    },
+    {
+      "id": "logic-09",
+      "family": "logic",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 453,
+      "total": 596
+    },
+    {
+      "id": "logic-09",
+      "family": "logic",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 288,
+      "total": 431
+    },
+    {
+      "id": "logic-09",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 130,
+      "total": 507
+    },
+    {
+      "id": "logic-09",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 130,
+      "total": 622
+    },
+    {
+      "id": "graph-10",
+      "family": "graph",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 396,
+      "total": 539
+    },
+    {
+      "id": "graph-10",
+      "family": "graph",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 333,
+      "total": 476
+    },
+    {
+      "id": "graph-10",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 235,
+      "total": 557
+    },
+    {
+      "id": "graph-10",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 235,
+      "total": 672
+    },
+    {
+      "id": "subset-10",
+      "family": "subset",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 407,
+      "total": 550
+    },
+    {
+      "id": "subset-10",
+      "family": "subset",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 305,
+      "total": 448
+    },
+    {
+      "id": "subset-10",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 163,
+      "total": 568
+    },
+    {
+      "id": "subset-10",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 163,
+      "total": 683
+    },
+    {
+      "id": "bayes-10",
+      "family": "bayes",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-10",
+      "family": "bayes",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-10",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-10",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-10",
+      "family": "schedule",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 506,
+      "total": 649
+    },
+    {
+      "id": "schedule-10",
+      "family": "schedule",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 476,
+      "total": 619
+    },
+    {
+      "id": "schedule-10",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 340,
+      "total": 696
+    },
+    {
+      "id": "schedule-10",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 340,
+      "total": 811
+    },
+    {
+      "id": "inventory-10",
+      "family": "inventory",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 295,
+      "total": 438
+    },
+    {
+      "id": "inventory-10",
+      "family": "inventory",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 229,
+      "total": 372
+    },
+    {
+      "id": "inventory-10",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 46,
+      "total": 495
+    },
+    {
+      "id": "inventory-10",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 46,
+      "total": 610
+    },
+    {
+      "id": "logic-10",
+      "family": "logic",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 461,
+      "total": 604
+    },
+    {
+      "id": "logic-10",
+      "family": "logic",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 292,
+      "total": 435
+    },
+    {
+      "id": "logic-10",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 134,
+      "total": 511
+    },
+    {
+      "id": "logic-10",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 134,
+      "total": 626
+    },
+    {
+      "id": "graph-11",
+      "family": "graph",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 462,
+      "total": 605
+    },
+    {
+      "id": "graph-11",
+      "family": "graph",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 407,
+      "total": 550
+    },
+    {
+      "id": "graph-11",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 322,
+      "input": 309,
+      "total": 631
+    },
+    {
+      "id": "graph-11",
+      "family": "graph",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 437,
+      "input": 309,
+      "total": 746
+    },
+    {
+      "id": "subset-11",
+      "family": "subset",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 402,
+      "total": 545
+    },
+    {
+      "id": "subset-11",
+      "family": "subset",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 300,
+      "total": 443
+    },
+    {
+      "id": "subset-11",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 405,
+      "input": 158,
+      "total": 563
+    },
+    {
+      "id": "subset-11",
+      "family": "subset",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 520,
+      "input": 158,
+      "total": 678
+    },
+    {
+      "id": "bayes-11",
+      "family": "bayes",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 405,
+      "total": 548
+    },
+    {
+      "id": "bayes-11",
+      "family": "bayes",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 221,
+      "total": 364
+    },
+    {
+      "id": "bayes-11",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 417,
+      "input": 63,
+      "total": 480
+    },
+    {
+      "id": "bayes-11",
+      "family": "bayes",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 532,
+      "input": 63,
+      "total": 595
+    },
+    {
+      "id": "schedule-11",
+      "family": "schedule",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 544,
+      "total": 687
+    },
+    {
+      "id": "schedule-11",
+      "family": "schedule",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 518,
+      "total": 661
+    },
+    {
+      "id": "schedule-11",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 356,
+      "input": 382,
+      "total": 738
+    },
+    {
+      "id": "schedule-11",
+      "family": "schedule",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 471,
+      "input": 382,
+      "total": 853
+    },
+    {
+      "id": "inventory-11",
+      "family": "inventory",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 296,
+      "total": 439
+    },
+    {
+      "id": "inventory-11",
+      "family": "inventory",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 230,
+      "total": 373
+    },
+    {
+      "id": "inventory-11",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 449,
+      "input": 47,
+      "total": 496
+    },
+    {
+      "id": "inventory-11",
+      "family": "inventory",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 564,
+      "input": 47,
+      "total": 611
+    },
+    {
+      "id": "logic-11",
+      "family": "logic",
+      "split": "test",
+      "mode": "draft",
+      "instruction": 143,
+      "input": 443,
+      "total": 586
+    },
+    {
+      "id": "logic-11",
+      "family": "logic",
+      "split": "test",
+      "mode": "compact",
+      "instruction": 143,
+      "input": 282,
+      "total": 425
+    },
+    {
+      "id": "logic-11",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-input",
+      "instruction": 377,
+      "input": 124,
+      "total": 501
+    },
+    {
+      "id": "logic-11",
+      "family": "logic",
+      "split": "test",
+      "mode": "atl-io",
+      "instruction": 492,
+      "input": 124,
+      "total": 616
+    }
+  ]
+}

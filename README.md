@@ -11,6 +11,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 - v0.4: [Evolution Engine](evolution/README.md), automatic reversible codebook discovery, cost-aware mutations, held-out and unseen-family static evaluation.
 - v0.4.1: [Adaptive Evolution](adaptive/README.md), verified o200k_base rank-based tokenizer, actual static token counts, input-only adaptive routing and 72 harder tasks with dual reference solvers.
 
+- v0.4.2: [Semantic Compiler](semantic/README.md), lossless typed-family wire representation, strong compact-English control, 72 verified roundtrips, four-arm independent inference harness.
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
