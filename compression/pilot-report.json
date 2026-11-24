@@ -1,0 +1,382 @@
+{
+  "scope": "Single-chat authored visible derivations, not independent calls; Unicode code points only; no hidden reasoning, usage, latency, or token claims.",
+  "answers_verified": {
+    "chain": "false",
+    "disjunction": "true",
+    "mass": "684",
+    "tank": "2.7",
+    "schedule": "14",
+    "pairs": "9",
+    "probability": "5/9",
+    "selection": "AB"
+  },
+  "summary": [
+    {
+      "mode": "baseline",
+      "correct": 8,
+      "n": 8,
+      "prompt_chars": 1309,
+      "instruction_chars": 1248,
+      "output_chars": 1216,
+      "total_chars": 3773
+    },
+    {
+      "mode": "draft",
+      "correct": 8,
+      "n": 8,
+      "prompt_chars": 1309,
+      "instruction_chars": 1304,
+      "output_chars": 585,
+      "total_chars": 3198
+    },
+    {
+      "mode": "native",
+      "correct": 8,
+      "n": 8,
+      "prompt_chars": 1309,
+      "instruction_chars": 1568,
+      "output_chars": 502,
+      "total_chars": 3379
+    },
+    {
+      "mode": "micro",
+      "correct": 8,
+      "n": 8,
+      "prompt_chars": 1309,
+      "instruction_chars": 1888,
+      "output_chars": 431,
+      "total_chars": 3628
+    },
+    {
+      "mode": "adaptive",
+      "correct": 8,
+      "n": 8,
+      "prompt_chars": 1309,
+      "instruction_chars": 1757,
+      "output_chars": 413,
+      "total_chars": 3479
+    }
+  ],
+  "records": [
+    {
+      "id": "chain",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 116,
+      "instruction_chars": 156,
+      "output_chars": 146
+    },
+    {
+      "id": "chain",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 116,
+      "instruction_chars": 163,
+      "output_chars": 84
+    },
+    {
+      "id": "chain",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 116,
+      "instruction_chars": 196,
+      "output_chars": 52
+    },
+    {
+      "id": "chain",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 116,
+      "instruction_chars": 236,
+      "output_chars": 54
+    },
+    {
+      "id": "chain",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 116,
+      "instruction_chars": 237,
+      "output_chars": 39
+    },
+    {
+      "id": "disjunction",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 106,
+      "instruction_chars": 156,
+      "output_chars": 120
+    },
+    {
+      "id": "disjunction",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 106,
+      "instruction_chars": 163,
+      "output_chars": 58
+    },
+    {
+      "id": "disjunction",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 106,
+      "instruction_chars": 196,
+      "output_chars": 35
+    },
+    {
+      "id": "disjunction",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 106,
+      "instruction_chars": 236,
+      "output_chars": 39
+    },
+    {
+      "id": "disjunction",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 106,
+      "instruction_chars": 235,
+      "output_chars": 34
+    },
+    {
+      "id": "mass",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 232,
+      "instruction_chars": 156,
+      "output_chars": 117
+    },
+    {
+      "id": "mass",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 232,
+      "instruction_chars": 163,
+      "output_chars": 79
+    },
+    {
+      "id": "mass",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 232,
+      "instruction_chars": 196,
+      "output_chars": 52
+    },
+    {
+      "id": "mass",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 232,
+      "instruction_chars": 236,
+      "output_chars": 39
+    },
+    {
+      "id": "mass",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 232,
+      "instruction_chars": 205,
+      "output_chars": 39
+    },
+    {
+      "id": "tank",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 183,
+      "instruction_chars": 156,
+      "output_chars": 177
+    },
+    {
+      "id": "tank",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 183,
+      "instruction_chars": 163,
+      "output_chars": 95
+    },
+    {
+      "id": "tank",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 183,
+      "instruction_chars": 196,
+      "output_chars": 95
+    },
+    {
+      "id": "tank",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 183,
+      "instruction_chars": 236,
+      "output_chars": 76
+    },
+    {
+      "id": "tank",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 183,
+      "instruction_chars": 205,
+      "output_chars": 73
+    },
+    {
+      "id": "schedule",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 187,
+      "instruction_chars": 156,
+      "output_chars": 134
+    },
+    {
+      "id": "schedule",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 187,
+      "instruction_chars": 163,
+      "output_chars": 54
+    },
+    {
+      "id": "schedule",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 187,
+      "instruction_chars": 196,
+      "output_chars": 66
+    },
+    {
+      "id": "schedule",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 187,
+      "instruction_chars": 236,
+      "output_chars": 48
+    },
+    {
+      "id": "schedule",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 187,
+      "instruction_chars": 260,
+      "output_chars": 40
+    },
+    {
+      "id": "pairs",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 104,
+      "instruction_chars": 156,
+      "output_chars": 143
+    },
+    {
+      "id": "pairs",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 104,
+      "instruction_chars": 163,
+      "output_chars": 55
+    },
+    {
+      "id": "pairs",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 104,
+      "instruction_chars": 196,
+      "output_chars": 53
+    },
+    {
+      "id": "pairs",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 104,
+      "instruction_chars": 236,
+      "output_chars": 44
+    },
+    {
+      "id": "pairs",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 104,
+      "instruction_chars": 205,
+      "output_chars": 56
+    },
+    {
+      "id": "probability",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 142,
+      "instruction_chars": 156,
+      "output_chars": 155
+    },
+    {
+      "id": "probability",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 142,
+      "instruction_chars": 163,
+      "output_chars": 45
+    },
+    {
+      "id": "probability",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 142,
+      "instruction_chars": 196,
+      "output_chars": 38
+    },
+    {
+      "id": "probability",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 142,
+      "instruction_chars": 236,
+      "output_chars": 32
+    },
+    {
+      "id": "probability",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 142,
+      "instruction_chars": 205,
+      "output_chars": 27
+    },
+    {
+      "id": "selection",
+      "mode": "baseline",
+      "correct": true,
+      "prompt_chars": 239,
+      "instruction_chars": 156,
+      "output_chars": 224
+    },
+    {
+      "id": "selection",
+      "mode": "draft",
+      "correct": true,
+      "prompt_chars": 239,
+      "instruction_chars": 163,
+      "output_chars": 115
+    },
+    {
+      "id": "selection",
+      "mode": "native",
+      "correct": true,
+      "prompt_chars": 239,
+      "instruction_chars": 196,
+      "output_chars": 111
+    },
+    {
+      "id": "selection",
+      "mode": "micro",
+      "correct": true,
+      "prompt_chars": 239,
+      "instruction_chars": 236,
+      "output_chars": 99
+    },
+    {
+      "id": "selection",
+      "mode": "adaptive",
+      "correct": true,
+      "prompt_chars": 239,
+      "instruction_chars": 205,
+      "output_chars": 105
+    }
+  ]
+}

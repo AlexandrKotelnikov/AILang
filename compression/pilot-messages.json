@@ -1,0 +1,282 @@
+[
+  {
+    "id": "chain",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "A implies B, B implies C, C implies D. D is false. Determine A (true, false or unknown). Justify using the premises.",
+    "output": "Since D is false, C must be false by contraposition. Applying the same rule to B implies C and A implies B gives B false and A false.\nFINAL: false"
+  },
+  {
+    "id": "chain",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "A implies B, B implies C, C implies D. D is false. Determine A (true, false or unknown). Justify using the premises.",
+    "output": "D false => C false => B false => A false (contraposition at each link).\nFINAL: false"
+  },
+  {
+    "id": "chain",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "A implies B, B implies C, C implies D. D is false. Determine A (true, false or unknown). Justify using the premises.",
+    "output": "!D; C=>D => !C; B=>C => !B; A=>B => !A.\nFINAL: false"
+  },
+  {
+    "id": "chain",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "A implies B, B implies C, C implies D. D is false. Determine A (true, false or unknown). Justify using the premises.",
+    "output": "I: !D => !C => !B => !A (contraposition).\nFINAL: false"
+  },
+  {
+    "id": "chain",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold. MT(X,Y): X=>Y and !Y entail !X.",
+    "user": "A implies B, B implies C, C implies D. D is false. Determine A (true, false or unknown). Justify using the premises.",
+    "output": "MT(C,D); MT(B,C); MT(A,B).\nFINAL: false"
+  },
+  {
+    "id": "disjunction",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "At least one of P and Q holds; P is false; Q implies R; R implies S. Is S true, false or unknown? Justify.",
+    "output": "Because P is false and at least one of P and Q holds, Q is true. Q implies R, and R implies S, so S is true.\nFINAL: true"
+  },
+  {
+    "id": "disjunction",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "At least one of P and Q holds; P is false; Q implies R; R implies S. Is S true, false or unknown? Justify.",
+    "output": "P false, P or Q => Q true. Q=>R=>S, so S true.\nFINAL: true"
+  },
+  {
+    "id": "disjunction",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "At least one of P and Q holds; P is false; Q implies R; R implies S. Is S true, false or unknown? Justify.",
+    "output": "(P|Q)&!P => Q; Q=>R=>S.\nFINAL: true"
+  },
+  {
+    "id": "disjunction",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "At least one of P and Q holds; P is false; Q implies R; R implies S. Is S true, false or unknown? Justify.",
+    "output": "I: (P|Q)&!P => Q => R => S.\nFINAL: true"
+  },
+  {
+    "id": "disjunction",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold. DS(X,Y): X|Y and !X entail Y.",
+    "user": "At least one of P and Q holds; P is false; Q implies R; R implies S. Is S true, false or unknown? Justify.",
+    "output": "DS(P,Q) => Q; Q=>R=>S.\nFINAL: true"
+  },
+  {
+    "id": "mass",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "Feed is 1200 kg/h, 80% active component by mass. 75% of the active component reacts; each kg reacted yields 1 kg product before separation, which recovers 95%. Calculate recovered product in kg/h. Give a number only as final answer.",
+    "output": "The active feed is 960 kg/h. Of this, 720 kg/h reacts and becomes product. Recovering 95% yields 684 kg/h.\nFINAL: 684"
+  },
+  {
+    "id": "mass",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "Feed is 1200 kg/h, 80% active component by mass. 75% of the active component reacts; each kg reacted yields 1 kg product before separation, which recovers 95%. Calculate recovered product in kg/h. Give a number only as final answer.",
+    "output": "Active=1200*.8=960; reacted=960*.75=720; recovered=720*.95=684 kg/h.\nFINAL: 684"
+  },
+  {
+    "id": "mass",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "Feed is 1200 kg/h, 80% active component by mass. 75% of the active component reacts; each kg reacted yields 1 kg product before separation, which recovers 95%. Calculate recovered product in kg/h. Give a number only as final answer.",
+    "output": "1200 kg/h × 0.8 × 0.75 × 0.95 = 684 kg/h.\nFINAL: 684"
+  },
+  {
+    "id": "mass",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "Feed is 1200 kg/h, 80% active component by mass. 75% of the active component reacts; each kg reacted yields 1 kg product before separation, which recovers 95%. Calculate recovered product in kg/h. Give a number only as final answer.",
+    "output": "I: 1200*.8*.75*.95=684 kg/h.\nFINAL: 684"
+  },
+  {
+    "id": "mass",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold.",
+    "user": "Feed is 1200 kg/h, 80% active component by mass. 75% of the active component reacts; each kg reacted yields 1 kg product before separation, which recovers 95%. Calculate recovered product in kg/h. Give a number only as final answer.",
+    "output": "1200*0.8*0.75*0.95=684 kg/h.\nFINAL: 684"
+  },
+  {
+    "id": "tank",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "A perfectly mixed tank initially holds 500 L at 2 g/L solute. Add 100 L at 8 g/L, mix, withdraw 150 L, then add 50 L pure water. Find final concentration in g/L; final answer numeric.",
+    "output": "After addition, the tank holds 600 L and 1800 g, giving 3 g/L. Withdrawal removes 450 g and leaves 1350 g. Adding pure water gives 500 L, so concentration is 2.7 g/L.\nFINAL: 2.7"
+  },
+  {
+    "id": "tank",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "A perfectly mixed tank initially holds 500 L at 2 g/L solute. Add 100 L at 8 g/L, mix, withdraw 150 L, then add 50 L pure water. Find final concentration in g/L; final answer numeric.",
+    "output": "Mix: 1800 g/600 L=3 g/L. Drain 450 g; left 1350 g/450 L. Add 50 L: 1350/500=2.7 g/L.\nFINAL: 2.7"
+  },
+  {
+    "id": "tank",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "A perfectly mixed tank initially holds 500 L at 2 g/L solute. Add 100 L at 8 g/L, mix, withdraw 150 L, then add 50 L pure water. Find final concentration in g/L; final answer numeric.",
+    "output": "m=500*2+100*8=1800 g; V=600 L; m'=1800*(450/600)=1350 g; V'=450+50=500 L; c=2.7 g/L.\nFINAL: 2.7"
+  },
+  {
+    "id": "tank",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "A perfectly mixed tank initially holds 500 L at 2 g/L solute. Add 100 L at 8 g/L, mix, withdraw 150 L, then add 50 L pure water. Find final concentration in g/L; final answer numeric.",
+    "output": "I: m=1800 g,V=600 L; m'=1800*450/600=1350 g; V'=500 L; c=2.7 g/L.\nFINAL: 2.7"
+  },
+  {
+    "id": "tank",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold.",
+    "user": "A perfectly mixed tank initially holds 500 L at 2 g/L solute. Add 100 L at 8 g/L, mix, withdraw 150 L, then add 50 L pure water. Find final concentration in g/L; final answer numeric.",
+    "output": "(500*2+100*8)*(600-150)/600=1350 g; V=500 L; 1350/500=2.7 g/L.\nFINAL: 2.7"
+  },
+  {
+    "id": "schedule",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "Unlimited parallel workers. A takes 3 h; B takes 4 h after A; C takes 5 h after A; D takes 2 h after both B and C; E takes 4 h after D. Earliest completion in hours? Final answer numeric.",
+    "output": "A finishes at hour 3, B at 7 and C at 8. D must wait until both finish, so it ends at 10. E finishes four hours later at 14.\nFINAL: 14"
+  },
+  {
+    "id": "schedule",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "Unlimited parallel workers. A takes 3 h; B takes 4 h after A; C takes 5 h after A; D takes 2 h after both B and C; E takes 4 h after D. Earliest completion in hours? Final answer numeric.",
+    "output": "A=3; B=7; C=8; D=max(7,8)+2=10; E=10+4=14 h.\nFINAL: 14"
+  },
+  {
+    "id": "schedule",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "Unlimited parallel workers. A takes 3 h; B takes 4 h after A; C takes 5 h after A; D takes 2 h after both B and C; E takes 4 h after D. Earliest completion in hours? Final answer numeric.",
+    "output": "EF(A,B,C)=(3,7,8); EF(D)=max(7,8)+2=10; EF(E)=10+4=14 h.\nFINAL: 14"
+  },
+  {
+    "id": "schedule",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "Unlimited parallel workers. A takes 3 h; B takes 4 h after A; C takes 5 h after A; D takes 2 h after both B and C; E takes 4 h after D. Earliest completion in hours? Final answer numeric.",
+    "output": "I: A=3,B=7,C=8,D=max(7,8)+2=10,E=14 h.\nFINAL: 14"
+  },
+  {
+    "id": "schedule",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold. EF(X)=duration(X)+max(EF(predecessors)); max(empty)=0.",
+    "user": "Unlimited parallel workers. A takes 3 h; B takes 4 h after A; C takes 5 h after A; D takes 2 h after both B and C; E takes 4 h after D. Earliest completion in hours? Final answer numeric.",
+    "output": "EF(A,B,C,D,E)=(3,7,8,10,14) h.\nFINAL: 14"
+  },
+  {
+    "id": "pairs",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "In the array [2,4,1,5,3,6], count distinct index pairs i<j for which a[i]+a[j]>=7. Final answer numeric.",
+    "output": "The counts of qualifying later partners for the six successive positions are 2, 3, 1, 2, 1 and 0. Each pair is counted once, giving 9.\nFINAL: 9"
+  },
+  {
+    "id": "pairs",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "In the array [2,4,1,5,3,6], count distinct index pairs i<j for which a[i]+a[j]>=7. Final answer numeric.",
+    "output": "Later partners by index: [2,3,1,2,1,0]; sum=9.\nFINAL: 9"
+  },
+  {
+    "id": "pairs",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "In the array [2,4,1,5,3,6], count distinct index pairs i<j for which a[i]+a[j]>=7. Final answer numeric.",
+    "output": "n_i=|{j>i:a_i+a_j>=7}|=(2,3,1,2,1,0); sum=9.\nFINAL: 9"
+  },
+  {
+    "id": "pairs",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "In the array [2,4,1,5,3,6], count distinct index pairs i<j for which a[i]+a[j]>=7. Final answer numeric.",
+    "output": "I: counts j>i=[2,3,1,2,1,0]; sum=9.\nFINAL: 9"
+  },
+  {
+    "id": "pairs",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold.",
+    "user": "In the array [2,4,1,5,3,6], count distinct index pairs i<j for which a[i]+a[j]>=7. Final answer numeric.",
+    "output": "Counts of qualifying j>i: (2,3,1,2,1,0); sum=9.\nFINAL: 9"
+  },
+  {
+    "id": "probability",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "An urn contains 5 red and 4 blue balls. Draw 2 without replacement. Find the probability of exactly one red. Final answer as reduced fraction.",
+    "output": "Exactly one red can occur as red then blue or blue then red. These have probabilities 5/9 times 4/8 and 4/9 times 5/8. Their sum reduces to 5/9.\nFINAL: 5/9"
+  },
+  {
+    "id": "probability",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "An urn contains 5 red and 4 blue balls. Draw 2 without replacement. Find the probability of exactly one red. Final answer as reduced fraction.",
+    "output": "RB or BR: 2*(5/9)*(4/8)=40/72=5/9.\nFINAL: 5/9"
+  },
+  {
+    "id": "probability",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "An urn contains 5 red and 4 blue balls. Draw 2 without replacement. Find the probability of exactly one red. Final answer as reduced fraction.",
+    "output": "P(RB ∪ BR)=2(5/9)(4/8)=5/9.\nFINAL: 5/9"
+  },
+  {
+    "id": "probability",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "An urn contains 5 red and 4 blue balls. Draw 2 without replacement. Find the probability of exactly one red. Final answer as reduced fraction.",
+    "output": "I: P=2*5*4/(9*8)=5/9.\nFINAL: 5/9"
+  },
+  {
+    "id": "probability",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold.",
+    "user": "An urn contains 5 red and 4 blue balls. Draw 2 without replacement. Find the probability of exactly one red. Final answer as reduced fraction.",
+    "output": "2*5*4/(9*8)=5/9.\nFINAL: 5/9"
+  },
+  {
+    "id": "selection",
+    "mode": "baseline",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use concise English sentences.",
+    "user": "Choose any subset of A,B,C,D to maximize gain. Each tuple is (cost,hours,gain): A=(4,3,8), B=(6,4,11), C=(5,2,10), D=(3,4,7). Total cost<=10 and hours<=7. No repeats. Final answer: selected letters in alphabetical order without separators.",
+    "output": "No triple fits the budget, since the cheapest three cost 12. Feasible pairs AB, AC, AD and CD yield 19, 18, 15 and 17 respectively; BC exceeds cost and BD exceeds hours. The best single yields 11, so AB is optimal.\nFINAL: AB"
+  },
+  {
+    "id": "selection",
+    "mode": "draft",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use terse English notes or equations.",
+    "user": "Choose any subset of A,B,C,D to maximize gain. Each tuple is (cost,hours,gain): A=(4,3,8), B=(6,4,11), C=(5,2,10), D=(3,4,7). Total cost<=10 and hours<=7. No repeats. Final answer: selected letters in alphabetical order without separators.",
+    "output": "Triples cost>=12>10. BC cost=11; BD hours=8. Feasible AB=19, AC=18, AD=15, CD=17; best single=11. Max AB.\nFINAL: AB"
+  },
+  {
+    "id": "selection",
+    "mode": "native",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar mathematical or logical notation; omit prose where clear.",
+    "user": "Choose any subset of A,B,C,D to maximize gain. Each tuple is (cost,hours,gain): A=(4,3,8), B=(6,4,11), C=(5,2,10), D=(3,4,7). Total cost<=10 and hours<=7. No repeats. Final answer: selected letters in alphabetical order without separators.",
+    "output": "min cost(3)=12>10; BC:11>10; BD:8h>7; feasible gains {AB:19,AC:18,AD:15,CD:17,single<=11}; argmax=AB.\nFINAL: AB"
+  },
+  {
+    "id": "selection",
+    "mode": "micro",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use optional G: given, I: inference, C: check, U: unknown. Omit redundant fields; preserve premises and units.",
+    "user": "Choose any subset of A,B,C,D to maximize gain. Each tuple is (cost,hours,gain): A=(4,3,8), B=(6,4,11), C=(5,2,10), D=(3,4,7). Total cost<=10 and hours<=7. No repeats. Final answer: selected letters in alphabetical order without separators.",
+    "output": "C: triples cost>=12; BC cost>10; BD h>7. I: gains AB19,AC18,AD15,CD17,single<=11; max=AB.\nFINAL: AB"
+  },
+  {
+    "id": "selection",
+    "mode": "adaptive",
+    "system": "Solve accurately. Give a checkable derivation; end with exactly one line FINAL: <answer>. Follow the requested answer format. Use familiar notation; use the optional local rule only when its premises hold.",
+    "user": "Choose any subset of A,B,C,D to maximize gain. Each tuple is (cost,hours,gain): A=(4,3,8), B=(6,4,11), C=(5,2,10), D=(3,4,7). Total cost<=10 and hours<=7. No repeats. Final answer: selected letters in alphabetical order without separators.",
+    "output": "triples cost>=12>10; BC cost11, BD h8 infeasible; gains AB19,AC18,AD15,CD17,single<=11; max AB.\nFINAL: AB"
+  }
+]

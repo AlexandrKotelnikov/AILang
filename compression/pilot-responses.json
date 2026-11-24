@@ -1,0 +1,58 @@
+{
+  "chain": [
+    "Since D is false, C must be false by contraposition. Applying the same rule to B implies C and A implies B gives B false and A false.\nFINAL: false",
+    "D false => C false => B false => A false (contraposition at each link).\nFINAL: false",
+    "!D; C=>D => !C; B=>C => !B; A=>B => !A.\nFINAL: false",
+    "I: !D => !C => !B => !A (contraposition).\nFINAL: false",
+    "MT(C,D); MT(B,C); MT(A,B).\nFINAL: false"
+  ],
+  "disjunction": [
+    "Because P is false and at least one of P and Q holds, Q is true. Q implies R, and R implies S, so S is true.\nFINAL: true",
+    "P false, P or Q => Q true. Q=>R=>S, so S true.\nFINAL: true",
+    "(P|Q)&!P => Q; Q=>R=>S.\nFINAL: true",
+    "I: (P|Q)&!P => Q => R => S.\nFINAL: true",
+    "DS(P,Q) => Q; Q=>R=>S.\nFINAL: true"
+  ],
+  "mass": [
+    "The active feed is 960 kg/h. Of this, 720 kg/h reacts and becomes product. Recovering 95% yields 684 kg/h.\nFINAL: 684",
+    "Active=1200*.8=960; reacted=960*.75=720; recovered=720*.95=684 kg/h.\nFINAL: 684",
+    "1200 kg/h × 0.8 × 0.75 × 0.95 = 684 kg/h.\nFINAL: 684",
+    "I: 1200*.8*.75*.95=684 kg/h.\nFINAL: 684",
+    "1200*0.8*0.75*0.95=684 kg/h.\nFINAL: 684"
+  ],
+  "tank": [
+    "After addition, the tank holds 600 L and 1800 g, giving 3 g/L. Withdrawal removes 450 g and leaves 1350 g. Adding pure water gives 500 L, so concentration is 2.7 g/L.\nFINAL: 2.7",
+    "Mix: 1800 g/600 L=3 g/L. Drain 450 g; left 1350 g/450 L. Add 50 L: 1350/500=2.7 g/L.\nFINAL: 2.7",
+    "m=500*2+100*8=1800 g; V=600 L; m'=1800*(450/600)=1350 g; V'=450+50=500 L; c=2.7 g/L.\nFINAL: 2.7",
+    "I: m=1800 g,V=600 L; m'=1800*450/600=1350 g; V'=500 L; c=2.7 g/L.\nFINAL: 2.7",
+    "(500*2+100*8)*(600-150)/600=1350 g; V=500 L; 1350/500=2.7 g/L.\nFINAL: 2.7"
+  ],
+  "schedule": [
+    "A finishes at hour 3, B at 7 and C at 8. D must wait until both finish, so it ends at 10. E finishes four hours later at 14.\nFINAL: 14",
+    "A=3; B=7; C=8; D=max(7,8)+2=10; E=10+4=14 h.\nFINAL: 14",
+    "EF(A,B,C)=(3,7,8); EF(D)=max(7,8)+2=10; EF(E)=10+4=14 h.\nFINAL: 14",
+    "I: A=3,B=7,C=8,D=max(7,8)+2=10,E=14 h.\nFINAL: 14",
+    "EF(A,B,C,D,E)=(3,7,8,10,14) h.\nFINAL: 14"
+  ],
+  "pairs": [
+    "The counts of qualifying later partners for the six successive positions are 2, 3, 1, 2, 1 and 0. Each pair is counted once, giving 9.\nFINAL: 9",
+    "Later partners by index: [2,3,1,2,1,0]; sum=9.\nFINAL: 9",
+    "n_i=|{j>i:a_i+a_j>=7}|=(2,3,1,2,1,0); sum=9.\nFINAL: 9",
+    "I: counts j>i=[2,3,1,2,1,0]; sum=9.\nFINAL: 9",
+    "Counts of qualifying j>i: (2,3,1,2,1,0); sum=9.\nFINAL: 9"
+  ],
+  "probability": [
+    "Exactly one red can occur as red then blue or blue then red. These have probabilities 5/9 times 4/8 and 4/9 times 5/8. Their sum reduces to 5/9.\nFINAL: 5/9",
+    "RB or BR: 2*(5/9)*(4/8)=40/72=5/9.\nFINAL: 5/9",
+    "P(RB ∪ BR)=2(5/9)(4/8)=5/9.\nFINAL: 5/9",
+    "I: P=2*5*4/(9*8)=5/9.\nFINAL: 5/9",
+    "2*5*4/(9*8)=5/9.\nFINAL: 5/9"
+  ],
+  "selection": [
+    "No triple fits the budget, since the cheapest three cost 12. Feasible pairs AB, AC, AD and CD yield 19, 18, 15 and 17 respectively; BC exceeds cost and BD exceeds hours. The best single yields 11, so AB is optimal.\nFINAL: AB",
+    "Triples cost>=12>10. BC cost=11; BD hours=8. Feasible AB=19, AC=18, AD=15, CD=17; best single=11. Max AB.\nFINAL: AB",
+    "min cost(3)=12>10; BC:11>10; BD:8h>7; feasible gains {AB:19,AC:18,AD:15,CD:17,single<=11}; argmax=AB.\nFINAL: AB",
+    "C: triples cost>=12; BC cost>10; BD h>7. I: gains AB19,AC18,AD15,CD17,single<=11; max=AB.\nFINAL: AB",
+    "triples cost>=12>10; BC cost11, BD h8 infeasible; gains AB19,AC18,AD15,CD17,single<=11; max AB.\nFINAL: AB"
+  ]
+}

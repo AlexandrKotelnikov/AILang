@@ -5,6 +5,7 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 - v0.1: [language specification](ATL-spec.md), [system prompt](system-prompt.txt), original static benchmark.
 - v0.2: [Tokenizer Lab](lab/README.md), 1,000 synthetic cases, development-only alias search.
 - v0.3: [Reasoning Engine](reasoning/README.md), five real-inference modes, [logic macros](reasoning/macros.md), deterministic scoring and token/latency accounting.
+- v0.3.1: [Compression Research](compression/README.md), Native/Micro/Adaptive modes, eight multi-step development tasks, single-chat pilot and independent API harness.
 
 Quick start:
 ```sh
