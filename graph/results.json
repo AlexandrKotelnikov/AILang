@@ -1,0 +1,107 @@
+{
+  "encoding": "o200k_base",
+  "sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "golden": 3,
+  "tasks": 240,
+  "pilot": 180,
+  "rows": 2902,
+  "certificates": 1680,
+  "answerChecks": 240,
+  "rejected": 10798,
+  "negatives": 10798,
+  "rejectedGeneration": 0,
+  "results": {
+    "dense": {
+      "system": 10440,
+      "input": 48700,
+      "output": 18460,
+      "total": 77600
+    },
+    "named": {
+      "system": 11700,
+      "input": 48700,
+      "output": 11300,
+      "total": 71700
+    },
+    "csv": {
+      "system": 10260,
+      "input": 48700,
+      "output": 9680,
+      "total": 68640
+    },
+    "atl": {
+      "system": 10440,
+      "input": 48700,
+      "output": 9320,
+      "total": 68460
+    },
+    "packed": {
+      "system": 9540,
+      "input": 48700,
+      "output": 8960,
+      "total": 67200
+    },
+    "program": {
+      "system": 4500,
+      "input": 48700,
+      "output": 180,
+      "total": 53380
+    },
+    "atl-program": {
+      "system": 5220,
+      "input": 48700,
+      "output": 540,
+      "total": 54460
+    },
+    "answer": {
+      "system": 7560,
+      "input": 48700,
+      "output": 8600,
+      "total": 64860
+    }
+  },
+  "families": {
+    "0": {
+      "tasks": 60,
+      "rows": 725,
+      "totals": {
+        "dense": 25760,
+        "named": 23820,
+        "csv": 22800,
+        "atl": 22740,
+        "packed": 22320,
+        "program": 17740,
+        "atl-program": 18100,
+        "answer": 21540
+      }
+    },
+    "1": {
+      "tasks": 60,
+      "rows": 750,
+      "totals": {
+        "dense": 26160,
+        "named": 24120,
+        "csv": 23100,
+        "atl": 23040,
+        "packed": 22620,
+        "program": 17940,
+        "atl-program": 18300,
+        "answer": 21840
+      }
+    },
+    "2": {
+      "tasks": 60,
+      "rows": 720,
+      "totals": {
+        "dense": 25680,
+        "named": 23760,
+        "csv": 22740,
+        "atl": 22680,
+        "packed": 22260,
+        "program": 17700,
+        "atl-program": 18060,
+        "answer": 21480
+      }
+    }
+  }
+}
