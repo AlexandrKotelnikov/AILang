@@ -1,0 +1,80 @@
+{
+  "stage": 8,
+  "status": "ready_for_pilot_static_token_counts_pending",
+  "seed": 2026112508,
+  "design": {
+    "actors": [
+      8,
+      16
+    ],
+    "operations": [
+      40,
+      120
+    ],
+    "per_cell": 3,
+    "unique_tasks": 12,
+    "queries_per_task": 3,
+    "operations_types": [
+      "S",
+      "L",
+      "G"
+    ],
+    "cycles": 3,
+    "order": [
+      [
+        "D8",
+        "B8",
+        "E8",
+        "C8"
+      ],
+      [
+        "E8",
+        "C8",
+        "B8",
+        "D8"
+      ],
+      [
+        "C8",
+        "D8",
+        "E8",
+        "B8"
+      ]
+    ]
+  },
+  "verification": {
+    "dual_oracle_matches": 12,
+    "wire_roundtrips": 24
+  },
+  "metrics": {
+    "B8": {
+      "chars": 149273,
+      "input_tokens": null
+    },
+    "C8": {
+      "chars": 30511,
+      "input_tokens": null
+    },
+    "D8": {
+      "chars": 4819,
+      "input_tokens": null
+    },
+    "E8": {
+      "chars": 3863,
+      "input_tokens": null
+    }
+  },
+  "tokenizer": "o200k_base",
+  "primary": "exact three-letter sequence accuracy per task",
+  "secondary": [
+    "per-item accuracy",
+    "per-complexity accuracy",
+    "static input tokens",
+    "API usage if available"
+  ],
+  "limitations": [
+    "Public synthetic pilot; not a secret holdout.",
+    "Repeated runs are not independent tasks.",
+    "Model and settings must be recorded; no timing inference from missing data.",
+    "Exact token counts pending vocabulary availability."
+  ]
+}
