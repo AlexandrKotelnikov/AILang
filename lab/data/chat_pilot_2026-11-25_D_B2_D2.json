@@ -1,0 +1,2242 @@
+{
+  "date": "2026-11-25",
+  "model_reported": "GPT-6.2 (ChatGPT; exact backend and reasoning setting not recorded)",
+  "design": "Same chat, sequential runs; accidental D repeat excluded from primary comparison. No tools requested during solving; external scoring afterwards.",
+  "runs": [
+    {
+      "id": "D",
+      "sent_utc": "07:13:00",
+      "next_user_message_utc": "07:13:16",
+      "interval_s": 16,
+      "correct": 24,
+      "total": 24
+    },
+    {
+      "id": "D_repeat",
+      "sent_utc": "07:13:16",
+      "next_user_message_utc": "07:13:43",
+      "interval_s": 27,
+      "correct": 24,
+      "total": 24
+    },
+    {
+      "id": "B2",
+      "sent_utc": "07:13:43",
+      "next_user_message_utc": "07:14:11",
+      "interval_s": 28,
+      "correct": 120,
+      "total": 120
+    },
+    {
+      "id": "D2",
+      "sent_utc": "07:14:11",
+      "next_user_message_utc": "07:14:44",
+      "interval_s": 33,
+      "correct": 120,
+      "total": 120
+    }
+  ],
+  "inputs": {
+    "D": {
+      "inventory": [
+        120,
+        20,
+        35,
+        48,
+        15,
+        70,
+        0,
+        40
+      ],
+      "inventory_layout": "stock,reserve,receipt1,request1,receipt2,request2,receipt3=0 (implicit),request3",
+      "graph": [
+        3,
+        5,
+        4,
+        2,
+        6,
+        3,
+        2
+      ],
+      "thresholds": [
+        90,
+        50,
+        85,
+        45,
+        80,
+        45
+      ],
+      "decision_rows": [
+        [
+          90,
+          49,
+          1,
+          1
+        ],
+        [
+          91,
+          10,
+          0,
+          1
+        ],
+        [
+          85,
+          44,
+          1,
+          1
+        ],
+        [
+          85,
+          45,
+          1,
+          1
+        ],
+        [
+          20,
+          50,
+          1,
+          1
+        ],
+        [
+          79,
+          44,
+          1,
+          0
+        ],
+        [
+          80,
+          44,
+          1,
+          0
+        ],
+        [
+          86,
+          44,
+          1,
+          1
+        ]
+      ]
+    },
+    "B2_D2": {
+      "inventory": [
+        [
+          90,
+          15,
+          30,
+          42,
+          12,
+          61,
+          24,
+          40
+        ],
+        [
+          65,
+          20,
+          15,
+          70,
+          50,
+          18,
+          8,
+          37
+        ],
+        [
+          130,
+          40,
+          0,
+          60,
+          20,
+          55,
+          10,
+          30
+        ],
+        [
+          35,
+          10,
+          75,
+          30,
+          0,
+          80,
+          40,
+          45
+        ]
+      ],
+      "graph_durations": [
+        [
+          3,
+          5,
+          4,
+          2,
+          6,
+          3,
+          2,
+          4
+        ],
+        [
+          6,
+          2,
+          0,
+          5,
+          2,
+          8,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          0,
+          5,
+          2,
+          2
+        ],
+        [
+          2,
+          7,
+          3,
+          0,
+          5,
+          1,
+          4,
+          6
+        ]
+      ],
+      "decision_thresholds": [
+        [
+          90,
+          50,
+          85,
+          45,
+          80,
+          45
+        ],
+        [
+          100,
+          60,
+          90,
+          50,
+          82,
+          52
+        ],
+        [
+          75,
+          40,
+          70,
+          35,
+          65,
+          36
+        ],
+        [
+          95,
+          55,
+          88,
+          48,
+          84,
+          49
+        ]
+      ],
+      "decision_rows": [
+        [
+          [
+            90,
+            49,
+            1,
+            1
+          ],
+          [
+            91,
+            0,
+            0,
+            1
+          ],
+          [
+            85,
+            44,
+            1,
+            1
+          ],
+          [
+            85,
+            45,
+            1,
+            1
+          ],
+          [
+            0,
+            50,
+            1,
+            1
+          ],
+          [
+            79,
+            44,
+            1,
+            0
+          ],
+          [
+            80,
+            44,
+            1,
+            0
+          ],
+          [
+            86,
+            44,
+            1,
+            1
+          ],
+          [
+            91,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            100,
+            59,
+            1,
+            1
+          ],
+          [
+            101,
+            0,
+            0,
+            1
+          ],
+          [
+            90,
+            49,
+            1,
+            1
+          ],
+          [
+            90,
+            50,
+            1,
+            1
+          ],
+          [
+            0,
+            60,
+            1,
+            1
+          ],
+          [
+            81,
+            51,
+            1,
+            0
+          ],
+          [
+            82,
+            51,
+            1,
+            0
+          ],
+          [
+            91,
+            49,
+            1,
+            1
+          ],
+          [
+            101,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            75,
+            39,
+            1,
+            1
+          ],
+          [
+            76,
+            0,
+            0,
+            1
+          ],
+          [
+            70,
+            34,
+            1,
+            1
+          ],
+          [
+            70,
+            35,
+            1,
+            1
+          ],
+          [
+            0,
+            40,
+            1,
+            1
+          ],
+          [
+            64,
+            35,
+            1,
+            0
+          ],
+          [
+            65,
+            35,
+            1,
+            0
+          ],
+          [
+            71,
+            34,
+            1,
+            1
+          ],
+          [
+            76,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            95,
+            54,
+            1,
+            1
+          ],
+          [
+            96,
+            0,
+            0,
+            1
+          ],
+          [
+            88,
+            47,
+            1,
+            1
+          ],
+          [
+            88,
+            48,
+            1,
+            1
+          ],
+          [
+            0,
+            55,
+            1,
+            1
+          ],
+          [
+            83,
+            48,
+            1,
+            0
+          ],
+          [
+            84,
+            48,
+            1,
+            0
+          ],
+          [
+            89,
+            47,
+            1,
+            1
+          ],
+          [
+            96,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ]
+    }
+  },
+  "observed": {
+    "D": [
+      {
+        "id": "I01",
+        "answer": 20
+      },
+      {
+        "id": "I02",
+        "answer": 150
+      },
+      {
+        "id": "I03",
+        "answer": 8
+      },
+      {
+        "id": "I04",
+        "answer": 32
+      },
+      {
+        "id": "I05",
+        "answer": 40
+      },
+      {
+        "id": "I06",
+        "answer": 28
+      },
+      {
+        "id": "I07",
+        "answer": 20
+      },
+      {
+        "id": "I08",
+        "answer": 43
+      },
+      {
+        "id": "G01",
+        "answer": 15
+      },
+      {
+        "id": "G02",
+        "answer": 7
+      },
+      {
+        "id": "G03",
+        "answer": 19
+      },
+      {
+        "id": "G04",
+        "answer": 18
+      },
+      {
+        "id": "G05",
+        "answer": 10
+      },
+      {
+        "id": "G06",
+        "answer": 17
+      },
+      {
+        "id": "G07",
+        "answer": 2
+      },
+      {
+        "id": "G08",
+        "answer": 5
+      },
+      {
+        "id": "S01",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S02",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S03",
+        "answer": "RUN"
+      },
+      {
+        "id": "S04",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S05",
+        "answer": "STOP"
+      },
+      {
+        "id": "S06",
+        "answer": "RUN"
+      },
+      {
+        "id": "S07",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S08",
+        "answer": "LIMIT"
+      }
+    ],
+    "D_repeat": [
+      {
+        "id": "I01",
+        "answer": 20
+      },
+      {
+        "id": "I02",
+        "answer": 150
+      },
+      {
+        "id": "I03",
+        "answer": 8
+      },
+      {
+        "id": "I04",
+        "answer": 32
+      },
+      {
+        "id": "I05",
+        "answer": 40
+      },
+      {
+        "id": "I06",
+        "answer": 28
+      },
+      {
+        "id": "I07",
+        "answer": 20
+      },
+      {
+        "id": "I08",
+        "answer": 43
+      },
+      {
+        "id": "G01",
+        "answer": 15
+      },
+      {
+        "id": "G02",
+        "answer": 7
+      },
+      {
+        "id": "G03",
+        "answer": 19
+      },
+      {
+        "id": "G04",
+        "answer": 18
+      },
+      {
+        "id": "G05",
+        "answer": 10
+      },
+      {
+        "id": "G06",
+        "answer": 17
+      },
+      {
+        "id": "G07",
+        "answer": 2
+      },
+      {
+        "id": "G08",
+        "answer": 5
+      },
+      {
+        "id": "S01",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S02",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S03",
+        "answer": "RUN"
+      },
+      {
+        "id": "S04",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S05",
+        "answer": "STOP"
+      },
+      {
+        "id": "S06",
+        "answer": "RUN"
+      },
+      {
+        "id": "S07",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S08",
+        "answer": "LIMIT"
+      }
+    ],
+    "B2": [
+      {
+        "id": "I101",
+        "answer": 15
+      },
+      {
+        "id": "I102",
+        "answer": 141
+      },
+      {
+        "id": "I103",
+        "answer": 2
+      },
+      {
+        "id": "I104",
+        "answer": 42
+      },
+      {
+        "id": "I105",
+        "answer": 38
+      },
+      {
+        "id": "I106",
+        "answer": 25
+      },
+      {
+        "id": "I107",
+        "answer": 12
+      },
+      {
+        "id": "I108",
+        "answer": 111
+      },
+      {
+        "id": "I109",
+        "answer": 32
+      },
+      {
+        "id": "I110",
+        "answer": 17
+      },
+      {
+        "id": "I201",
+        "answer": 23
+      },
+      {
+        "id": "I202",
+        "answer": 115
+      },
+      {
+        "id": "I203",
+        "answer": 10
+      },
+      {
+        "id": "I204",
+        "answer": 60
+      },
+      {
+        "id": "I205",
+        "answer": 37
+      },
+      {
+        "id": "I206",
+        "answer": 33
+      },
+      {
+        "id": "I207",
+        "answer": 20
+      },
+      {
+        "id": "I208",
+        "answer": 100
+      },
+      {
+        "id": "I209",
+        "answer": 25
+      },
+      {
+        "id": "I210",
+        "answer": 22
+      },
+      {
+        "id": "I301",
+        "answer": 40
+      },
+      {
+        "id": "I302",
+        "answer": 120
+      },
+      {
+        "id": "I303",
+        "answer": 25
+      },
+      {
+        "id": "I304",
+        "answer": 60
+      },
+      {
+        "id": "I305",
+        "answer": 10
+      },
+      {
+        "id": "I306",
+        "answer": 50
+      },
+      {
+        "id": "I307",
+        "answer": 35
+      },
+      {
+        "id": "I308",
+        "answer": 120
+      },
+      {
+        "id": "I309",
+        "answer": 25
+      },
+      {
+        "id": "I310",
+        "answer": 40
+      },
+      {
+        "id": "I401",
+        "answer": 10
+      },
+      {
+        "id": "I402",
+        "answer": 140
+      },
+      {
+        "id": "I403",
+        "answer": 15
+      },
+      {
+        "id": "I404",
+        "answer": 30
+      },
+      {
+        "id": "I405",
+        "answer": 40
+      },
+      {
+        "id": "I406",
+        "answer": 20
+      },
+      {
+        "id": "I407",
+        "answer": 25
+      },
+      {
+        "id": "I408",
+        "answer": 65
+      },
+      {
+        "id": "I409",
+        "answer": 90
+      },
+      {
+        "id": "I410",
+        "answer": 30
+      },
+      {
+        "id": "G101",
+        "answer": 19
+      },
+      {
+        "id": "G102",
+        "answer": 7
+      },
+      {
+        "id": "G103",
+        "answer": 7
+      },
+      {
+        "id": "G104",
+        "answer": 2
+      },
+      {
+        "id": "G105",
+        "answer": 21
+      },
+      {
+        "id": "G106",
+        "answer": 22
+      },
+      {
+        "id": "G107",
+        "answer": 14
+      },
+      {
+        "id": "G108",
+        "answer": 21
+      },
+      {
+        "id": "G109",
+        "answer": 16
+      },
+      {
+        "id": "G110",
+        "answer": 17
+      },
+      {
+        "id": "G201",
+        "answer": 17
+      },
+      {
+        "id": "G202",
+        "answer": 11
+      },
+      {
+        "id": "G203",
+        "answer": 11
+      },
+      {
+        "id": "G204",
+        "answer": 1
+      },
+      {
+        "id": "G205",
+        "answer": 19
+      },
+      {
+        "id": "G206",
+        "answer": 17
+      },
+      {
+        "id": "G207",
+        "answer": 15
+      },
+      {
+        "id": "G208",
+        "answer": 21
+      },
+      {
+        "id": "G209",
+        "answer": 16
+      },
+      {
+        "id": "G210",
+        "answer": 14
+      },
+      {
+        "id": "G301",
+        "answer": 13
+      },
+      {
+        "id": "G302",
+        "answer": 8
+      },
+      {
+        "id": "G303",
+        "answer": 8
+      },
+      {
+        "id": "G304",
+        "answer": 1
+      },
+      {
+        "id": "G305",
+        "answer": 14
+      },
+      {
+        "id": "G306",
+        "answer": 16
+      },
+      {
+        "id": "G307",
+        "answer": 13
+      },
+      {
+        "id": "G308",
+        "answer": 20
+      },
+      {
+        "id": "G309",
+        "answer": 11
+      },
+      {
+        "id": "G310",
+        "answer": 11
+      },
+      {
+        "id": "G401",
+        "answer": 22
+      },
+      {
+        "id": "G402",
+        "answer": 7
+      },
+      {
+        "id": "G403",
+        "answer": 7
+      },
+      {
+        "id": "G404",
+        "answer": 1
+      },
+      {
+        "id": "G405",
+        "answer": 22
+      },
+      {
+        "id": "G406",
+        "answer": 25
+      },
+      {
+        "id": "G407",
+        "answer": 18
+      },
+      {
+        "id": "G408",
+        "answer": 25
+      },
+      {
+        "id": "G409",
+        "answer": 16
+      },
+      {
+        "id": "G410",
+        "answer": 18
+      },
+      {
+        "id": "S101",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S102",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S103",
+        "answer": "RUN"
+      },
+      {
+        "id": "S104",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S105",
+        "answer": "STOP"
+      },
+      {
+        "id": "S106",
+        "answer": "RUN"
+      },
+      {
+        "id": "S107",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S108",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S109",
+        "answer": "STOP"
+      },
+      {
+        "id": "S110",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S201",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S202",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S203",
+        "answer": "RUN"
+      },
+      {
+        "id": "S204",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S205",
+        "answer": "STOP"
+      },
+      {
+        "id": "S206",
+        "answer": "RUN"
+      },
+      {
+        "id": "S207",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S208",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S209",
+        "answer": "STOP"
+      },
+      {
+        "id": "S210",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S301",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S302",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S303",
+        "answer": "RUN"
+      },
+      {
+        "id": "S304",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S305",
+        "answer": "STOP"
+      },
+      {
+        "id": "S306",
+        "answer": "RUN"
+      },
+      {
+        "id": "S307",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S308",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S309",
+        "answer": "STOP"
+      },
+      {
+        "id": "S310",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S401",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S402",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S403",
+        "answer": "RUN"
+      },
+      {
+        "id": "S404",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S405",
+        "answer": "STOP"
+      },
+      {
+        "id": "S406",
+        "answer": "RUN"
+      },
+      {
+        "id": "S407",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S408",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S409",
+        "answer": "STOP"
+      },
+      {
+        "id": "S410",
+        "answer": "HOLD"
+      }
+    ],
+    "D2": [
+      {
+        "id": "I101",
+        "answer": 15
+      },
+      {
+        "id": "I102",
+        "answer": 141
+      },
+      {
+        "id": "I103",
+        "answer": 2
+      },
+      {
+        "id": "I104",
+        "answer": 42
+      },
+      {
+        "id": "I105",
+        "answer": 38
+      },
+      {
+        "id": "I106",
+        "answer": 25
+      },
+      {
+        "id": "I107",
+        "answer": 12
+      },
+      {
+        "id": "I108",
+        "answer": 111
+      },
+      {
+        "id": "I109",
+        "answer": 32
+      },
+      {
+        "id": "I110",
+        "answer": 17
+      },
+      {
+        "id": "I201",
+        "answer": 23
+      },
+      {
+        "id": "I202",
+        "answer": 115
+      },
+      {
+        "id": "I203",
+        "answer": 10
+      },
+      {
+        "id": "I204",
+        "answer": 60
+      },
+      {
+        "id": "I205",
+        "answer": 37
+      },
+      {
+        "id": "I206",
+        "answer": 33
+      },
+      {
+        "id": "I207",
+        "answer": 20
+      },
+      {
+        "id": "I208",
+        "answer": 100
+      },
+      {
+        "id": "I209",
+        "answer": 25
+      },
+      {
+        "id": "I210",
+        "answer": 22
+      },
+      {
+        "id": "I301",
+        "answer": 40
+      },
+      {
+        "id": "I302",
+        "answer": 120
+      },
+      {
+        "id": "I303",
+        "answer": 25
+      },
+      {
+        "id": "I304",
+        "answer": 60
+      },
+      {
+        "id": "I305",
+        "answer": 10
+      },
+      {
+        "id": "I306",
+        "answer": 50
+      },
+      {
+        "id": "I307",
+        "answer": 35
+      },
+      {
+        "id": "I308",
+        "answer": 120
+      },
+      {
+        "id": "I309",
+        "answer": 25
+      },
+      {
+        "id": "I310",
+        "answer": 40
+      },
+      {
+        "id": "I401",
+        "answer": 10
+      },
+      {
+        "id": "I402",
+        "answer": 140
+      },
+      {
+        "id": "I403",
+        "answer": 15
+      },
+      {
+        "id": "I404",
+        "answer": 30
+      },
+      {
+        "id": "I405",
+        "answer": 40
+      },
+      {
+        "id": "I406",
+        "answer": 20
+      },
+      {
+        "id": "I407",
+        "answer": 25
+      },
+      {
+        "id": "I408",
+        "answer": 65
+      },
+      {
+        "id": "I409",
+        "answer": 90
+      },
+      {
+        "id": "I410",
+        "answer": 30
+      },
+      {
+        "id": "G101",
+        "answer": 19
+      },
+      {
+        "id": "G102",
+        "answer": 7
+      },
+      {
+        "id": "G103",
+        "answer": 7
+      },
+      {
+        "id": "G104",
+        "answer": 2
+      },
+      {
+        "id": "G105",
+        "answer": 21
+      },
+      {
+        "id": "G106",
+        "answer": 22
+      },
+      {
+        "id": "G107",
+        "answer": 14
+      },
+      {
+        "id": "G108",
+        "answer": 21
+      },
+      {
+        "id": "G109",
+        "answer": 16
+      },
+      {
+        "id": "G110",
+        "answer": 17
+      },
+      {
+        "id": "G201",
+        "answer": 17
+      },
+      {
+        "id": "G202",
+        "answer": 11
+      },
+      {
+        "id": "G203",
+        "answer": 11
+      },
+      {
+        "id": "G204",
+        "answer": 1
+      },
+      {
+        "id": "G205",
+        "answer": 19
+      },
+      {
+        "id": "G206",
+        "answer": 17
+      },
+      {
+        "id": "G207",
+        "answer": 15
+      },
+      {
+        "id": "G208",
+        "answer": 21
+      },
+      {
+        "id": "G209",
+        "answer": 16
+      },
+      {
+        "id": "G210",
+        "answer": 14
+      },
+      {
+        "id": "G301",
+        "answer": 13
+      },
+      {
+        "id": "G302",
+        "answer": 8
+      },
+      {
+        "id": "G303",
+        "answer": 8
+      },
+      {
+        "id": "G304",
+        "answer": 1
+      },
+      {
+        "id": "G305",
+        "answer": 14
+      },
+      {
+        "id": "G306",
+        "answer": 16
+      },
+      {
+        "id": "G307",
+        "answer": 13
+      },
+      {
+        "id": "G308",
+        "answer": 20
+      },
+      {
+        "id": "G309",
+        "answer": 11
+      },
+      {
+        "id": "G310",
+        "answer": 11
+      },
+      {
+        "id": "G401",
+        "answer": 22
+      },
+      {
+        "id": "G402",
+        "answer": 7
+      },
+      {
+        "id": "G403",
+        "answer": 7
+      },
+      {
+        "id": "G404",
+        "answer": 1
+      },
+      {
+        "id": "G405",
+        "answer": 22
+      },
+      {
+        "id": "G406",
+        "answer": 25
+      },
+      {
+        "id": "G407",
+        "answer": 18
+      },
+      {
+        "id": "G408",
+        "answer": 25
+      },
+      {
+        "id": "G409",
+        "answer": 16
+      },
+      {
+        "id": "G410",
+        "answer": 18
+      },
+      {
+        "id": "S101",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S102",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S103",
+        "answer": "RUN"
+      },
+      {
+        "id": "S104",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S105",
+        "answer": "STOP"
+      },
+      {
+        "id": "S106",
+        "answer": "RUN"
+      },
+      {
+        "id": "S107",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S108",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S109",
+        "answer": "STOP"
+      },
+      {
+        "id": "S110",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S201",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S202",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S203",
+        "answer": "RUN"
+      },
+      {
+        "id": "S204",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S205",
+        "answer": "STOP"
+      },
+      {
+        "id": "S206",
+        "answer": "RUN"
+      },
+      {
+        "id": "S207",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S208",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S209",
+        "answer": "STOP"
+      },
+      {
+        "id": "S210",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S301",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S302",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S303",
+        "answer": "RUN"
+      },
+      {
+        "id": "S304",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S305",
+        "answer": "STOP"
+      },
+      {
+        "id": "S306",
+        "answer": "RUN"
+      },
+      {
+        "id": "S307",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S308",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S309",
+        "answer": "STOP"
+      },
+      {
+        "id": "S310",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S401",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S402",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S403",
+        "answer": "RUN"
+      },
+      {
+        "id": "S404",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S405",
+        "answer": "STOP"
+      },
+      {
+        "id": "S406",
+        "answer": "RUN"
+      },
+      {
+        "id": "S407",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S408",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S409",
+        "answer": "STOP"
+      },
+      {
+        "id": "S410",
+        "answer": "HOLD"
+      }
+    ]
+  },
+  "reference": {
+    "D": [
+      {
+        "id": "I01",
+        "answer": 20
+      },
+      {
+        "id": "I02",
+        "answer": 150
+      },
+      {
+        "id": "I03",
+        "answer": 8
+      },
+      {
+        "id": "I04",
+        "answer": 32
+      },
+      {
+        "id": "I05",
+        "answer": 40
+      },
+      {
+        "id": "I06",
+        "answer": 28
+      },
+      {
+        "id": "I07",
+        "answer": 20
+      },
+      {
+        "id": "I08",
+        "answer": 43
+      },
+      {
+        "id": "G01",
+        "answer": 15
+      },
+      {
+        "id": "G02",
+        "answer": 7
+      },
+      {
+        "id": "G03",
+        "answer": 19
+      },
+      {
+        "id": "G04",
+        "answer": 18
+      },
+      {
+        "id": "G05",
+        "answer": 10
+      },
+      {
+        "id": "G06",
+        "answer": 17
+      },
+      {
+        "id": "G07",
+        "answer": 2
+      },
+      {
+        "id": "G08",
+        "answer": 5
+      },
+      {
+        "id": "S01",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S02",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S03",
+        "answer": "RUN"
+      },
+      {
+        "id": "S04",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S05",
+        "answer": "STOP"
+      },
+      {
+        "id": "S06",
+        "answer": "RUN"
+      },
+      {
+        "id": "S07",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S08",
+        "answer": "LIMIT"
+      }
+    ],
+    "B2_D2": [
+      {
+        "id": "I101",
+        "answer": 15
+      },
+      {
+        "id": "I102",
+        "answer": 141
+      },
+      {
+        "id": "I103",
+        "answer": 2
+      },
+      {
+        "id": "I104",
+        "answer": 42
+      },
+      {
+        "id": "I105",
+        "answer": 38
+      },
+      {
+        "id": "I106",
+        "answer": 25
+      },
+      {
+        "id": "I107",
+        "answer": 12
+      },
+      {
+        "id": "I108",
+        "answer": 111
+      },
+      {
+        "id": "I109",
+        "answer": 32
+      },
+      {
+        "id": "I110",
+        "answer": 17
+      },
+      {
+        "id": "I201",
+        "answer": 23
+      },
+      {
+        "id": "I202",
+        "answer": 115
+      },
+      {
+        "id": "I203",
+        "answer": 10
+      },
+      {
+        "id": "I204",
+        "answer": 60
+      },
+      {
+        "id": "I205",
+        "answer": 37
+      },
+      {
+        "id": "I206",
+        "answer": 33
+      },
+      {
+        "id": "I207",
+        "answer": 20
+      },
+      {
+        "id": "I208",
+        "answer": 100
+      },
+      {
+        "id": "I209",
+        "answer": 25
+      },
+      {
+        "id": "I210",
+        "answer": 22
+      },
+      {
+        "id": "I301",
+        "answer": 40
+      },
+      {
+        "id": "I302",
+        "answer": 120
+      },
+      {
+        "id": "I303",
+        "answer": 25
+      },
+      {
+        "id": "I304",
+        "answer": 60
+      },
+      {
+        "id": "I305",
+        "answer": 10
+      },
+      {
+        "id": "I306",
+        "answer": 50
+      },
+      {
+        "id": "I307",
+        "answer": 35
+      },
+      {
+        "id": "I308",
+        "answer": 120
+      },
+      {
+        "id": "I309",
+        "answer": 25
+      },
+      {
+        "id": "I310",
+        "answer": 40
+      },
+      {
+        "id": "I401",
+        "answer": 10
+      },
+      {
+        "id": "I402",
+        "answer": 140
+      },
+      {
+        "id": "I403",
+        "answer": 15
+      },
+      {
+        "id": "I404",
+        "answer": 30
+      },
+      {
+        "id": "I405",
+        "answer": 40
+      },
+      {
+        "id": "I406",
+        "answer": 20
+      },
+      {
+        "id": "I407",
+        "answer": 25
+      },
+      {
+        "id": "I408",
+        "answer": 65
+      },
+      {
+        "id": "I409",
+        "answer": 90
+      },
+      {
+        "id": "I410",
+        "answer": 30
+      },
+      {
+        "id": "G101",
+        "answer": 19
+      },
+      {
+        "id": "G102",
+        "answer": 7
+      },
+      {
+        "id": "G103",
+        "answer": 7
+      },
+      {
+        "id": "G104",
+        "answer": 2
+      },
+      {
+        "id": "G105",
+        "answer": 21
+      },
+      {
+        "id": "G106",
+        "answer": 22
+      },
+      {
+        "id": "G107",
+        "answer": 14
+      },
+      {
+        "id": "G108",
+        "answer": 21
+      },
+      {
+        "id": "G109",
+        "answer": 16
+      },
+      {
+        "id": "G110",
+        "answer": 17
+      },
+      {
+        "id": "G201",
+        "answer": 17
+      },
+      {
+        "id": "G202",
+        "answer": 11
+      },
+      {
+        "id": "G203",
+        "answer": 11
+      },
+      {
+        "id": "G204",
+        "answer": 1
+      },
+      {
+        "id": "G205",
+        "answer": 19
+      },
+      {
+        "id": "G206",
+        "answer": 17
+      },
+      {
+        "id": "G207",
+        "answer": 15
+      },
+      {
+        "id": "G208",
+        "answer": 21
+      },
+      {
+        "id": "G209",
+        "answer": 16
+      },
+      {
+        "id": "G210",
+        "answer": 14
+      },
+      {
+        "id": "G301",
+        "answer": 13
+      },
+      {
+        "id": "G302",
+        "answer": 8
+      },
+      {
+        "id": "G303",
+        "answer": 8
+      },
+      {
+        "id": "G304",
+        "answer": 1
+      },
+      {
+        "id": "G305",
+        "answer": 14
+      },
+      {
+        "id": "G306",
+        "answer": 16
+      },
+      {
+        "id": "G307",
+        "answer": 13
+      },
+      {
+        "id": "G308",
+        "answer": 20
+      },
+      {
+        "id": "G309",
+        "answer": 11
+      },
+      {
+        "id": "G310",
+        "answer": 11
+      },
+      {
+        "id": "G401",
+        "answer": 22
+      },
+      {
+        "id": "G402",
+        "answer": 7
+      },
+      {
+        "id": "G403",
+        "answer": 7
+      },
+      {
+        "id": "G404",
+        "answer": 1
+      },
+      {
+        "id": "G405",
+        "answer": 22
+      },
+      {
+        "id": "G406",
+        "answer": 25
+      },
+      {
+        "id": "G407",
+        "answer": 18
+      },
+      {
+        "id": "G408",
+        "answer": 25
+      },
+      {
+        "id": "G409",
+        "answer": 16
+      },
+      {
+        "id": "G410",
+        "answer": 18
+      },
+      {
+        "id": "S101",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S102",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S103",
+        "answer": "RUN"
+      },
+      {
+        "id": "S104",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S105",
+        "answer": "STOP"
+      },
+      {
+        "id": "S106",
+        "answer": "RUN"
+      },
+      {
+        "id": "S107",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S108",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S109",
+        "answer": "STOP"
+      },
+      {
+        "id": "S110",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S201",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S202",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S203",
+        "answer": "RUN"
+      },
+      {
+        "id": "S204",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S205",
+        "answer": "STOP"
+      },
+      {
+        "id": "S206",
+        "answer": "RUN"
+      },
+      {
+        "id": "S207",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S208",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S209",
+        "answer": "STOP"
+      },
+      {
+        "id": "S210",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S301",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S302",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S303",
+        "answer": "RUN"
+      },
+      {
+        "id": "S304",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S305",
+        "answer": "STOP"
+      },
+      {
+        "id": "S306",
+        "answer": "RUN"
+      },
+      {
+        "id": "S307",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S308",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S309",
+        "answer": "STOP"
+      },
+      {
+        "id": "S310",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S401",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S402",
+        "answer": "HOLD"
+      },
+      {
+        "id": "S403",
+        "answer": "RUN"
+      },
+      {
+        "id": "S404",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S405",
+        "answer": "STOP"
+      },
+      {
+        "id": "S406",
+        "answer": "RUN"
+      },
+      {
+        "id": "S407",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S408",
+        "answer": "LIMIT"
+      },
+      {
+        "id": "S409",
+        "answer": "STOP"
+      },
+      {
+        "id": "S410",
+        "answer": "HOLD"
+      }
+    ]
+  },
+  "limitations": [
+    "Intervals are upper bounds on response latency only if next message was sent after completion; not direct reasoning measurements.",
+    "Same-context carryover can explain perfect agreement and invalidates causal speed/accuracy claims.",
+    "No exact input/output/reasoning token telemetry recorded. Previously stated character counts were not independently measured and are excluded.",
+    "No independent repetitions or model diversity."
+  ],
+  "conclusion": "Observed answers match programmatic references. This is a pilot, not evidence of faster reasoning."
+}
