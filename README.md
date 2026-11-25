@@ -25,6 +25,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.4.8: [Graph VM](graph_vm/README.md), unknown source and operation selection, 100 checked tasks, fixed-width wire vs CSV and ATL with exact static rank-based token counts; independent API harness prepared, inference pending.
 
+- v0.4.9: [Symbolic Execution Engine](symbolic/README.md), 120 checked affine graphs, CSE/DCE, six-arm static token comparison and opt-in inference harness (inference pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
