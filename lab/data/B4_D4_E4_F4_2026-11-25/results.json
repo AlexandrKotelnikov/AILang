@@ -8,7 +8,14 @@
       "total_chars": 43550,
       "savings_chars_pct": 0,
       "token_counts": null,
-      "timing": null
+      "timing": {
+        "reported_chat_reasoning_seconds": 97,
+        "source": "User-reported ChatGPT displayed reasoning duration",
+        "total_response_seconds": null,
+        "reasoning_tokens": null,
+        "reduction_vs_B4_pct": 0,
+        "correct_per_reported_reasoning_second": 10.309278350515465
+      }
     },
     "D4": {
       "correct": 1000,
@@ -18,7 +25,14 @@
       "total_chars": 35785,
       "savings_chars_pct": 17.830080367393798,
       "token_counts": null,
-      "timing": null
+      "timing": {
+        "reported_chat_reasoning_seconds": 89,
+        "source": "User-reported ChatGPT displayed reasoning duration",
+        "total_response_seconds": null,
+        "reasoning_tokens": null,
+        "reduction_vs_B4_pct": 8.24742268041237,
+        "correct_per_reported_reasoning_second": 11.235955056179776
+      }
     },
     "E4": {
       "correct": 999,
@@ -28,7 +42,14 @@
       "total_chars": 11559,
       "savings_chars_pct": 73.45809414466132,
       "token_counts": null,
-      "timing": null
+      "timing": {
+        "reported_chat_reasoning_seconds": 57,
+        "source": "User-reported ChatGPT displayed reasoning duration",
+        "total_response_seconds": null,
+        "reasoning_tokens": null,
+        "reduction_vs_B4_pct": 41.23711340206186,
+        "correct_per_reported_reasoning_second": 17.526315789473685
+      }
     },
     "F4": {
       "correct": 1000,
@@ -38,7 +59,14 @@
       "total_chars": 19323,
       "savings_chars_pct": 55.630309988518945,
       "token_counts": null,
-      "timing": null
+      "timing": {
+        "reported_chat_reasoning_seconds": 64,
+        "source": "User-reported ChatGPT displayed reasoning duration",
+        "total_response_seconds": null,
+        "reasoning_tokens": null,
+        "reduction_vs_B4_pct": 34.02061855670103,
+        "correct_per_reported_reasoning_second": 15.625
+      }
     }
   },
   "errors": [
@@ -52,8 +80,18 @@
   "normalization": "B4/D4 remove line-ending backslashes before parsing and serialize compactly; E4/F4 exclude arm label and line-ending backslashes. F4 and reference reproduced from verified matching B4 values; independent scoring and SHA256 check against local preregistered reference were performed before publication.",
   "limitations": [
     "One run per arm; independent contexts and model settings not verified",
-    "No token counts or timing telemetry",
+    "No token counts or API timing telemetry; chat-displayed reasoning durations reported by user, not independently measured; full response durations unknown",
     "Accuracy over 4000 responses to the same 1000 questions, not 4000 independent questions",
     "Raw model formatting unavailable for E4/F4"
-  ]
+  ],
+  "timing_analysis": {
+    "assignment": "Assumed user-provided sequence matches submission order B4,D4,E4,F4; not explicitly labeled",
+    "input_mean_saving_seconds": 7.5,
+    "output_mean_saving_seconds": 32.5,
+    "interaction_seconds": 1,
+    "combined_saving_seconds": 40,
+    "combined_speedup": 1.7017543859649122,
+    "combined_saving_pct": 41.23711340206186,
+    "scope": "Descriptive single-run factorial contrasts, no uncertainty estimate or causal inference."
+  }
 }
