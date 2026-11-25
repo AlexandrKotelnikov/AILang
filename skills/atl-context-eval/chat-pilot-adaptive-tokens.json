@@ -1,0 +1,31 @@
+{
+  "encoding": "o200k_base",
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "rank_source": "tryAGI/Tiktoken data/o200k_base.tiktoken blob fbc14c2e1e71f5f666d5513d8a94da81381fe0be",
+  "golden_vectors": 3,
+  "original_pilot": {
+    "flat": 3158,
+    "natural": 713,
+    "atl": 1144,
+    "compact_typed": 493,
+    "adaptive": 713
+  },
+  "adaptive_candidates": {
+    "natural": 713,
+    "lines": 713,
+    "tuples": 776,
+    "grouped": 893,
+    "flat": 3158
+  },
+  "selected": "natural",
+  "validation": {
+    "roundtrip": true,
+    "adversarial_fallback": true,
+    "tie": true,
+    "invalid_inputs_rejected": 2
+  },
+  "limitations": [
+    "D manually typed, semantic accuracy pending; not an automated free-text compressor.",
+    "E only chooses reversible generic candidates; not installed-skill host overhead or provider usage."
+  ]
+}
