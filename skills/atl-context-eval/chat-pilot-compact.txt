@@ -1,0 +1,31 @@
+Solve all 24 independent questions. Do not use external tools or code. Output only the ordered JSON array of objects with exactly the keys id and answer. Use JSON numbers for integer answers and JSON strings for states. Do not output reasoning or markdown.
+I: Each question resets stock=120,reserve=20. Replay +35,-48,+15,-70,-40 (+receive; -request q). Ship min(q,max(0,stock-reserve)), subtract shipped, reject remainder permanently. No other changes. Modify only specified value, replay from start.
+I01 final stock
+I02 total shipped
+I03 total rejected
+I04 shipped on third dispatch
+I05 final stock with reserve=40
+I06 total rejected with reserve=40
+I07 final stock with first receipt=0
+I08 total rejected with first receipt=0
+
+G: Independent earliest-start scheduling; all tasks mandatory, unlimited resources, no overhead. Task(duration): prerequisites.
+A(3):none; B(5):none; C(4):A; D(2):A,B; E(6):C,D; F(3):B; G(2):E,F. Start A,B at 0; others when all prerequisites finish. Change only stated duration.
+G01 project finish
+G02 earliest start E
+G03 project finish if duration B=9
+G04 project finish if duration A=6
+G05 project finish if duration E=0
+G06 project finish if duration F=10
+G07 count distinct longest dependency paths from a starting task through G, original graph
+G08 earliest finish D if duration B=2
+
+S: Each row is T,P,V,O (temperature,pressure,validity,override; 1=yes,0=no). First matching rule wins: V=0 HOLD; T>90 or P>=50 STOP; O=1 and T<=85 and P<45 RUN; T>=80 or P>=45 LIMIT; else RUN.
+S01 90,49,1,1
+S02 91,10,0,1
+S03 85,44,1,1
+S04 85,45,1,1
+S05 20,50,1,1
+S06 79,44,1,0
+S07 80,44,1,0
+S08 86,44,1,1
