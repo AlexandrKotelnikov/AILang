@@ -1,0 +1,152 @@
+{
+  "version": "0.5.3",
+  "experiment": "semantic projection audit",
+  "seed": 20261125,
+  "tasks": 120,
+  "balance": {
+    "T": 40,
+    "F": 40,
+    "U": 40
+  },
+  "truthChecks": 7680,
+  "positive_controls": 120,
+  "pairChecks": 5120,
+  "total": {
+    "all": 5120,
+    "equivalent": 2057,
+    "corrupt": 3063,
+    "false_accept": {
+      "answer_only": 1801,
+      "answer_query": 1761,
+      "unary_query": 328,
+      "pairs_query": 0
+    }
+  },
+  "byType": {
+    "drop_clause": {
+      "all": 1096,
+      "equivalent": 604,
+      "corrupt": 492,
+      "false_accept": {
+        "answer_only": 385,
+        "answer_query": 385,
+        "unary_query": 93,
+        "pairs_query": 0
+      }
+    },
+    "flip_literal": {
+      "all": 1952,
+      "equivalent": 564,
+      "corrupt": 1388,
+      "false_accept": {
+        "answer_only": 754,
+        "answer_query": 754,
+        "unary_query": 74,
+        "pairs_query": 0
+      }
+    },
+    "replace_atom": {
+      "all": 1952,
+      "equivalent": 889,
+      "corrupt": 1063,
+      "false_accept": {
+        "answer_only": 622,
+        "answer_query": 622,
+        "unary_query": 161,
+        "pairs_query": 0
+      }
+    },
+    "flip_query": {
+      "all": 120,
+      "equivalent": 0,
+      "corrupt": 120,
+      "false_accept": {
+        "answer_only": 40,
+        "answer_query": 0,
+        "unary_query": 0,
+        "pairs_query": 0
+      }
+    }
+  },
+  "taskRisk": {
+    "answer_only": 120,
+    "answer_query": 120,
+    "unary_query": 52,
+    "pairs_query": 0
+  },
+  "projection_width": {
+    "unary": 6,
+    "pairs": 15,
+    "pair_mask_bits": 4
+  },
+  "boundary": {
+    "evenCnf": [
+      [
+        -1,
+        2,
+        3
+      ],
+      [
+        1,
+        -2,
+        3
+      ],
+      [
+        1,
+        2,
+        -3
+      ],
+      [
+        -1,
+        -2,
+        -3
+      ]
+    ],
+    "oddCnf": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        -1,
+        -2,
+        3
+      ],
+      [
+        -1,
+        2,
+        -3
+      ],
+      [
+        1,
+        -2,
+        -3
+      ]
+    ],
+    "even": [
+      0,
+      3,
+      5,
+      6
+    ],
+    "odd": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "pair_signature": [
+      15,
+      15,
+      15
+    ]
+  },
+  "limitations": [
+    "Same controlled-language fixtures as v0.5.2; not held-out or independent model inference.",
+    "Exact query identity and gold projection signatures are required.",
+    "Pair completeness applies to 2-CNF over the same atom universe, with at least two atoms; not general 3-CNF/FOL.",
+    "Mutation rates are descriptive and correlated within tasks.",
+    "No token counts, API usage, or deployment-time cost measured."
+  ]
+}
