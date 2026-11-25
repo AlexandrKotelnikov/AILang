@@ -1,0 +1,340 @@
+{
+  "date": "2026-11-25",
+  "protocol_commit": "d2e1d0a7198afa072fbd77071c0639a069345c12",
+  "source": "User-transcribed responses from three ChatGPT chats; one trial per arm.",
+  "encoding": "o200k_base",
+  "arms": {
+    "A": {
+      "arm": "flat",
+      "static_prompt_tokens": 3158,
+      "normalized_response": [
+        {
+          "id": "I01",
+          "answer": 20
+        },
+        {
+          "id": "I02",
+          "answer": 150
+        },
+        {
+          "id": "I03",
+          "answer": 8
+        },
+        {
+          "id": "I04",
+          "answer": 32
+        },
+        {
+          "id": "I05",
+          "answer": 40
+        },
+        {
+          "id": "I06",
+          "answer": 28
+        },
+        {
+          "id": "I07",
+          "answer": 20
+        },
+        {
+          "id": "I08",
+          "answer": 43
+        },
+        {
+          "id": "G01",
+          "answer": 15
+        },
+        {
+          "id": "G02",
+          "answer": 7
+        },
+        {
+          "id": "G03",
+          "answer": 19
+        },
+        {
+          "id": "G04",
+          "answer": 18
+        },
+        {
+          "id": "G05",
+          "answer": 10
+        },
+        {
+          "id": "G06",
+          "answer": 17
+        },
+        {
+          "id": "G07",
+          "answer": 2
+        },
+        {
+          "id": "G08",
+          "answer": 5
+        },
+        {
+          "id": "S01",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S02",
+          "answer": "HOLD"
+        },
+        {
+          "id": "S03",
+          "answer": "RUN"
+        },
+        {
+          "id": "S04",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S05",
+          "answer": "STOP"
+        },
+        {
+          "id": "S06",
+          "answer": "RUN"
+        },
+        {
+          "id": "S07",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S08",
+          "answer": "LIMIT"
+        }
+      ],
+      "semantic_correct": 24,
+      "total": 24,
+      "semantic_accuracy": 1,
+      "strict_raw_protocol_ok": null,
+      "provider_usage": null,
+      "latency_ms": null
+    },
+    "B": {
+      "arm": "natural",
+      "static_prompt_tokens": 713,
+      "normalized_response": [
+        {
+          "id": "I01",
+          "answer": 20
+        },
+        {
+          "id": "I02",
+          "answer": 150
+        },
+        {
+          "id": "I03",
+          "answer": 8
+        },
+        {
+          "id": "I04",
+          "answer": 32
+        },
+        {
+          "id": "I05",
+          "answer": 40
+        },
+        {
+          "id": "I06",
+          "answer": 28
+        },
+        {
+          "id": "I07",
+          "answer": 20
+        },
+        {
+          "id": "I08",
+          "answer": 43
+        },
+        {
+          "id": "G01",
+          "answer": 15
+        },
+        {
+          "id": "G02",
+          "answer": 7
+        },
+        {
+          "id": "G03",
+          "answer": 19
+        },
+        {
+          "id": "G04",
+          "answer": 18
+        },
+        {
+          "id": "G05",
+          "answer": 10
+        },
+        {
+          "id": "G06",
+          "answer": 17
+        },
+        {
+          "id": "G07",
+          "answer": 2
+        },
+        {
+          "id": "G08",
+          "answer": 5
+        },
+        {
+          "id": "S01",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S02",
+          "answer": "HOLD"
+        },
+        {
+          "id": "S03",
+          "answer": "RUN"
+        },
+        {
+          "id": "S04",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S05",
+          "answer": "STOP"
+        },
+        {
+          "id": "S06",
+          "answer": "RUN"
+        },
+        {
+          "id": "S07",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S08",
+          "answer": "LIMIT"
+        }
+      ],
+      "semantic_correct": 24,
+      "total": 24,
+      "semantic_accuracy": 1,
+      "strict_raw_protocol_ok": null,
+      "provider_usage": null,
+      "latency_ms": null
+    },
+    "C": {
+      "arm": "atl",
+      "static_prompt_tokens": 1144,
+      "normalized_response": [
+        {
+          "id": "I01",
+          "answer": 20
+        },
+        {
+          "id": "I02",
+          "answer": 150
+        },
+        {
+          "id": "I03",
+          "answer": 8
+        },
+        {
+          "id": "I04",
+          "answer": 32
+        },
+        {
+          "id": "I05",
+          "answer": 40
+        },
+        {
+          "id": "I06",
+          "answer": 28
+        },
+        {
+          "id": "I07",
+          "answer": 20
+        },
+        {
+          "id": "I08",
+          "answer": 43
+        },
+        {
+          "id": "G01",
+          "answer": 15
+        },
+        {
+          "id": "G02",
+          "answer": 7
+        },
+        {
+          "id": "G03",
+          "answer": 19
+        },
+        {
+          "id": "G04",
+          "answer": 18
+        },
+        {
+          "id": "G05",
+          "answer": 10
+        },
+        {
+          "id": "G06",
+          "answer": 17
+        },
+        {
+          "id": "G07",
+          "answer": 2
+        },
+        {
+          "id": "G08",
+          "answer": 5
+        },
+        {
+          "id": "S01",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S02",
+          "answer": "HOLD"
+        },
+        {
+          "id": "S03",
+          "answer": "RUN"
+        },
+        {
+          "id": "S04",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S05",
+          "answer": "STOP"
+        },
+        {
+          "id": "S06",
+          "answer": "RUN"
+        },
+        {
+          "id": "S07",
+          "answer": "LIMIT"
+        },
+        {
+          "id": "S08",
+          "answer": "LIMIT"
+        }
+      ],
+      "semantic_correct": 24,
+      "total": 24,
+      "semantic_accuracy": 1,
+      "strict_raw_protocol_ok": true,
+      "provider_usage": null,
+      "latency_ms": null
+    }
+  },
+  "limitations": [
+    "A and B pasted with backslashes and/or HTML space entities; semantic values normalized, original raw JSON validity unverified. C valid as pasted.",
+    "Model label, reasoning effort, trial order, chat isolation and elapsed times not supplied.",
+    "Static prompt token counts are not provider usage. Output and reasoning token counts unavailable.",
+    "ATL forced grouped arm bypasses host installation and adaptive router.",
+    "One trial per arm; no non-inferiority or generalization claim."
+  ],
+  "conclusion": "Equal semantic accuracy; natural-language control is more token-efficient than forced ATL (431 extra static prompt tokens)."
+}
