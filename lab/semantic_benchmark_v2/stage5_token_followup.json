@@ -1,0 +1,50 @@
+{
+  "source": "lab/external_benchmark_v1",
+  "tokenizer": "o200k_base independent SHA256-verified encoder",
+  "golden_vectors": 3,
+  "arms": {
+    "B5": {
+      "chars": 45462,
+      "input_tokens": 12219,
+      "normalized_output_tokens": 603,
+      "visible_total_tokens": 12822,
+      "reduction_vs_B5_pct": 0
+    },
+    "A5": {
+      "chars": 43526,
+      "input_tokens": 11825,
+      "normalized_output_tokens": 603,
+      "visible_total_tokens": 12428,
+      "reduction_vs_B5_pct": 3.0728435501481854
+    },
+    "C5": {
+      "chars": 43023,
+      "input_tokens": 11655,
+      "normalized_output_tokens": 603,
+      "visible_total_tokens": 12258,
+      "reduction_vs_B5_pct": 4.398689751988771
+    },
+    "R5": {
+      "chars": 45866,
+      "input_tokens": 12291,
+      "normalized_output_tokens": 603,
+      "visible_total_tokens": 12894,
+      "reduction_vs_B5_pct": -0.5615348619560034
+    },
+    "D5": {
+      "chars": 43122,
+      "input_tokens": 11753,
+      "normalized_output_tokens": 603,
+      "visible_total_tokens": 12356,
+      "reduction_vs_B5_pct": 3.6343784121042
+    },
+    "K5": {
+      "chars": 43427,
+      "input_tokens": 11727,
+      "normalized_output_tokens": 603,
+      "visible_total_tokens": 12330,
+      "reduction_vs_B5_pct": 3.837154890032757
+    }
+  },
+  "note": "Exact text encoding counts for archived prompts and normalized shared response. Not API usage, reasoning tokens, or raw output."
+}
