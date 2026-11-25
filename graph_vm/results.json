@@ -11,105 +11,105 @@
   "attempts": 149,
   "totals": {
     "csv-program": {
-      "system": 10000,
+      "system": 10640,
       "input": 28768,
       "output": 160,
-      "total": 38928
+      "total": 39568
     },
     "fixed-program": {
-      "system": 10640,
+      "system": 11280,
       "input": 15104,
       "output": 160,
-      "total": 25904
+      "total": 26544
     },
     "atl-program": {
-      "system": 11040,
+      "system": 11680,
       "input": 15104,
       "output": 320,
-      "total": 26464
+      "total": 27104
     },
     "csv-direct": {
-      "system": 12080,
+      "system": 12240,
       "input": 28768,
       "output": 9344,
-      "total": 50192
+      "total": 50352
     },
     "fixed-direct": {
-      "system": 12720,
+      "system": 12880,
       "input": 15104,
       "output": 7048,
-      "total": 34872
+      "total": 35032
     },
     "atl-direct": {
-      "system": 13120,
+      "system": 13280,
       "input": 15104,
       "output": 7208,
-      "total": 35432
+      "total": 35592
     }
   },
   "examples": [
     {
       "mode": "csv-program",
-      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. An external interpreter computes all forecast rows. Rows are comma-separated integers. Return four octal digits only.",
+      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Each node triple is left0,left1,right. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. Rows are comma-separated integers. An external interpreter computes forecasts. Return four octal digits only.",
       "input": "Nodes 4..7: 0,1,2;1,2,3;4,0,5;5,4,6\nCalibration:\n68,53,35,28,76,76\n92,75,56,37,22,22\n66,65,84,79,95,95\n8,77,22,4,66,79\n96,77,71,82,35,35\n46,49,63,82,12,85\n94,94,75,18,52,66\n60,0,58,54,39,85\nForecast:\n96,41,92,29\n96,47,84,39\n32,62,63,26\n28,26,36,55\n59,29,40,65\n79,70,49,20\n65,79,18,36\n19,94,55,94\n15,4,12,96\n84,30,82,28\n70,60,88,80\n81,39,73,35\n70,44,19,57\n85,73,4,10\n56,65,15,85\n44,46,13,75\n55,76,96,55\n1,43,39,45\n27,18,55,90\n96,65,60,45\n61,3,15,59\n36,3,41,30\n33,28,10,37\n64,31,81,75\n13,26,72,75\n62,60,84,54\n34,31,15,42\n47,91,19,87\n17,92,22,33\n56,20,83,87",
       "output": "2067",
       "tokens": [
-        125,
+        133,
         370,
         2
       ]
     },
     {
       "mode": "fixed-program",
-      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. An external interpreter computes all forecast rows. Each row concatenates two decimal digits per value, with leading zero. Return four octal digits only.",
+      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Each node triple is left0,left1,right. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. Each row concatenates two decimal digits per value, with leading zero. An external interpreter computes forecasts. Return four octal digits only.",
       "input": "Nodes 4..7: 0,1,2;1,2,3;4,0,5;5,4,6\nCalibration:\n685335287676\n927556372222\n666584799595\n087722046679\n967771823535\n464963821285\n949475185266\n600058543985\nForecast:\n96419229\n96478439\n32626326\n28263655\n59294065\n79704920\n65791836\n19945594\n15041296\n84308228\n70608880\n81397335\n70441957\n85730410\n56651585\n44461375\n55769655\n01433945\n27185590\n96656045\n61031559\n36034130\n33281037\n64318175\n13267275\n62608454\n34311542\n47911987\n17922233\n56208387",
       "output": "2067",
       "tokens": [
-        133,
+        141,
         194,
         2
       ]
     },
     {
       "mode": "atl-program",
-      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. An external interpreter computes all forecast rows. ATL W2 rows concatenate two decimal digits per value, with leading zero. Return P: followed by four octal digits only.",
+      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Each node triple is left0,left1,right. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. ATL W2 rows concatenate two decimal digits per value, with leading zero. An external interpreter computes forecasts. Return P: followed by four octal digits only.",
       "input": "Nodes 4..7: 0,1,2;1,2,3;4,0,5;5,4,6\nCalibration:\n685335287676\n927556372222\n666584799595\n087722046679\n967771823535\n464963821285\n949475185266\n600058543985\nForecast:\n96419229\n96478439\n32626326\n28263655\n59294065\n79704920\n65791836\n19945594\n15041296\n84308228\n70608880\n81397335\n70441957\n85730410\n56651585\n44461375\n55769655\n01433945\n27185590\n96656045\n61031559\n36034130\n33281037\n64318175\n13267275\n62608454\n34311542\n47911987\n17922233\n56208387",
       "output": "P:2067",
       "tokens": [
-        138,
+        146,
         194,
         4
       ]
     },
     {
       "mode": "csv-direct",
-      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. An external interpreter computes all forecast rows. Rows are comma-separated integers. Return the program on the first line (four octal digits) then node 6 and 7 for each forecast row in the input row format, no labels.",
+      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Each node triple is left0,left1,right. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. Rows are comma-separated integers. Return the program on the first line (four octal digits) then node 6 and 7 for each forecast row in the input row format, no labels.",
       "input": "Nodes 4..7: 0,1,2;1,2,3;4,0,5;5,4,6\nCalibration:\n68,53,35,28,76,76\n92,75,56,37,22,22\n66,65,84,79,95,95\n8,77,22,4,66,79\n96,77,71,82,35,35\n46,49,63,82,12,85\n94,94,75,18,52,66\n60,0,58,54,39,85\nForecast:\n96,41,92,29\n96,47,84,39\n32,62,63,26\n28,26,36,55\n59,29,40,65\n79,70,49,20\n65,79,18,36\n19,94,55,94\n15,4,12,96\n84,30,82,28\n70,60,88,80\n81,39,73,35\n70,44,19,57\n85,73,4,10\n56,65,15,85\n44,46,13,75\n55,76,96,55\n1,43,39,45\n27,18,55,90\n96,65,60,45\n61,3,15,59\n36,3,41,30\n33,28,10,37\n64,31,81,75\n13,26,72,75\n62,60,84,54\n34,31,15,42\n47,91,19,87\n17,92,22,33\n56,20,83,87",
       "output": "2067\n27,27\n11,13\n3,76\n37,38\n17,32\n29,88\n6,6\n80,80\n45,83\n22,22\n3,49\n77,93\n86,86\n71,71\n58,64\n86,87\n27,42\n88,88\n6,30\n84,84\n96,96\n24,24\n11,39\n91,91\n52,63\n84,84\n57,57\n24,24\n88,88\n75,89",
       "tokens": [
-        151,
+        153,
         370,
         122
       ]
     },
     {
       "mode": "fixed-direct",
-      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. An external interpreter computes all forecast rows. Each row concatenates two decimal digits per value, with leading zero. Return the program on the first line (four octal digits) then node 6 and 7 for each forecast row in the input row format, no labels.",
+      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Each node triple is left0,left1,right. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. Each row concatenates two decimal digits per value, with leading zero. Return the program on the first line (four octal digits) then node 6 and 7 for each forecast row in the input row format, no labels.",
       "input": "Nodes 4..7: 0,1,2;1,2,3;4,0,5;5,4,6\nCalibration:\n685335287676\n927556372222\n666584799595\n087722046679\n967771823535\n464963821285\n949475185266\n600058543985\nForecast:\n96419229\n96478439\n32626326\n28263655\n59294065\n79704920\n65791836\n19945594\n15041296\n84308228\n70608880\n81397335\n70441957\n85730410\n56651585\n44461375\n55769655\n01433945\n27185590\n96656045\n61031559\n36034130\n33281037\n64318175\n13267275\n62608454\n34311542\n47911987\n17922233\n56208387",
       "output": "2067\n2727\n1113\n0376\n3738\n1732\n2988\n0606\n8080\n4583\n2222\n0349\n7793\n8686\n7171\n5864\n8687\n2742\n8888\n0630\n8484\n9696\n2424\n1139\n9191\n5263\n8484\n5757\n2424\n8888\n7589",
       "tokens": [
-        159,
+        161,
         194,
         92
       ]
     },
     {
       "mode": "atl-direct",
-      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. An external interpreter computes all forecast rows. ATL W2 rows concatenate two decimal digits per value, with leading zero. Return the program on the first line (four octal digits, prefixed P:) then node 6 and 7 for each forecast row in the input row format, no labels.",
+      "system": "Four inputs indexed 0..3. Four nodes indexed 4..7. Each node has two candidate left indices and one fixed right index. Each node triple is left0,left1,right. Its digit k in 0..7 selects left index floor(k/4) and operation k mod 4: 0 add, 1 left minus right, 2 multiply, 3 max. Each node result is modulo 97 in 0..96. Calibration rows contain four inputs followed by node 6 and 7 outputs. Recover the unique four digits. ATL W2 rows concatenate two decimal digits per value, with leading zero. Return the program on the first line (four octal digits, prefixed P:) then node 6 and 7 for each forecast row in the input row format, no labels.",
       "input": "Nodes 4..7: 0,1,2;1,2,3;4,0,5;5,4,6\nCalibration:\n685335287676\n927556372222\n666584799595\n087722046679\n967771823535\n464963821285\n949475185266\n600058543985\nForecast:\n96419229\n96478439\n32626326\n28263655\n59294065\n79704920\n65791836\n19945594\n15041296\n84308228\n70608880\n81397335\n70441957\n85730410\n56651585\n44461375\n55769655\n01433945\n27185590\n96656045\n61031559\n36034130\n33281037\n64318175\n13267275\n62608454\n34311542\n47911987\n17922233\n56208387",
       "output": "P:2067\n2727\n1113\n0376\n3738\n1732\n2988\n0606\n8080\n4583\n2222\n0349\n7793\n8686\n7171\n5864\n8687\n2742\n8888\n0630\n8484\n9696\n2424\n1139\n9191\n5263\n8484\n5757\n2424\n8888\n7589",
       "tokens": [
-        164,
+        166,
         194,
         94
       ]
