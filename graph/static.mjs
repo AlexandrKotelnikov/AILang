@@ -2,7 +2,7 @@
 import {readFileSync} from "node:fs";
 import {tokenizer,verify,EXPECTED} from "../adaptive/tokenizer.mjs";
 function graphLab(count){
- const M=97, ops=["+","-","*","max"], modes=["dense","named","csv","atl","answer"];
+ const M=97, ops=["+","-","*","max"], modes=["dense","named","csv","atl","packed","program","atl-program","answer"];
  const topologies=[["xy","az","ab"],["xy","aw","bz"],["xz","ay","ab"]];
  const norm=n=>((n%M)+M)%M;
  function op(k,x,y){return norm(k===0?x+y:k===1?x-y:k===2?x*y:Math.max(x,y));}
@@ -50,18 +50,28 @@ function graphLab(count){
  named:common+" First line: op1=N,op2=N,op3=N (replace N). Then one line per row with c,d comma-separated. The graph can be replayed from these IDs.",
  csv:common+" First line: three operation IDs separated by commas. Then one line per row with c,d comma-separated. The IDs and supplied graph define all intermediate values.",
  atl:common+" ATL: first line G: followed by three operation IDs concatenated without separators. Then one line per row with c,d comma-separated. Replay graph from IDs.",
+ packed:common+" First line: three operation IDs concatenated without separators. Then one line per row with c,d comma-separated. Replay graph from IDs.",
+ program:"Recover the three fixed operation IDs from calibration. Return only three concatenated digits. An external interpreter will produce every forecast row.",
+ "atl-program":"Recover the three fixed operation IDs from calibration. Return only G: followed by three concatenated digits. An external interpreter will produce every forecast row.",
  answer:common+" Return only one line per row with c,d comma-separated, no operation IDs."
  };
  function render(mode,p,trace){
-  let head=mode==="named"?`op1=${p[0]},op2=${p[1]},op3=${p[2]}`:mode==="atl"?"G:"+p.join(""):p.join(",");
+  let head=mode==="named"?`op1=${p[0]},op2=${p[1]},op3=${p[2]}`:(mode==="atl"||mode==="atl-program")?"G:"+p.join(""):(mode==="packed"||mode==="program")?p.join(""):p.join(",");
+  if(mode==="program"||mode==="atl-program")return head;
   let lines=trace.map(v=>(mode==="dense"?v:outs(v)).join(","));
   return (mode==="answer"?lines:[head,...lines]).join("\n");
  }
  function verify(mode,t,s){
   if(typeof s!=="string"||s.length>20000)return false;
+  if(mode==="program"||mode==="atl-program"){
+   const m=s.match(mode==="program"?/^([0-3])([0-3])([0-3])$/:/^G:([0-3])([0-3])([0-3])$/);
+   if(!m||s.includes("\n"))return false;
+   const p=m.slice(1).map(Number);
+   return t.cal.every(([v,y])=>same(outs(graph(t.f,p,v)),y))&&t.queries.every(v=>same(graph(t.f,p,v),oracle(t.f,t.p,v)));
+  }
   const l=s.split("\n"); if(l.length!==t.queries.length+(mode==="answer"?0:1))return false;
   if(mode==="answer"){return l.every((line,i)=>line===outs(oracle(t.f,t.p,t.queries[i])).join(","));}
-  const rx=mode==="named"?/^op1=([0-3]),op2=([0-3]),op3=([0-3])$/:mode==="atl"?/^G:([0-3])([0-3])([0-3])$/:/^([0-3]),([0-3]),([0-3])$/;
+  const rx=mode==="named"?/^op1=([0-3]),op2=([0-3]),op3=([0-3])$/:mode==="atl"?/^G:([0-3])([0-3])([0-3])$/:mode==="packed"?/^([0-3])([0-3])([0-3])$/:/^([0-3]),([0-3]),([0-3])$/;
   const m=l.shift().match(rx);if(!m)return false;
   const p=m.slice(1).map(Number);
   if(!t.cal.every(([v,y])=>same(outs(graph(t.f,p,v)),y)))return false;
