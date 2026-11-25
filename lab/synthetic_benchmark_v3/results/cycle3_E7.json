@@ -1,0 +1,17 @@
+{
+  "stage": 7,
+  "cycle": 3,
+  "arm": "E7",
+  "arm_attribution": "Inferred from planned third run of cycle 3 and preceding instruction to use E7",
+  "raw_response": "P025=A\nP006=C\nP003=C\nP024=N\nP019=T\nP002=D\nP022=O\nP017=H\nP001=C\nP016=H\nP027=J\nP005=E\nP021=P\nP014=G\nP018=B\nP010=E\nP008=B\nP004=A\nP009=E\nP012=F\nP026=B\nP020=T\nP023=T\nP015=C\nP007=C\nP011=F\nP013=J",
+  "correct": 27,
+  "total": 27,
+  "accuracy": 1,
+  "input_tokens_static": 1600,
+  "model": null,
+  "settings": null,
+  "reasoning_time_seconds": null,
+  "wall_time_seconds": null,
+  "api_usage": null,
+  "errors": []
+}
