@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-25",
+  "skill_version": "0.2.0",
+  "environment": "ChatGPT local Node.js v22.16.0",
+  "source_commit": "2b0ab10b1afde76f6c4101728b790ceac75856ff",
+  "verified_git_blobs": {
+    "core": "590fc00134466f6b1934a28e1bdbb60b502d11ec",
+    "tests": "2d4512fdd3f218c6ee31d07d6a2c1feaeb9c23f8",
+    "fixture": "5c03e799d14f28524c1854245e3baca22ed3159f"
+  },
+  "node_test": {
+    "groups_passed": 4,
+    "groups_total": 4,
+    "assertions_in_source": 16
+  },
+  "fixture": {
+    "tasks": 24,
+    "roundtrip": true,
+    "character_counts_including_instruction_excluding_activation": {
+      "flat": 23628,
+      "grouped": 4126,
+      "tuples": 3810,
+      "lines": 3732
+    },
+    "character_proxy_selected": "lines",
+    "character_savings_pct": 84.20518029456576,
+    "tie_fallback": "flat",
+    "large_overhead_fallback": "flat"
+  },
+  "token_counts": null,
+  "limitations": [
+    "Official rank file unavailable; DNS/network download blocked.",
+    "Character proxy is not a token measurement; real tokenizer routing not tested.",
+    "Host skill discovery and actual Codex or ChatGPT skill installation not tested.",
+    "No independent inference or API usage measured."
+  ]
+}
