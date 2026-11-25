@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync} from "node:fs";
 import {tokenizer,verify} from "../adaptive/tokenizer.mjs";
-function lab(encode) {
+function lab(encode, allFixtures=false) {
  const mod=x=>((x%97)+97)%97, w=x=>String(x).padStart(2,"0"), eq=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
  function rng(seed){let s=seed>>>0;return n=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return Math.floor(s/4294967296*n)}}
  function make(i){const r=rng(13579+i*104729),nodes=[];const add=(op,a,b)=>{nodes.push([op,a,b]);return nodes.length+3};const plus=(a,b)=>add("+",a,b),minus=(a,b)=>add("-",a,b),mul=(a,b)=>add("*",a,b);
@@ -34,9 +34,9 @@ function lab(encode) {
  for(let i=0;i<120;i++){const g=make(i),opt=optimize(g),c=compile(g);const b=scalar(g,[0,0,0]);const probes=[[1,0,0],[0,1,0],[0,0,1]].map(x=>scalar(g,x));const ref=b.map((z,j)=>[z,...probes.map(p=>mod(p[j]-z))]);if(!eq(c,ref)||!eq(c,compile(opt)))throw Error("coefficient mismatch");for(const x of g.queries){if(!eq(scalar(g,x),evaluate(c,x))||!eq(scalar(g,x),scalar(opt,x)))throw Error("query mismatch");}verified++;
  for(const m of modes){const inp=input(m.startsWith("full")?g:opt),out=m.endsWith("direct")?g.queries.flatMap(x=>scalar(g,x)).map(w).join(""):m.endsWith("dense")?c.flat().map(w).join(""):(m==="atl-sparse"?"ATL:":"")+sparse(c);
  if(!score(m,out,g,c))throw Error("valid output rejected");for(const bad of [out+"!",out.slice(0,-1),out+"00"]){if(score(m,bad,g,c))throw Error("invalid accepted");mutations++;}
- if(i>=24){const a=totals[m],s=count(systems[m]),p=count(inp),o=count(out);a.system+=s;a.input+=p;a.output+=o;a.total+=s+p+o;a.passed++;const f=byFamily[g.family]??={};f[m]=(f[m]??0)+s+p+o;if(i<27)fixtures.push({id:i,mode:m,system:systems[m],input:inp,expected:out});}}
+ if(i>=24){const a=totals[m],s=count(systems[m]),p=count(inp),o=count(out);a.system+=s;a.input+=p;a.output+=o;a.total+=s+p+o;a.passed++;const f=byFamily[g.family]??={};f[m]=(f[m]??0)+s+p+o;if(allFixtures||i<27)fixtures.push({id:i,mode:m,system:systems[m],input:inp,expected:out});}}
  if(i>=24){original+=g.nodes.length;reduced+=opt.nodes.length;cse+=opt.cse;dead+=opt.dead;queries+=g.queries.length;}
  }
  return {version:"0.4.9",development:24,test:96,verified,validFormats:verified*modes.length,mutations,queries,original,reduced,cse,dead,totals,byFamily,fixtures};
 }
-const encode=tokenizer(readFileSync(process.argv[2],"utf8"));verify(encode);const result=lab(encode);if(process.argv[3])writeFileSync(process.argv[3],JSON.stringify(result,null,2)+"\n");else console.log(JSON.stringify(result,null,2));
+const encode=tokenizer(readFileSync(process.argv[2],"utf8"));verify(encode);const result=lab(encode,process.argv.includes("--all-fixtures"));if(process.argv[3]&&process.argv[3]!=="--all-fixtures")writeFileSync(process.argv[3],JSON.stringify(result,null,2)+"\n");else console.log(JSON.stringify(result,null,2));
