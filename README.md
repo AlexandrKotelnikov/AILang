@@ -23,6 +23,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.4.7: [Computational Graph](graph/README.md), 240 checked graph-identification tasks, eight-arm static o200k_base benchmark and executable graph certificates; ordinary packed control outperforms prefixed ATL (inference pending).
 
+- v0.4.8: [Graph VM](graph_vm/README.md), unknown source and operation selection, 100 checked tasks, fixed-width wire vs CSV and ATL with exact static rank-based token counts; independent API harness prepared, inference pending.
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
