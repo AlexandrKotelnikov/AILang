@@ -21,6 +21,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.4.6: [Recursive Engine](recursive/README.md), bounded recurrence identification, 240 checked tasks and checksum-verified token counts with equivalent recurrence and final-only controls.
 
+- v0.4.7: [Computational Graph](graph/README.md), 240 checked graph-identification tasks, eight-arm static o200k_base benchmark and executable graph certificates; ordinary packed control outperforms prefixed ATL (inference pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
