@@ -13,3 +13,7 @@ Copy `skills/atl-context` into a compatible skill directory (for example `.agent
 2. Freeze an external batch corpus and compare flat JSON, grouped natural language, native host reuse and ATL, with real provider input/output/optional reasoning usage, latency, correctness and retry cost. Require non-inferiority of correctness before claiming a gain.
 3. Add a typed semantic compiler only for domains with an independently verified source representation. Introduce checkpoint/state and agent handoff formats with provenance and uncertainty, separate from hidden reasoning.
 4. Review licensing and distribution; no license is selected by this MVP. Do not promise compatibility or savings until verified.
+
+## Manual ChatGPT pilot
+
+[Protocol and prompts](atl-context-eval/CHAT-PILOT.md), [verified static counts](atl-context-eval/chat-pilot-tokens.json). The frozen 24-task pilot measures flat JSON (3158), grouped natural language (713) and forced ATL (1144) prompt tokens in o200k_base. ATL saves against flat but loses against the strong natural-language control; real inference remains pending. The pilot bypasses host installation and routing.
