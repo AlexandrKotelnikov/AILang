@@ -1,0 +1,127 @@
+{
+  "version": "0.5.1",
+  "dev": 30,
+  "test": 90,
+  "test_labels": {
+    "T": 30,
+    "F": 30,
+    "U": 30
+  },
+  "duplicates": 0,
+  "assignments": 63104,
+  "checks": 480,
+  "mutations": 480,
+  "dev_counts": {
+    "natural_final": {
+      "system": 1140,
+      "input": 12883,
+      "output": 30,
+      "total": 14053
+    },
+    "natural_english": {
+      "system": 2250,
+      "input": 12883,
+      "output": 1816,
+      "total": 16949
+    },
+    "natural_json": {
+      "system": 2730,
+      "input": 12883,
+      "output": 813,
+      "total": 16426
+    },
+    "natural_packed": {
+      "system": 2880,
+      "input": 12883,
+      "output": 473,
+      "total": 16236
+    },
+    "cnf_final": {
+      "system": 1500,
+      "input": 2960,
+      "output": 30,
+      "total": 4490
+    },
+    "cnf_packed": {
+      "system": 3240,
+      "input": 2960,
+      "output": 473,
+      "total": 6673
+    },
+    "atl_final": {
+      "system": 1830,
+      "input": 2683,
+      "output": 30,
+      "total": 4543
+    },
+    "atl_packed": {
+      "system": 3570,
+      "input": 2683,
+      "output": 473,
+      "total": 6726
+    }
+  },
+  "test_counts": {
+    "natural_final": {
+      "system": 3420,
+      "input": 37860,
+      "output": 90,
+      "total": 41370
+    },
+    "natural_english": {
+      "system": 6750,
+      "input": 37860,
+      "output": 5367,
+      "total": 49977
+    },
+    "natural_json": {
+      "system": 8190,
+      "input": 37860,
+      "output": 2409,
+      "total": 48459
+    },
+    "natural_packed": {
+      "system": 8640,
+      "input": 37860,
+      "output": 1389,
+      "total": 47889
+    },
+    "cnf_final": {
+      "system": 4500,
+      "input": 8644,
+      "output": 90,
+      "total": 13234
+    },
+    "cnf_packed": {
+      "system": 9720,
+      "input": 8644,
+      "output": 1389,
+      "total": 19753
+    },
+    "atl_final": {
+      "system": 5490,
+      "input": 7867,
+      "output": 90,
+      "total": 13447
+    },
+    "atl_packed": {
+      "system": 10710,
+      "input": 7867,
+      "output": 1389,
+      "total": 19966
+    }
+  },
+  "example": {
+    "input": "Variables A, B, C, D, E, F, G, H are Boolean.\n1. At least one of these holds: B is false; H is false.\n2. At least one of these holds: G is false; E is true.\n3. At least one of these holds: H is true; A is false; F is true.\n4. At least one of these holds: E is false; B is false; C is true.\n5. At least one of these holds: D is true; B is true.\n6. At least one of these holds: B is true; H is true.\n7. At least one of these holds: D is true; E is true; H is true.\n8. At least one of these holds: A is false; B is false; D is false.\n9. At least one of these holds: C is true; F is true.\n10. At least one of these holds: H is true; G is true; E is false.\n11. At least one of these holds: B is false; A is true.\n12. At least one of these holds: C is false; D is true.\n13. At least one of these holds: D is true; H is true; C is false.\n14. At least one of these holds: C is false; G is false.\n15. At least one of these holds: H is true; D is true.\n16. At least one of these holds: C is false; D is true.\nQuery: E is false.",
+    "atl": "8:!E\n!B!H\n!GE\nH!AF\n!E!BC\nDB\nBH\nDEH\n!A!B!D\nCF\nHG!E\n!BA\n!CD\nDH!C\n!C!G\nHD\n!CD",
+    "certificate": "U|w00110001|w00111001"
+  },
+  "limitations": [
+    "Static canonical output counts, not independent LLM calls.",
+    "Synthetic CNF, deterministic solver sufficient; no semantic parsing evaluated.",
+    "English proof is verbose; compare stronger packed controls.",
+    "No framing, tools, cache, hidden reasoning or runtime counts."
+  ],
+  "golden": 3,
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d"
+}
