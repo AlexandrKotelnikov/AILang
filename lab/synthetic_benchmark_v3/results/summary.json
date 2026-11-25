@@ -1,0 +1,162 @@
+{
+  "stage": 7,
+  "status": "closed_pilot",
+  "runs": 12,
+  "unique_tasks": 27,
+  "task_responses": 324,
+  "stats": [
+    {
+      "arm": "B7",
+      "correct": 79,
+      "total": 81,
+      "run_scores": [
+        25,
+        27,
+        27
+      ],
+      "input_tokens": 18440,
+      "per_complexity": [
+        {
+          "m": 5,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 20,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 100,
+          "correct": 25,
+          "total": 27
+        }
+      ],
+      "errors": [
+        {
+          "id": "P008",
+          "n": 5,
+          "m": 100,
+          "correct": 2
+        },
+        {
+          "id": "P026",
+          "n": 20,
+          "m": 100,
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "arm": "C7",
+      "correct": 81,
+      "total": 81,
+      "run_scores": [
+        27,
+        27,
+        27
+      ],
+      "input_tokens": 6119,
+      "per_complexity": [
+        {
+          "m": 5,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 20,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 100,
+          "correct": 27,
+          "total": 27
+        }
+      ],
+      "errors": []
+    },
+    {
+      "arm": "D7",
+      "correct": 81,
+      "total": 81,
+      "run_scores": [
+        27,
+        27,
+        27
+      ],
+      "input_tokens": 2672,
+      "per_complexity": [
+        {
+          "m": 5,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 20,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 100,
+          "correct": 27,
+          "total": 27
+        }
+      ],
+      "errors": []
+    },
+    {
+      "arm": "E7",
+      "correct": 81,
+      "total": 81,
+      "run_scores": [
+        27,
+        27,
+        27
+      ],
+      "input_tokens": 1600,
+      "per_complexity": [
+        {
+          "m": 5,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 20,
+          "correct": 27,
+          "total": 27
+        },
+        {
+          "m": 100,
+          "correct": 27,
+          "total": 27
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "paired_case_comparison": {
+    "endpoint": "all three responses correct per unique case",
+    "E7_vs_B7": {
+      "E7_only": 2,
+      "B7_only": 0,
+      "both": 25,
+      "neither": 0,
+      "exact_two_sided_mcnemar_p": 0.5
+    },
+    "E7_vs_C7": {
+      "discordant": 0,
+      "p": 1
+    },
+    "E7_vs_D7": {
+      "discordant": 0,
+      "p": 1
+    }
+  },
+  "limitations": [
+    "Exploratory paired case test, not independent repeated observations; cases from one generator.",
+    "Model/settings, timing and billing usage unavailable; arm attribution inferred from order.",
+    "Static token counts inherited from manifest o200k_base; no hidden reasoning measurements.",
+    "Public pilot, ceiling effect; no claim of general superiority or noninferiority."
+  ]
+}
