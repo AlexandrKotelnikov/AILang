@@ -1,0 +1,14 @@
+{
+  "encoding": "o200k_base",
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "golden": 3,
+  "static_prompt_tokens": {
+    "flat": 3158,
+    "natural": 713,
+    "atl": 1144
+  },
+  "limitations": [
+    "Exact published prompt text only, not provider usage.",
+    "Forced-grouped ATL arm, not end-to-end product routing."
+  ]
+}
