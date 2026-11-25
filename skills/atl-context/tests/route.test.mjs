@@ -1,0 +1,9 @@
+import assert from "node:assert/strict";
+import {test} from "node:test";
+import {batchCandidates,permNormalize,permDecode,permCandidates,select} from "../scripts/route-v2.mjs";
+const rows=[{"id":"T1","context":"A pump has a rated flow of 100 L/min and a maximum pressure of 6 bar.","task":"What is the rated flow?"},{"id":"T2","context":"A pump has a rated flow of 100 L/min and a maximum pressure of 6 bar.","task":"What is the maximum pressure?"}];
+const perms=[{"id":"P001","initial":"CAB","swaps":["AB","BC"],"query":"B"},{"id":"P002","initial":"BAC","swaps":["AC","BC","AB"],"query":"A"}];
+test("roundtrip all eligible batch formats",()=>{assert.equal(batchCandidates(rows).length,4);assert.equal(batchCandidates([{id:"x",context:"多\nline",task:"x"}]).length,3);assert.equal(batchCandidates([{id:"x",context:"x",task:""}]).length,4)});
+test("reject invalid batch",()=>{assert.throws(()=>batchCandidates([rows[0],rows[0]]));assert.throws(()=>batchCandidates([{id:"x",context:"c",task:1}]));assert.throws(()=>batchCandidates([]))});
+test("permutation roundtrip and malformed records",()=>{assert.equal(permCandidates(perms).length,2);assert.deepEqual(permDecode("P:ABC/ABBC/C","packed")[0].swaps,["AB","BC"]);assert.throws(()=>permNormalize([{id:"x",initial:"AAB",swaps:["AB"],query:"A"}]));assert.throws(()=>permNormalize([{id:"x",initial:"ABC",swaps:["AA"],query:"A"}]));assert.throws(()=>permDecode("P:ABC/ABA/A","packed"));assert.throws(()=>permDecode("P:ABC/AD/A","packed"))});
+test("strict improvement, overhead and invalid counter",()=>{assert.equal(select(batchCandidates(rows),s=>s.length,{skillText:"x".repeat(10000)}).mode,"flat");assert.equal(select(batchCandidates(rows),()=>10).mode,"flat");assert.throws(()=>select(batchCandidates(rows),()=>NaN));assert.notEqual(select(batchCandidates(Array.from({length:20},(_,i)=>({id:"T"+i,context:"long ".repeat(100),task:"q"}))),s=>s.length,{skillLoaded:true,skillText:"skill"}).mode,"flat")});

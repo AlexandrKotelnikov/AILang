@@ -6,7 +6,7 @@ import {group,expand,normalize,route} from "../atl-context/scripts/batch-core.mj
 const read=(p)=>readFileSync(new URL(p,import.meta.url),"utf8");
 if(!process.argv[2])throw Error("Provide a local o200k_base rank file");
 const encode=tokenizer(readFileSync(process.argv[2],"utf8")), count=s=>encode(s).length;
-const golden=verify(encode),skill=read("../atl-context/SKILL.md");
+const golden=verify(encode),skill=read("./skill-v0.1.0.md");
 const cases=JSON.parse(read("./cases.json")),report=JSON.parse(read("./report.json"));
 assert.equal(EXPECTED,report.rank_sha);
 assert.equal(golden,report.golden);

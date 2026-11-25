@@ -1,49 +1,78 @@
-# ATL — Artificial Thought Language
+# AiLang — ATL Context
 
-Experimental language for compact prompts, generated reasoning notes, memory and agent communication. Goal: improve correct tasks per million tokens, not merely shorten text.
+**Less repeated context. More room for the task.**
 
-- v0.1: [language specification](ATL-spec.md), [system prompt](system-prompt.txt), original static benchmark.
-- v0.2: [Tokenizer Lab](lab/README.md), 1,000 synthetic cases, development-only alias search.
-- v0.3: [Reasoning Engine](reasoning/README.md), five real-inference modes, [logic macros](reasoning/macros.md), deterministic scoring and token/latency accounting.
-- v0.3.1: [Compression Research](compression/README.md), Native/Micro/Adaptive modes, eight multi-step development tasks, single-chat pilot and independent API harness.
-- v0.3.2: [ATL-Nano](nano/README.md), zero-dictionary notation, ASCII/Unicode comparison, new multi-step development pilot and API harness.
-- v0.3.3: [Long Reasoning](long/README.md), 12 recurrence/branch/inventory/dependency cases, bounded replay DSL, exact state replay and static pilot.
-- v0.4: [Evolution Engine](evolution/README.md), automatic reversible codebook discovery, cost-aware mutations, held-out and unseen-family static evaluation.
-- v0.4.1: [Adaptive Evolution](adaptive/README.md), verified o200k_base rank-based tokenizer, actual static token counts, input-only adaptive routing and 72 harder tasks with dual reference solvers.
+An experimental Agent Skill that finds compact, reversible input representations for LLM workflows — and keeps the original whenever compression is not worthwhile.
 
-- v0.4.2: [Semantic Compiler](semantic/README.md), lossless typed-family wire representation, strong compact-English control, 72 verified roundtrips, four-arm independent inference harness.
+[Install](#install) · [Try it](#try-it) · [Evidence](#what-we-have-measured) · [Research](RESEARCH.md) · [Русский](README.ru.md)
 
-- v0.4.3: [Verifiable Reasoning Certificates](certificate/README.md), two new task families, 200 solver-checked instances, compact executable witnesses and static token measurements against a strong compact control.
+> **Preview v0.2.0** · Local Node.js CLI · No API key · No automatic network calls
 
-- v0.4.4: [Executable Repeat Operators](operators/README.md), 240 independently checked interval tasks, lossless bounded repeat syntax, strong RLE control and static character and verified-rank token benchmarks (inference pending).
+## Why AiLang?
 
-- v0.4.5: [Adaptive Operator Engine](operator_engine/README.md), bounded arithmetic runs, input-only routing, 320 checked tasks and seven-arm static character and token benchmarks (inference pending).
+LLM workflows frequently repeat the same source material or express structured operations in unnecessarily verbose prose. ATL Context compares equivalent representations using a verified tokenizer, preserving information rather than summarizing it away.
 
-- v0.4.6: [Recursive Engine](recursive/README.md), bounded recurrence identification, 240 checked tasks and checksum-verified token counts with equivalent recurrence and final-only controls.
+- **Adaptive:** compares flat JSON, grouped JSON, tuples and readable lines for independent task batches.
+- **Typed:** supports compact, reversible notation for explicit sequences of swaps.
+- **Conservative:** validates roundtrips and selects a compact format only when the modeled input token cost is strictly lower than its control.
+- **Transparent:** static input counts are separate from provider billing, accuracy and latency. No claims about controlling hidden thoughts.
 
-- v0.4.7: [Computational Graph](graph/README.md), 240 checked graph-identification tasks, eight-arm static o200k_base benchmark and executable graph certificates; ordinary packed control outperforms prefixed ATL (inference pending).
+## Install
 
-- v0.4.8: [Graph VM](graph_vm/README.md), unknown source and operation selection, 100 checked tasks, fixed-width wire vs CSV and ATL with exact static rank-based token counts; independent API harness prepared, inference pending.
+For Codex, from the project where you want the skill (Git and Node.js 18+):
 
-- v0.4.9: [Symbolic Execution Engine](symbolic/README.md), 120 checked affine graphs, CSE/DCE, six-arm static token comparison and opt-in inference harness (inference pending).
-
-- v0.5.0: [Adaptive Reasoning Compiler pilot](piecewise/README.md), live nonlinear piecewise chains, 112 checked tasks, query-free controls and development-only output-cost routing (static benchmark; inference pending).
-
-- v0.5.1: [Logical Reasoning Engine](logic/README.md), 120 checked Boolean entailment tasks, executable witness/core certificates, eight static o200k_base modes; standard CNF wins per-task total (inference pending).
-
-- v0.5.2: [Semantic Fidelity Engine](fidelity/README.md), 120 controlled-language tasks, 5,120 mutations, gold-model equivalence audit and checksum-verified static token comparison (inference pending).
-
-- v0.5.3: [Semantic Projection Audit](projection/README.md), replicated 5,120 mutations; complete pair-projection verification for 2-CNF against gold, explicit 3-CNF counterexample (inference pending).
-
-- v0.5.4: [Generalized Semantic Verification](generalized/README.md), 120 new tasks, 5,156 mutations, bounded-width projection equivalence and six checksum-verified static token modes (inference pending).
-
-Quick start:
 ```sh
-node reasoning/run.mjs --self-test
-node reasoning/run.mjs --model YOUR_MODEL
-python -m unittest discover -s lab -p 'test_*.py'
-python -m pip install tiktoken
-python lab/lab.py --encoding o200k_base --out results/o200k
+git clone --depth 1 https://github.com/AlexandrKotelnikov/AILang.git /tmp/ailang-skill
+mkdir -p .agents/skills
+test ! -e .agents/skills/atl-context && cp -R /tmp/ailang-skill/skills/atl-context .agents/skills/
 ```
 
-Reasoning Engine defaults to dry run; see its README for execution. No validated compression or accuracy claim yet. Static reference counts do not measure model performance, and prompts cannot guarantee control over hidden reasoning in closed models.
+Start a new Codex session and invoke `$atl-context` explicitly. The copy command deliberately refuses to overwrite an existing skill. For a global install use `~/.agents/skills/`; for Claude Code the documented project folder is `.claude/skills/`. These paths follow [OpenAI's installation guidance](https://developers.openai.com/api/reference/cli); host integration has not yet been tested by this project. See [installation and updating](docs/INSTALL.md) for the local rank file and verification.
+
+## Try it
+
+Ask your agent:
+
+> $atl-context — I have 20 independent questions using the same source document. Preserve the exact source and all IDs. Compare the full input token costs, choose a reversible format only if cheaper, and show me the counts before using it downstream.
+
+Or run the CLI from the repository root after obtaining the [official tokenizer ranks](docs/INSTALL.md):
+
+```sh
+node skills/atl-context/scripts/optimize.mjs --mode batch --input skills/atl-context/examples/batch.json --ranks /path/to/o200k_base.tiktoken --skill-loaded
+```
+
+A typed example: `P001:CAB/ABBC/B` means initial items CAB, swaps AB then BC, query actor B. The skill can compare this packed representation against an equivalent CSV representation. It does not silently convert arbitrary prose.
+
+## What we have measured
+
+### Stage 7: permutation reasoning pilot
+
+| Representation | Static input tokens | Correct responses (3 runs) |
+|---|---:|---:|
+| Verbose English | 18,440 | 79/81 |
+| Compact English | 6,119 | 81/81 |
+| Semantic CSV | 2,672 | 81/81 |
+| **ATL packed** | **1,600** | **81/81** |
+
+**91.32% fewer input tokens than verbose English; 40.12% fewer than CSV.**
+
+This is a public, synthetic 27-task pilot with three repeats per format, not 81 independent tasks. The numbers describe the benchmark prompts, not the installation or end-to-end skill overhead. Accuracy superiority was not established (exploratory paired test p = 0.50). Model/settings and actual usage were not recorded. Results do not establish general savings, speedups or hidden reasoning compression.
+
+[Protocol](lab/synthetic_benchmark_v3/README.md) · [Raw scores and analysis](lab/synthetic_benchmark_v3/results/summary.json) · [Next experiment](lab/synthetic_benchmark_v4/README.md)
+
+## Explore the project
+
+| Path | Purpose |
+|---|---|
+| [skills/atl-context](skills/atl-context) | Installable skill, scripts, examples, tests |
+| [docs/INSTALL.md](docs/INSTALL.md) | Installation, rank file, updating and verification |
+| [RESEARCH.md](RESEARCH.md) | Research archive and previous ATL engines |
+| [CHANGELOG.md](CHANGELOG.md) | Product changes |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Reproducible evaluations and bug reports |
+
+## Help us validate it
+
+Try a real repeated-context batch, compare against your existing optimized workflow and share the exact model, input counts, correctness and any failures in [GitHub Issues](https://github.com/AlexandrKotelnikov/AILang/issues). Do not submit confidential source data.
+
+**License status:** a distribution license has not yet been selected. Public visibility is not an open-source license; redistribution and broader reuse rights are not granted by this README. Review the repository before installing and contact the maintainer about licensing.
+

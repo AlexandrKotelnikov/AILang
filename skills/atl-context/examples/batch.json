@@ -1,0 +1,12 @@
+[
+  {
+    "id": "T1",
+    "context": "A pump has a rated flow of 100 L/min and a maximum pressure of 6 bar.",
+    "task": "What is the rated flow?"
+  },
+  {
+    "id": "T2",
+    "context": "A pump has a rated flow of 100 L/min and a maximum pressure of 6 bar.",
+    "task": "What is the maximum pressure?"
+  }
+]
