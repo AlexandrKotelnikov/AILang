@@ -29,6 +29,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.5.0: [Adaptive Reasoning Compiler pilot](piecewise/README.md), live nonlinear piecewise chains, 112 checked tasks, query-free controls and development-only output-cost routing (static benchmark; inference pending).
 
+- v0.5.1: [Logical Reasoning Engine](logic/README.md), 120 checked Boolean entailment tasks, executable witness/core certificates, eight static o200k_base modes; standard CNF wins per-task total (inference pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
