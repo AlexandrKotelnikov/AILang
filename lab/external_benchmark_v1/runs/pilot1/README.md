@@ -1,0 +1,3 @@
+# Pilot 1 — reported answers
+
+Six user-submitted sequences in order B5, A5, C5, R5, D5, K5 were identical after normalization. K5 checked against pinned reference; same result for all arms: 99/100, GSM8K 24/25, other categories 25/25 each. M0516 official 160, reported 288; ambiguous scope of $4 each (bag versus pack). Official scoring unchanged. All IDs and order match. One shared response file rather than duplicating identical data. No evidence of a format or guidance accuracy advantage in this pilot. Independence, exact original output syntax, model settings and timing not verified. No token measurements yet. Do not infer statistical equivalence or internal computation savings. See ../README.md for design. Time and token fields remain null pending measurements.

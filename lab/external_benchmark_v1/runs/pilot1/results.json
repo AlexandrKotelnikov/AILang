@@ -1,0 +1,264 @@
+{
+  "replicate": 1,
+  "order": [
+    "B5",
+    "A5",
+    "C5",
+    "R5",
+    "D5",
+    "K5"
+  ],
+  "assignment": "Unlabeled user submissions assigned by agreed order; independence unverified",
+  "response_file": "shared_normalized_response.txt",
+  "note": "All six pasted answer sequences match. One shared normalized file, not six independent raw logs. Backslashes at line ends omitted; original chat formatting unknown.",
+  "arms": {
+    "B5": {
+      "format": "json",
+      "guide": false,
+      "characters": 45462,
+      "utf8_bytes": null,
+      "visible_input_tokens": null,
+      "reasoning_tokens": null,
+      "accuracy": 0.99,
+      "correct": 99,
+      "total": 100,
+      "by_category": {
+        "M": {
+          "total": 25,
+          "correct": 24
+        },
+        "L": {
+          "total": 25,
+          "correct": 25
+        },
+        "T": {
+          "total": 25,
+          "correct": 25
+        },
+        "D": {
+          "total": 25,
+          "correct": 25
+        }
+      },
+      "output_chars": 990,
+      "total_chars": 46452,
+      "ui_reasoning_s": null,
+      "strict_after_normalization": true,
+      "errors": [
+        {
+          "id": "M0516",
+          "expected": "160",
+          "actual": "288"
+        }
+      ]
+    },
+    "A5": {
+      "format": "atl",
+      "guide": true,
+      "characters": 43526,
+      "utf8_bytes": null,
+      "visible_input_tokens": null,
+      "reasoning_tokens": null,
+      "accuracy": 0.99,
+      "correct": 99,
+      "total": 100,
+      "by_category": {
+        "M": {
+          "total": 25,
+          "correct": 24
+        },
+        "L": {
+          "total": 25,
+          "correct": 25
+        },
+        "T": {
+          "total": 25,
+          "correct": 25
+        },
+        "D": {
+          "total": 25,
+          "correct": 25
+        }
+      },
+      "output_chars": 990,
+      "total_chars": 44516,
+      "ui_reasoning_s": null,
+      "strict_after_normalization": true,
+      "errors": [
+        {
+          "id": "M0516",
+          "expected": "160",
+          "actual": "288"
+        }
+      ]
+    },
+    "C5": {
+      "format": "csv",
+      "guide": false,
+      "characters": 43023,
+      "utf8_bytes": null,
+      "visible_input_tokens": null,
+      "reasoning_tokens": null,
+      "accuracy": 0.99,
+      "correct": 99,
+      "total": 100,
+      "by_category": {
+        "M": {
+          "total": 25,
+          "correct": 24
+        },
+        "L": {
+          "total": 25,
+          "correct": 25
+        },
+        "T": {
+          "total": 25,
+          "correct": 25
+        },
+        "D": {
+          "total": 25,
+          "correct": 25
+        }
+      },
+      "output_chars": 990,
+      "total_chars": 44013,
+      "ui_reasoning_s": null,
+      "strict_after_normalization": true,
+      "errors": [
+        {
+          "id": "M0516",
+          "expected": "160",
+          "actual": "288"
+        }
+      ]
+    },
+    "R5": {
+      "format": "json",
+      "guide": true,
+      "characters": 45866,
+      "utf8_bytes": null,
+      "visible_input_tokens": null,
+      "reasoning_tokens": null,
+      "accuracy": 0.99,
+      "correct": 99,
+      "total": 100,
+      "by_category": {
+        "M": {
+          "total": 25,
+          "correct": 24
+        },
+        "L": {
+          "total": 25,
+          "correct": 25
+        },
+        "T": {
+          "total": 25,
+          "correct": 25
+        },
+        "D": {
+          "total": 25,
+          "correct": 25
+        }
+      },
+      "output_chars": 990,
+      "total_chars": 46856,
+      "ui_reasoning_s": null,
+      "strict_after_normalization": true,
+      "errors": [
+        {
+          "id": "M0516",
+          "expected": "160",
+          "actual": "288"
+        }
+      ]
+    },
+    "D5": {
+      "format": "atl",
+      "guide": false,
+      "characters": 43122,
+      "utf8_bytes": null,
+      "visible_input_tokens": null,
+      "reasoning_tokens": null,
+      "accuracy": 0.99,
+      "correct": 99,
+      "total": 100,
+      "by_category": {
+        "M": {
+          "total": 25,
+          "correct": 24
+        },
+        "L": {
+          "total": 25,
+          "correct": 25
+        },
+        "T": {
+          "total": 25,
+          "correct": 25
+        },
+        "D": {
+          "total": 25,
+          "correct": 25
+        }
+      },
+      "output_chars": 990,
+      "total_chars": 44112,
+      "ui_reasoning_s": null,
+      "strict_after_normalization": true,
+      "errors": [
+        {
+          "id": "M0516",
+          "expected": "160",
+          "actual": "288"
+        }
+      ]
+    },
+    "K5": {
+      "format": "csv",
+      "guide": true,
+      "characters": 43427,
+      "utf8_bytes": null,
+      "visible_input_tokens": null,
+      "reasoning_tokens": null,
+      "accuracy": 0.99,
+      "correct": 99,
+      "total": 100,
+      "by_category": {
+        "M": {
+          "total": 25,
+          "correct": 24
+        },
+        "L": {
+          "total": 25,
+          "correct": 25
+        },
+        "T": {
+          "total": 25,
+          "correct": 25
+        },
+        "D": {
+          "total": 25,
+          "correct": 25
+        }
+      },
+      "output_chars": 990,
+      "total_chars": 44417,
+      "ui_reasoning_s": null,
+      "strict_after_normalization": true,
+      "errors": [
+        {
+          "id": "M0516",
+          "expected": "160",
+          "actual": "288"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "One reported run per arm, same 100 tasks",
+    "Model/settings and independent chats not verified",
+    "No exact token or timing data yet",
+    "Public benchmark contamination possible",
+    "M0516 wording ambiguous; official answer retained",
+    "Hash-ranked selection may cluster source IDs; not representative random sample"
+  ]
+}
