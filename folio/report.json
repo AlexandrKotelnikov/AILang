@@ -1,0 +1,187 @@
+{
+  "version": "0.5.2",
+  "excluded_zero_based": [
+    9,
+    10,
+    11,
+    87,
+    105,
+    106,
+    107,
+    173,
+    174,
+    175
+  ],
+  "matched": {
+    "rows": 194,
+    "groups": 69,
+    "group_sizes": {
+      "1": 8,
+      "2": 9,
+      "3": 45,
+      "4": 2,
+      "5": 5
+    },
+    "labels": {
+      "U": 67,
+      "T": 67,
+      "F": 60
+    },
+    "group_roundtrips": 194,
+    "alias_roundtrips": 138,
+    "lexical_checks": 2831,
+    "counts": {
+      "nl_single": {
+        "requests": 194,
+        "system": 6984,
+        "input": 17643,
+        "output": 582,
+        "total": 25209
+      },
+      "fol_single": {
+        "requests": 194,
+        "system": 7178,
+        "input": 22104,
+        "output": 582,
+        "total": 29864
+      },
+      "fol_min_single": {
+        "requests": 194,
+        "system": 7178,
+        "input": 21396,
+        "output": 582,
+        "total": 29156
+      },
+      "nl_batch": {
+        "requests": 69,
+        "system": 2484,
+        "input": 7487,
+        "output": 457,
+        "total": 10428
+      },
+      "fol_batch": {
+        "requests": 69,
+        "system": 2553,
+        "input": 9315,
+        "output": 457,
+        "total": 12325
+      },
+      "fol_min_batch": {
+        "requests": 69,
+        "system": 2553,
+        "input": 9020,
+        "output": 457,
+        "total": 12030
+      },
+      "alias_batch": {
+        "requests": 69,
+        "system": 4140,
+        "input": 10964,
+        "output": 457,
+        "total": 15561
+      },
+      "adaptive_batch": {
+        "requests": 69,
+        "system": 4140,
+        "input": 8922,
+        "output": 457,
+        "total": 13519
+      }
+    },
+    "selections": {
+      "plain": 65,
+      "alias": 4
+    }
+  },
+  "all": {
+    "rows": 204,
+    "groups": 73,
+    "group_sizes": {
+      "1": 9,
+      "2": 9,
+      "3": 48,
+      "4": 2,
+      "5": 5
+    },
+    "labels": {
+      "U": 69,
+      "T": 72,
+      "F": 63
+    },
+    "group_roundtrips": 204,
+    "alias_roundtrips": 146,
+    "lexical_checks": 3001,
+    "counts": {
+      "nl_single": {
+        "requests": 204,
+        "system": 7344,
+        "input": 18852,
+        "output": 612,
+        "total": 26808
+      },
+      "fol_single": {
+        "requests": 204,
+        "system": 7548,
+        "input": 23278,
+        "output": 612,
+        "total": 31438
+      },
+      "fol_min_single": {
+        "requests": 204,
+        "system": 7548,
+        "input": 22527,
+        "output": 612,
+        "total": 30687
+      },
+      "nl_batch": {
+        "requests": 73,
+        "system": 2628,
+        "input": 8036,
+        "output": 481,
+        "total": 11145
+      },
+      "fol_batch": {
+        "requests": 73,
+        "system": 2701,
+        "input": 9883,
+        "output": 481,
+        "total": 13065
+      },
+      "fol_min_batch": {
+        "requests": 73,
+        "system": 2701,
+        "input": 9565,
+        "output": 481,
+        "total": 12747
+      },
+      "alias_batch": {
+        "requests": 73,
+        "system": 4380,
+        "input": 11661,
+        "output": 481,
+        "total": 16522
+      },
+      "adaptive_batch": {
+        "requests": 73,
+        "system": 4380,
+        "input": 9467,
+        "output": 481,
+        "total": 14328
+      }
+    },
+    "selections": {
+      "plain": 69,
+      "alias": 4
+    }
+  },
+  "limitations": [
+    "Static canonical text, not actual inference.",
+    "Gold FOL supplied; semantic translation and entailment correctness not tested.",
+    "Lexical roundtrip, not a FOL parser; grouping exact raw premise arrays.",
+    "Grouped requests may change model quality; no framing, cache, runtime or hidden tokens measured.",
+    "Public validation split, not blind; equal premise count does not establish semantic alignment."
+  ],
+  "dataset_blob": "06244bd10b37eac73cba7aca6c336e96011ace58",
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "golden": 3
+}
