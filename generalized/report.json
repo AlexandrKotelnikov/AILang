@@ -1,0 +1,483 @@
+{
+  "version": "0.5.4",
+  "seed": 4512026,
+  "roundtrips": 600,
+  "checks": 5156,
+  "positive": 120,
+  "boundary": [
+    {
+      "k": 2,
+      "lower_order_indistinguishable": true,
+      "required_order_distinguishes": true
+    },
+    {
+      "k": 3,
+      "lower_order_indistinguishable": true,
+      "required_order_distinguishes": true
+    },
+    {
+      "k": 4,
+      "lower_order_indistinguishable": true,
+      "required_order_distinguishes": true
+    }
+  ],
+  "total": {
+    "tasks": 120,
+    "mutations": 5156,
+    "corrupt": 3612,
+    "equivalent": 1544,
+    "false_accept": {
+      "answer": 3023,
+      "order1": 1849,
+      "order2": 632,
+      "order3": 99,
+      "order4": 0,
+      "required": 0,
+      "mutual": 0
+    },
+    "tokens": {
+      "cnf": {
+        "system": 7800,
+        "input": 4041,
+        "output": 120,
+        "total": 11961
+      },
+      "atl": {
+        "system": 7680,
+        "input": 3708,
+        "output": 120,
+        "total": 11508
+      },
+      "reduced": {
+        "system": 7680,
+        "input": 2616,
+        "output": 120,
+        "total": 10416
+      },
+      "projection": {
+        "system": 10200,
+        "input": 6039,
+        "output": 120,
+        "total": 16359
+      },
+      "bitmap": {
+        "system": 8400,
+        "input": 2585,
+        "output": 120,
+        "total": 11105
+      },
+      "adaptive": {
+        "system": 13560,
+        "input": 2259,
+        "output": 120,
+        "total": 15939
+      }
+    },
+    "selected": {
+      "C": 48,
+      "P": 13,
+      "B": 59
+    },
+    "labels": {
+      "T": 18,
+      "F": 30,
+      "U": 72,
+      "I": 0
+    }
+  },
+  "groups": {
+    "6:2": {
+      "tasks": 20,
+      "mutations": 653,
+      "corrupt": 439,
+      "equivalent": 214,
+      "false_accept": {
+        "answer": 301,
+        "order1": 84,
+        "order2": 0,
+        "order3": 0,
+        "order4": 0,
+        "required": 0,
+        "mutual": 0
+      },
+      "tokens": {
+        "cnf": {
+          "system": 1300,
+          "input": 494,
+          "output": 20,
+          "total": 1814
+        },
+        "atl": {
+          "system": 1280,
+          "input": 462,
+          "output": 20,
+          "total": 1762
+        },
+        "reduced": {
+          "system": 1280,
+          "input": 321,
+          "output": 20,
+          "total": 1621
+        },
+        "projection": {
+          "system": 1700,
+          "input": 269,
+          "output": 20,
+          "total": 1989
+        },
+        "bitmap": {
+          "system": 1400,
+          "input": 236,
+          "output": 20,
+          "total": 1656
+        },
+        "adaptive": {
+          "system": 2260,
+          "input": 261,
+          "output": 20,
+          "total": 2541
+        }
+      },
+      "selected": {
+        "C": 4,
+        "P": 3,
+        "B": 13
+      },
+      "labels": {
+        "T": 3,
+        "F": 10,
+        "U": 7,
+        "I": 0
+      }
+    },
+    "6:3": {
+      "tasks": 20,
+      "mutations": 847,
+      "corrupt": 565,
+      "equivalent": 282,
+      "false_accept": {
+        "answer": 423,
+        "order1": 212,
+        "order2": 12,
+        "order3": 0,
+        "order4": 0,
+        "required": 0,
+        "mutual": 0
+      },
+      "tokens": {
+        "cnf": {
+          "system": 1300,
+          "input": 669,
+          "output": 20,
+          "total": 1989
+        },
+        "atl": {
+          "system": 1280,
+          "input": 615,
+          "output": 20,
+          "total": 1915
+        },
+        "reduced": {
+          "system": 1280,
+          "input": 421,
+          "output": 20,
+          "total": 1721
+        },
+        "projection": {
+          "system": 1700,
+          "input": 515,
+          "output": 20,
+          "total": 2235
+        },
+        "bitmap": {
+          "system": 1400,
+          "input": 240,
+          "output": 20,
+          "total": 1660
+        },
+        "adaptive": {
+          "system": 2260,
+          "input": 275,
+          "output": 20,
+          "total": 2555
+        }
+      },
+      "selected": {
+        "C": 2,
+        "P": 0,
+        "B": 18
+      },
+      "labels": {
+        "T": 6,
+        "F": 4,
+        "U": 10,
+        "I": 0
+      }
+    },
+    "6:4": {
+      "tasks": 20,
+      "mutations": 1019,
+      "corrupt": 638,
+      "equivalent": 381,
+      "false_accept": {
+        "answer": 595,
+        "order1": 436,
+        "order2": 197,
+        "order3": 28,
+        "order4": 0,
+        "required": 0,
+        "mutual": 0
+      },
+      "tokens": {
+        "cnf": {
+          "system": 1300,
+          "input": 813,
+          "output": 20,
+          "total": 2133
+        },
+        "atl": {
+          "system": 1280,
+          "input": 726,
+          "output": 20,
+          "total": 2026
+        },
+        "reduced": {
+          "system": 1280,
+          "input": 457,
+          "output": 20,
+          "total": 1757
+        },
+        "projection": {
+          "system": 1700,
+          "input": 720,
+          "output": 20,
+          "total": 2440
+        },
+        "bitmap": {
+          "system": 1400,
+          "input": 269,
+          "output": 20,
+          "total": 1689
+        },
+        "adaptive": {
+          "system": 2260,
+          "input": 302,
+          "output": 20,
+          "total": 2582
+        }
+      },
+      "selected": {
+        "C": 2,
+        "P": 0,
+        "B": 18
+      },
+      "labels": {
+        "T": 0,
+        "F": 4,
+        "U": 16,
+        "I": 0
+      }
+    },
+    "8:2": {
+      "tasks": 20,
+      "mutations": 707,
+      "corrupt": 519,
+      "equivalent": 188,
+      "false_accept": {
+        "answer": 382,
+        "order1": 148,
+        "order2": 0,
+        "order3": 0,
+        "order4": 0,
+        "required": 0,
+        "mutual": 0
+      },
+      "tokens": {
+        "cnf": {
+          "system": 1300,
+          "input": 589,
+          "output": 20,
+          "total": 1909
+        },
+        "atl": {
+          "system": 1280,
+          "input": 563,
+          "output": 20,
+          "total": 1863
+        },
+        "reduced": {
+          "system": 1280,
+          "input": 408,
+          "output": 20,
+          "total": 1708
+        },
+        "projection": {
+          "system": 1700,
+          "input": 404,
+          "output": 20,
+          "total": 2124
+        },
+        "bitmap": {
+          "system": 1400,
+          "input": 582,
+          "output": 20,
+          "total": 2002
+        },
+        "adaptive": {
+          "system": 2260,
+          "input": 398,
+          "output": 20,
+          "total": 2678
+        }
+      },
+      "selected": {
+        "C": 10,
+        "P": 10,
+        "B": 0
+      },
+      "labels": {
+        "T": 4,
+        "F": 6,
+        "U": 10,
+        "I": 0
+      }
+    },
+    "8:3": {
+      "tasks": 20,
+      "mutations": 857,
+      "corrupt": 695,
+      "equivalent": 162,
+      "false_accept": {
+        "answer": 621,
+        "order1": 422,
+        "order2": 143,
+        "order3": 0,
+        "order4": 0,
+        "required": 0,
+        "mutual": 0
+      },
+      "tokens": {
+        "cnf": {
+          "system": 1300,
+          "input": 662,
+          "output": 20,
+          "total": 1982
+        },
+        "atl": {
+          "system": 1280,
+          "input": 607,
+          "output": 20,
+          "total": 1907
+        },
+        "reduced": {
+          "system": 1280,
+          "input": 492,
+          "output": 20,
+          "total": 1792
+        },
+        "projection": {
+          "system": 1700,
+          "input": 1213,
+          "output": 20,
+          "total": 2933
+        },
+        "bitmap": {
+          "system": 1400,
+          "input": 638,
+          "output": 20,
+          "total": 2058
+        },
+        "adaptive": {
+          "system": 2260,
+          "input": 508,
+          "output": 20,
+          "total": 2788
+        }
+      },
+      "selected": {
+        "C": 18,
+        "P": 0,
+        "B": 2
+      },
+      "labels": {
+        "T": 2,
+        "F": 4,
+        "U": 14,
+        "I": 0
+      }
+    },
+    "8:4": {
+      "tasks": 20,
+      "mutations": 1073,
+      "corrupt": 756,
+      "equivalent": 317,
+      "false_accept": {
+        "answer": 701,
+        "order1": 547,
+        "order2": 280,
+        "order3": 71,
+        "order4": 0,
+        "required": 0,
+        "mutual": 0
+      },
+      "tokens": {
+        "cnf": {
+          "system": 1300,
+          "input": 814,
+          "output": 20,
+          "total": 2134
+        },
+        "atl": {
+          "system": 1280,
+          "input": 735,
+          "output": 20,
+          "total": 2035
+        },
+        "reduced": {
+          "system": 1280,
+          "input": 517,
+          "output": 20,
+          "total": 1817
+        },
+        "projection": {
+          "system": 1700,
+          "input": 2918,
+          "output": 20,
+          "total": 4638
+        },
+        "bitmap": {
+          "system": 1400,
+          "input": 620,
+          "output": 20,
+          "total": 2040
+        },
+        "adaptive": {
+          "system": 2260,
+          "input": 515,
+          "output": 20,
+          "total": 2795
+        }
+      },
+      "selected": {
+        "C": 12,
+        "P": 0,
+        "B": 8
+      },
+      "labels": {
+        "T": 3,
+        "F": 2,
+        "U": 15,
+        "I": 0
+      }
+    }
+  },
+  "limitations": [
+    "Synthetic bounded CNF, n=6 or 8, width 2..4; not external or model inference.",
+    "Gold reference required. Mutation counts correlated; candidate formulas preserve max width.",
+    "Token counts are canonical static text, not actual API usage, framing, cache, hidden reasoning or latency.",
+    "Reduced CNF via greedy redundancy elimination; no minimum-size guarantee. Adaptive route chooses lowest wire token count before adding common adaptive instructions; no oracle answer needed beyond input formula model enumeration.",
+    "No independent API inference. Exhaustive model enumeration is exponential; SAT-based implementation needed at scale."
+  ],
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "golden": 3
+}
