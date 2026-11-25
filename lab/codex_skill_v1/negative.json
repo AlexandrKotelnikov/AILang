@@ -1,0 +1,12 @@
+[
+  {
+    "id": "N1",
+    "context": "A is red.",
+    "task": "What color is A?"
+  },
+  {
+    "id": "N2",
+    "context": "B is blue.",
+    "task": "What color is B?"
+  }
+]

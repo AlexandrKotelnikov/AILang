@@ -1,6 +1,6 @@
 # Contributing
 
-The project is experimental; licensing is not yet selected. Before proposing redistributable code or data, contact the maintainer to clarify licensing.
+The project is experimental and licensed under the [MIT License](LICENSE). Submit only code or data you have the rights to contribute; retain third-party notices.
 
 For a bug report, include the skill version, host, model and settings if known, expected and actual result, minimal nonconfidential fixture and command. Report static tokenizer counts separately from provider usage. For research contributions, freeze task cases and format controls before inference, use equivalent output contracts, preserve raw responses, report failures, avoid treating repeated cases as independent. Prefer strong compact baselines over verbose-only comparisons.
 

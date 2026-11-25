@@ -1,0 +1,98 @@
+[
+  {
+    "id": "T01",
+    "answer": "120 L/min"
+  },
+  {
+    "id": "T02",
+    "answer": "35 L/min"
+  },
+  {
+    "id": "T03",
+    "answer": "8 bar"
+  },
+  {
+    "id": "T04",
+    "answer": "1450 rpm"
+  },
+  {
+    "id": "T05",
+    "answer": "15 kW"
+  },
+  {
+    "id": "T06",
+    "answer": "85 °C"
+  },
+  {
+    "id": "T07",
+    "answer": "7.2 bar"
+  },
+  {
+    "id": "T08",
+    "answer": "7.8 bar"
+  },
+  {
+    "id": "T09",
+    "answer": "4 L/min"
+  },
+  {
+    "id": "T10",
+    "answer": "30 days"
+  },
+  {
+    "id": "T11",
+    "answer": "90 °C"
+  },
+  {
+    "id": "T12",
+    "answer": "25%"
+  },
+  {
+    "id": "T13",
+    "answer": "92%"
+  },
+  {
+    "id": "T14",
+    "answer": "3.5 mm/s"
+  },
+  {
+    "id": "T15",
+    "answer": "7.1 mm/s"
+  },
+  {
+    "id": "T16",
+    "answer": "12 s"
+  },
+  {
+    "id": "T17",
+    "answer": "1.3 bar"
+  },
+  {
+    "id": "T18",
+    "answer": "29 A"
+  },
+  {
+    "id": "T19",
+    "answer": "0.6 bar"
+  },
+  {
+    "id": "T20",
+    "answer": "180 days"
+  },
+  {
+    "id": "T21",
+    "answer": "5 rpm/s"
+  },
+  {
+    "id": "T22",
+    "answer": "18 L/min"
+  },
+  {
+    "id": "T23",
+    "answer": "−10 °C"
+  },
+  {
+    "id": "T24",
+    "answer": "45 °C"
+  }
+]

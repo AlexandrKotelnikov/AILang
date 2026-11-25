@@ -1,0 +1,18 @@
+import {readFileSync,writeFileSync,mkdirSync} from "node:fs";
+import {join} from "node:path";
+import {batchCandidates,select} from "../../skills/atl-context/scripts/route-v2.mjs";
+import {tokenizer,verify,EXPECTED} from "../../skills/atl-context/scripts/tokenizer.mjs";
+const [rankPath,out]=process.argv.slice(2);
+if(!rankPath||!out)throw Error("Usage: node prepare.mjs RANKS OUT_DIR");
+const read=p=>readFileSync(new URL(p,import.meta.url),"utf8");
+const rows=JSON.parse(read("./fixture.json"));
+const encode=tokenizer(readFileSync(rankPath,"utf8")),golden=verify(encode),count=s=>encode(s).length;
+const skillText=read("../../skills/atl-context/SKILL.md"),candidates=batchCandidates(rows);
+const warm=select(candidates,count,{skillText,skillLoaded:true}),cold=select(candidates,count,{skillText});
+const suffix="\nDo not use tools, code, files or the web to solve these tasks. Return only the requested JSON array, in input order.";
+const prompts={A:candidates[0].instruction+"\n"+candidates[0].payload+suffix,B:read("./control-B.txt").trimEnd()+suffix,C:warm.selectedInstruction+"\n"+warm.selectedPayload+suffix};
+mkdirSync(out,{recursive:true});
+for(const [arm,p] of Object.entries(prompts))writeFileSync(join(out,arm+".txt"),p,"utf8");
+const report={encoding:"o200k_base",rank_sha:EXPECTED,golden,static_prompt_tokens:Object.fromEntries(Object.entries(prompts).map(([k,v])=>[k,count(v)])),warm,cold,n:rows.length,notes:"Actual prompt strings including suffix; warm/cold router costs exclude common suffix and model host framing. C uses warm-selected representation."};
+writeFileSync(join(out,"static.json"),JSON.stringify(report,null,2)+"\n");
+console.log(JSON.stringify({tokens:report.static_prompt_tokens,warm_mode:warm.mode,cold_mode:cold.mode,golden},null,2));

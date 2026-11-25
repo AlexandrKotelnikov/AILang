@@ -1,0 +1,122 @@
+[
+  {
+    "id": "T01",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the nominal flow? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T02",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the minimum stable flow? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T03",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the maximum pressure? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T04",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the nominal speed? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T05",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the motor rating? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T06",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the fluid temperature limit? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T07",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the alarm threshold? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T08",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the trip threshold? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T09",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the seal flush flow? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T10",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the inspection interval? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T11",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the bearing temperature limit? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T12",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the minimum tank level? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T13",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the maximum tank level? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T14",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the normal vibration limit? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T15",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the high vibration trip? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T16",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the startup delay? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T17",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the minimum suction pressure? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T18",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the maximum current? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T19",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the filter differential alarm? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T20",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the calibration interval? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T21",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the maximum ramp rate? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T22",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the cooling water flow? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T23",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the minimum ambient temperature? Return exactly the value and unit shown, including the sign if present."
+  },
+  {
+    "id": "T24",
+    "context": "Fictional equipment P-217; synthetic test data only. Values below are explicit setpoints or limits; do not infer other values or convert units. nominal flow: 120 L/min. minimum stable flow: 35 L/min. maximum pressure: 8 bar. nominal speed: 1450 rpm. motor rating: 15 kW. fluid temperature limit: 85 °C. alarm threshold: 7.2 bar. trip threshold: 7.8 bar. seal flush flow: 4 L/min. inspection interval: 30 days. bearing temperature limit: 90 °C. minimum tank level: 25%. maximum tank level: 92%. normal vibration limit: 3.5 mm/s. high vibration trip: 7.1 mm/s. startup delay: 12 s. minimum suction pressure: 1.3 bar. maximum current: 29 A. filter differential alarm: 0.6 bar. calibration interval: 180 days. maximum ramp rate: 5 rpm/s. cooling water flow: 18 L/min. minimum ambient temperature: −10 °C. maximum ambient temperature: 45 °C.",
+    "task": "What is the maximum ambient temperature? Return exactly the value and unit shown, including the sign if present."
+  }
+]

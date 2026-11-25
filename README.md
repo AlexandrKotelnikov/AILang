@@ -6,7 +6,7 @@
 
 An experimental Agent Skill that finds compact, reversible input representations for LLM workflows — and keeps the original whenever compression is not worthwhile.
 
-[Install](#install) · [Try it](#try-it) · [Evidence](#what-we-have-measured) · [Research](RESEARCH.md) · [Русский](README.ru.md)
+[Install](#install) · [Try it](#try-it) · [Evidence](#what-we-have-measured) · [Codex experiment](lab/codex_skill_v1/README.md) · [Research](RESEARCH.md) · [Русский](README.ru.md)
 
 > **Preview v0.2.0** · Local Node.js CLI · No API key · No automatic network calls
 
@@ -77,5 +77,6 @@ This is a public, synthetic 27-task pilot with three repeats per format, not 81 
 
 Try a real repeated-context batch, compare against your existing optimized workflow and share the exact model, input counts, correctness and any failures in [GitHub Issues](https://github.com/AlexandrKotelnikov/AILang/issues). Do not submit confidential source data.
 
-**License status:** a distribution license has not yet been selected. Public visibility is not an open-source license; redistribution and broader reuse rights are not granted by this README. Review the repository before installing and contact the maintainer about licensing.
+## License
 
+[MIT](LICENSE). Use, modify and distribute the project under the MIT terms; preserve the copyright and license notice. Third-party material remains subject to its own terms.

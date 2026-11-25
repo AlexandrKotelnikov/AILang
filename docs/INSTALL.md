@@ -37,3 +37,7 @@ Review the changes before updating. Pull the source checkout, back up your exist
 - Small/unrelated request: keep normal language.
 - No savings: the selected representation is the control; keep the original if already submitted.
 - Host does not discover the skill: check folder and frontmatter; the CLI can still be used directly.
+
+## Codex experiment
+
+Follow the [host and representation pilot](../lab/codex_skill_v1/README.md) to record real Codex results.

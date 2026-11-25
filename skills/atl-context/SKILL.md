@@ -1,6 +1,7 @@
 ---
 name: atl-context
 description: Optimize context for independent task batches or structured permutation tasks with reversible encodings and measured input token costs. Use when asked to reduce tokens, deduplicate repeated context, or prepare compact task payloads for an authorized downstream agent. Do not use for ordinary small requests.
+license: MIT
 metadata:
   version: "0.2.0"
 ---
