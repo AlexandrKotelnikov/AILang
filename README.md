@@ -31,6 +31,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.5.1: [Logical Reasoning Engine](logic/README.md), 120 checked Boolean entailment tasks, executable witness/core certificates, eight static o200k_base modes; standard CNF wins per-task total (inference pending).
 
+- v0.5.2: [Semantic Fidelity Engine](fidelity/README.md), 120 controlled-language tasks, 5,120 mutations, gold-model equivalence audit and checksum-verified static token comparison (inference pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
