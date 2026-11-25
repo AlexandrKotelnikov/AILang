@@ -1,0 +1,1 @@
+pair_id,arm,model,reasoning_setting,start_utc,first_output_utc,end_utc,visible_reasoning_seconds,input_tokens,cached_input_tokens,output_tokens,reasoning_tokens,strict_format,correct,total,truncated,tools_used,notes

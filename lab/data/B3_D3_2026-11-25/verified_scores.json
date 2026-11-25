@@ -1,0 +1,25 @@
+{
+  "B3": {
+    "correct": 1000,
+    "total": 1000,
+    "errors": [],
+    "strict": true
+  },
+  "D3": {
+    "correct": 998,
+    "total": 1000,
+    "errors": [
+      {
+        "id": "I0310",
+        "expected": 15,
+        "actual": 0
+      },
+      {
+        "id": "S3309",
+        "expected": "LIMIT",
+        "actual": "RUN"
+      }
+    ],
+    "strict": true
+  }
+}

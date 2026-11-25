@@ -1,0 +1,74 @@
+{
+  "B3": {
+    "total": 1000,
+    "correct": 1000,
+    "accuracy": 1.0,
+    "by_family": {
+      "I": {
+        "correct": 340,
+        "total": 340
+      },
+      "G": {
+        "correct": 330,
+        "total": 330
+      },
+      "S": {
+        "correct": 330,
+        "total": 330
+      }
+    },
+    "format_valid": true,
+    "errors": [],
+    "output_chars": 28302,
+    "input_chars": 15223,
+    "response_sha256": "b6e65fed02e67421137e9a976198da6d76b29313fd77ba9607896240cc8a0d5c",
+    "visible_tokens_reported": 17490,
+    "input_tokens_reported": 7435,
+    "output_tokens_reported": 10055
+  },
+  "D3": {
+    "total": 1000,
+    "correct": 998,
+    "accuracy": 0.998,
+    "by_family": {
+      "I": {
+        "correct": 339,
+        "total": 340
+      },
+      "G": {
+        "correct": 330,
+        "total": 330
+      },
+      "S": {
+        "correct": 329,
+        "total": 330
+      }
+    },
+    "format_valid": true,
+    "errors": [
+      {
+        "id": "I0310",
+        "actual": 0,
+        "expected": 15
+      },
+      {
+        "id": "S3309",
+        "actual": "RUN",
+        "expected": "LIMIT"
+      }
+    ],
+    "output_chars": 28299,
+    "input_chars": 7623,
+    "response_sha256": "3acf122473b7a341fc90a5955385e09c2fa914b1f27e1cd9e021311ac161b75a",
+    "visible_tokens_reported": 14885,
+    "tokenizer_reported": "o200k_base",
+    "input_tokens_reported": null,
+    "output_tokens_reported": null
+  },
+  "notes": [
+    "Token counts supplied by user; not independently reproduced; same tokenizer for B3 not confirmed.",
+    "No reasoning token or latency measurement supplied."
+  ],
+  "visible_token_reduction_pct": 14.89422527158376,
+  "input_char_reduction_pct": 49.92445641463575
+}
