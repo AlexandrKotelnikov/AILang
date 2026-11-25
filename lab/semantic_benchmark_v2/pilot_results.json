@@ -1,7 +1,7 @@
 {
   "date": "2026-11-25",
   "benchmark_commit": "78da632cfd9d4df4d2f134b7a53d34a6194696a4",
-  "status": "accuracy_complete_metadata_pending",
+  "status": "closed_accuracy_and_input_tokens_only",
   "reported_order": [
     "B6",
     "E6",
@@ -160,5 +160,6 @@
     "Semantic compiler specific to five known templates; not general compressor.",
     "All pilot initial assignments are ABCDE; permutation of initial items and independent synthetic holdout should be tested.",
     "Timing and run metadata pending."
-  ]
+  ],
+  "timing_policy": "Closed by user decision on 2026-11-25; no timing comparison. Missing timings remain null."
 }
