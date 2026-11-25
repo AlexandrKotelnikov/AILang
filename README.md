@@ -35,6 +35,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.5.3: [Semantic Projection Audit](projection/README.md), replicated 5,120 mutations; complete pair-projection verification for 2-CNF against gold, explicit 3-CNF counterexample (inference pending).
 
+- v0.5.4: [Generalized Semantic Verification](generalized/README.md), 120 new tasks, 5,156 mutations, bounded-width projection equivalence and six checksum-verified static token modes (inference pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
