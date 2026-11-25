@@ -1,0 +1,130 @@
+{
+  "skill_version": "0.1.0",
+  "research_base": "400cb533639503da443c745852a6071494d6c1f0",
+  "encoding": "o200k_base",
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "golden": 3,
+  "skill_file_tokens": 226,
+  "metadata_text_tokens": 54,
+  "test_assertions": 25,
+  "results": [
+    {
+      "case": "shared-1",
+      "n": 1,
+      "baseline_payload": 83,
+      "group_payload": 88,
+      "cold": {
+        "flat": 119,
+        "group": 369,
+        "mode": "flat"
+      },
+      "warm": {
+        "flat": 345,
+        "group": 369,
+        "mode": "flat"
+      }
+    },
+    {
+      "case": "shared-2",
+      "n": 2,
+      "baseline_payload": 164,
+      "group_payload": 107,
+      "cold": {
+        "flat": 200,
+        "group": 388,
+        "mode": "flat"
+      },
+      "warm": {
+        "flat": 426,
+        "group": 388,
+        "mode": "grouped"
+      }
+    },
+    {
+      "case": "shared-4",
+      "n": 4,
+      "baseline_payload": 326,
+      "group_payload": 145,
+      "cold": {
+        "flat": 362,
+        "group": 426,
+        "mode": "flat"
+      },
+      "warm": {
+        "flat": 588,
+        "group": 426,
+        "mode": "grouped"
+      }
+    },
+    {
+      "case": "shared-8",
+      "n": 8,
+      "baseline_payload": 650,
+      "group_payload": 221,
+      "cold": {
+        "flat": 686,
+        "group": 502,
+        "mode": "grouped"
+      },
+      "warm": {
+        "flat": 912,
+        "group": 502,
+        "mode": "grouped"
+      }
+    },
+    {
+      "case": "shared-16",
+      "n": 16,
+      "baseline_payload": 1298,
+      "group_payload": 373,
+      "cold": {
+        "flat": 1334,
+        "group": 654,
+        "mode": "grouped"
+      },
+      "warm": {
+        "flat": 1560,
+        "group": 654,
+        "mode": "grouped"
+      }
+    },
+    {
+      "case": "distinct-8",
+      "n": 8,
+      "baseline_payload": 682,
+      "group_payload": 715,
+      "cold": {
+        "flat": 718,
+        "group": 996,
+        "mode": "flat"
+      },
+      "warm": {
+        "flat": 944,
+        "group": 996,
+        "mode": "flat"
+      }
+    },
+    {
+      "case": "mixed-unicode",
+      "n": 4,
+      "baseline_payload": 80,
+      "group_payload": 82,
+      "cold": {
+        "flat": 116,
+        "group": 363,
+        "mode": "flat"
+      },
+      "warm": {
+        "flat": 342,
+        "group": 363,
+        "mode": "flat"
+      }
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture, no actual LLM inference or end-to-end provider usage.",
+    "Exact serialized static input strings only; reference reads, tool messages, discovery, API framing, actual output, caching and hidden reasoning excluded.",
+    "Flat compact JSON control; does not establish superiority over grouped natural language or optimized host context reuse.",
+    "Executed pure core and tokenizer in JavaScript; Node CLI wrapper and host installation not executed."
+  ]
+}

@@ -1,0 +1,252 @@
+[
+  {
+    "name": "shared-1",
+    "rows": [
+      {
+        "id": "1",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 1: identify a stated fact and one limitation."
+      }
+    ]
+  },
+  {
+    "name": "shared-2",
+    "rows": [
+      {
+        "id": "1",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 1: identify a stated fact and one limitation."
+      },
+      {
+        "id": "2",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 2: identify a stated fact and one limitation."
+      }
+    ]
+  },
+  {
+    "name": "shared-4",
+    "rows": [
+      {
+        "id": "1",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 1: identify a stated fact and one limitation."
+      },
+      {
+        "id": "2",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 2: identify a stated fact and one limitation."
+      },
+      {
+        "id": "3",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 3: identify a stated fact and one limitation."
+      },
+      {
+        "id": "4",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 4: identify a stated fact and one limitation."
+      }
+    ]
+  },
+  {
+    "name": "shared-8",
+    "rows": [
+      {
+        "id": "1",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 1: identify a stated fact and one limitation."
+      },
+      {
+        "id": "2",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 2: identify a stated fact and one limitation."
+      },
+      {
+        "id": "3",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 3: identify a stated fact and one limitation."
+      },
+      {
+        "id": "4",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 4: identify a stated fact and one limitation."
+      },
+      {
+        "id": "5",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 5: identify a stated fact and one limitation."
+      },
+      {
+        "id": "6",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 6: identify a stated fact and one limitation."
+      },
+      {
+        "id": "7",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 7: identify a stated fact and one limitation."
+      },
+      {
+        "id": "8",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 8: identify a stated fact and one limitation."
+      }
+    ]
+  },
+  {
+    "name": "shared-16",
+    "rows": [
+      {
+        "id": "1",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 1: identify a stated fact and one limitation."
+      },
+      {
+        "id": "2",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 2: identify a stated fact and one limitation."
+      },
+      {
+        "id": "3",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 3: identify a stated fact and one limitation."
+      },
+      {
+        "id": "4",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 4: identify a stated fact and one limitation."
+      },
+      {
+        "id": "5",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 5: identify a stated fact and one limitation."
+      },
+      {
+        "id": "6",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 6: identify a stated fact and one limitation."
+      },
+      {
+        "id": "7",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 7: identify a stated fact and one limitation."
+      },
+      {
+        "id": "8",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 8: identify a stated fact and one limitation."
+      },
+      {
+        "id": "9",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 9: identify a stated fact and one limitation."
+      },
+      {
+        "id": "10",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 10: identify a stated fact and one limitation."
+      },
+      {
+        "id": "11",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 11: identify a stated fact and one limitation."
+      },
+      {
+        "id": "12",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 12: identify a stated fact and one limitation."
+      },
+      {
+        "id": "13",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 13: identify a stated fact and one limitation."
+      },
+      {
+        "id": "14",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 14: identify a stated fact and one limitation."
+      },
+      {
+        "id": "15",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 15: identify a stated fact and one limitation."
+      },
+      {
+        "id": "16",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions.",
+        "task": "Question 16: identify a stated fact and one limitation."
+      }
+    ]
+  },
+  {
+    "name": "distinct-8",
+    "rows": [
+      {
+        "id": "1",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 0",
+        "task": "Question 1: identify a stated fact and one limitation."
+      },
+      {
+        "id": "2",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 1",
+        "task": "Question 2: identify a stated fact and one limitation."
+      },
+      {
+        "id": "3",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 2",
+        "task": "Question 3: identify a stated fact and one limitation."
+      },
+      {
+        "id": "4",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 3",
+        "task": "Question 4: identify a stated fact and one limitation."
+      },
+      {
+        "id": "5",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 4",
+        "task": "Question 5: identify a stated fact and one limitation."
+      },
+      {
+        "id": "6",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 5",
+        "task": "Question 6: identify a stated fact and one limitation."
+      },
+      {
+        "id": "7",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 6",
+        "task": "Question 7: identify a stated fact and one limitation."
+      },
+      {
+        "id": "8",
+        "context": "Партия A: расход сырья 6200 кг/ч, температура 70 °C, давление 35 бар. Сохранять единицы, отрицания и ограничения. Do not assume that a missing measurement is zero. Use only these stated facts; distinguish measured values from assumptions. Case 7",
+        "task": "Question 8: identify a stated fact and one limitation."
+      }
+    ]
+  },
+  {
+    "name": "mixed-unicode",
+    "rows": [
+      {
+        "id": "α",
+        "context": "a\\n\"☃\" 不",
+        "task": "!"
+      },
+      {
+        "id": "β",
+        "context": "a\\n\"☃\" 不",
+        "task": "? "
+      },
+      {
+        "id": "γ",
+        "context": "a\\n\"☃\" 不 ",
+        "task": "x"
+      },
+      {
+        "id": "δ",
+        "context": "a\\n\"☃\" 不",
+        "task": "y"
+      }
+    ]
+  }
+]
