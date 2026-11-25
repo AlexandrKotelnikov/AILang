@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "seed": 2026112507,
+  "design": {
+    "actors": [
+      5,
+      10,
+      20
+    ],
+    "swaps": [
+      5,
+      20,
+      100
+    ],
+    "per_cell": 3,
+    "tasks": 27,
+    "repetitions_planned": 3,
+    "order": [
+      [
+        "D7",
+        "B7",
+        "E7",
+        "C7"
+      ],
+      [
+        "E7",
+        "C7",
+        "B7",
+        "D7"
+      ],
+      [
+        "C7",
+        "D7",
+        "E7",
+        "B7"
+      ]
+    ],
+    "order_note": "Fixed before inference; order not claimed random or fully balanced."
+  },
+  "metrics": {
+    "B7": {
+      "chars": 82694,
+      "input_tokens": 18440,
+      "normalized_reference_output_tokens": 119,
+      "input_reduction_vs_B7_pct": 0
+    },
+    "C7": {
+      "chars": 15043,
+      "input_tokens": 6119,
+      "normalized_reference_output_tokens": 119,
+      "input_reduction_vs_B7_pct": 66.81670281995662
+    },
+    "D7": {
+      "chars": 4494,
+      "input_tokens": 2672,
+      "normalized_reference_output_tokens": 119,
+      "input_reduction_vs_B7_pct": 85.50976138828634
+    },
+    "E7": {
+      "chars": 3408,
+      "input_tokens": 1600,
+      "normalized_reference_output_tokens": 119,
+      "input_reduction_vs_B7_pct": 91.3232104121475
+    }
+  },
+  "verification": {
+    "dual_oracle_matches": 27,
+    "wire_roundtrips": 54,
+    "negative_fixtures": 3,
+    "nonidentity_initials": 27,
+    "unique_tasks": 27
+  },
+  "tokenizer": {
+    "encoding": "o200k_base",
+    "rank_sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+    "golden_vectors": 3,
+    "scope": "static visible text only"
+  },
+  "status": "ready_for_inference",
+  "limitations": [
+    "Synthetic instances newly generated, but general task family is known; no guarantee of training independence.",
+    "27 tasks are a pilot; per-cell accuracy has coarse 33.3 percentage-point resolution.",
+    "Repeated runs use same cases; do not count as independent tasks.",
+    "Manual chats cannot measure hidden tokens; timing optional; no causal speed claim.",
+    "Reference output count is not actual output usage."
+  ]
+}
