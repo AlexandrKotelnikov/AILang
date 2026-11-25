@@ -1,0 +1,122 @@
+{
+  "version": "0.5.2",
+  "seed": 20261125,
+  "tasks": 120,
+  "balance": {
+    "T": 40,
+    "F": 40,
+    "U": 40
+  },
+  "truthChecks": 7680,
+  "roundtrips": 480,
+  "positiveChecks": 120,
+  "formCounts": {
+    "implication": 83,
+    "only_if": 87,
+    "reverse_if": 74,
+    "equivalence": 85,
+    "xor": 85,
+    "or": 85,
+    "nand": 97,
+    "unless": 90
+  },
+  "audit": {
+    "drop_clause": {
+      "all": 1096,
+      "equivalent": 604,
+      "corrupt": 492,
+      "label_pass": 385
+    },
+    "flip_literal": {
+      "all": 1952,
+      "equivalent": 564,
+      "corrupt": 1388,
+      "label_pass": 754
+    },
+    "replace_atom": {
+      "all": 1952,
+      "equivalent": 889,
+      "corrupt": 1063,
+      "label_pass": 622
+    },
+    "flip_query": {
+      "all": 120,
+      "equivalent": 0,
+      "corrupt": 120,
+      "label_pass": 40
+    }
+  },
+  "byLabel": {
+    "U": {
+      "all": 1630,
+      "equivalent": 604,
+      "corrupt": 1026,
+      "label_pass": 694
+    },
+    "T": {
+      "all": 1690,
+      "equivalent": 672,
+      "corrupt": 1018,
+      "label_pass": 553
+    },
+    "F": {
+      "all": 1800,
+      "equivalent": 781,
+      "corrupt": 1019,
+      "label_pass": 554
+    }
+  },
+  "totals": {
+    "all": 5120,
+    "equivalent": 2057,
+    "corrupt": 3063,
+    "label_pass": 1801
+  },
+  "counts": {
+    "spaced": {
+      "system": 7800,
+      "input": 20703,
+      "output": 4193,
+      "total": 32696
+    },
+    "atl": {
+      "system": 8280,
+      "input": 20703,
+      "output": 3763,
+      "total": 32746
+    },
+    "numeric": {
+      "system": 8640,
+      "input": 20703,
+      "output": 4623,
+      "total": 33966
+    },
+    "json": {
+      "system": 8280,
+      "input": 20703,
+      "output": 5526,
+      "total": 34509
+    },
+    "direct": {
+      "system": 3480,
+      "input": 20703,
+      "output": 120,
+      "total": 24303
+    }
+  },
+  "example": {
+    "input": "A: the pump is running\nB: the valve is open\nC: the alarm is active\nD: the sensor is online\nE: the heater is enabled\nF: the controller is ready\nPremises:\nIf it is false that the alarm is active, then the pump is running.\nIf it is false that the sensor is online, then the alarm is active.\nIf the heater is enabled, then the valve is open.\nIt is not the case that both statements hold: the pump is running; it is false that the controller is ready.\nExactly one of the following is true: it is false that the pump is running; it is false that the sensor is online.\nthe valve is open.\nthe sensor is online.\nQuery: it is false that the controller is ready.",
+    "cnf": "!F\nC A\nD C\n!E B\n!A F\n!A !D\nA D\nB\nD",
+    "atl": "!F\nCA\nDC\n!EB\n!AF\n!A!D\nAD\nB\nD",
+    "label": "U"
+  },
+  "limitations": [
+    "Synthetic templated English; atom mapping supplied; not an external dataset or independent model inference.",
+    "Exact gold-based audit is an evaluation metric, not a deployment verifier without a gold reference.",
+    "Mutations deliberately corrupt reference CNF; rates are not estimates of real LLM error frequencies.",
+    "Semantic criterion compares full premise model sets and the query literal over the fixed six-atom universe; no auxiliary variables or first-order logic.",
+    "Static ordinary-text token counts, no API framing/caching/reasoning tokens. Direct outputs solve a weaker task."
+  ],
+  "golden": 3,
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d"
+}
