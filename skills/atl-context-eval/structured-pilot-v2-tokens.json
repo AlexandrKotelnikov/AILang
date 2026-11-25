@@ -1,0 +1,21 @@
+{
+  "encoding": "o200k_base",
+  "rank_sha": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+  "static_prompt_tokens": {
+    "natural": 1378,
+    "compact": 1001
+  },
+  "validation": {
+    "gold_count": 120,
+    "unique": true,
+    "reference_checks": 4,
+    "conservation_and_path_checks": true,
+    "prompt_count": 2
+  },
+  "observed_accuracy": null,
+  "limitations": [
+    "Public synthetic development set, same three domains as first pilot but new cases and query variants.",
+    "No model runs, no provider usage, no hidden reasoning measurement.",
+    "Natural and compact share domain rules and question templates; compact rendering is domain-specific."
+  ]
+}
