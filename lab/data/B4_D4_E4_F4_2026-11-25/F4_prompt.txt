@@ -1,0 +1,438 @@
+Solve all 1000 independent questions without external tools or code. Return only plain text, one line per case, exactly 100 lines. Each line: family letter and two-digit case number, colon, then ten comma-separated answers in question order 01 to 10 (e.g. I01:1,2,3,4,5,6,7,8,9,10). Use decimal integers or state names HOLD,STOP,RUN,LIMIT without quotes. No spaces, markdown, reasoning, or extra lines. Order: family I, G, S; ascending case number. Each question resets to its case. Do not omit any answers.
+Inventory (I): Each case specifies the initial stock and reserve followed by three receipts and three dispatch requests in alternating order. A receipt increases stock by the receipt quantity. For a dispatch request of quantity q, ship the lesser of q and the nonnegative excess of current stock over the reserve. Subtract the shipped amount from stock and permanently reject the unshipped part of the request. There are no other changes; do not carry rejected quantities forward. If a question changes a value, make only that change and replay all events from the beginning.
+For each case answer the following questions in order: 01 final stock; 02 total shipped; 03 total rejected; 04 amount shipped on first dispatch; 05 amount shipped on third dispatch; 06 final stock if reserve is increased by 10; 07 total rejected if reserve is increased by 10; 08 total shipped if the first receipt is set to zero; 09 total rejected if the first receipt is set to zero; 10 total rejected if the third dispatch request is increased by 15.
+Case 01: stock 4, reserve 23; receive 0, request 19, receive 7, request 0, receive 15, request 20.
+Case 02: stock 17, reserve 17; receive 0, request 0, receive 0, request 8, receive 9, request 0.
+Case 03: stock 0, reserve 7; receive 0, request 0, receive 0, request 0, receive 0, request 0.
+Case 04: stock 55, reserve 12; receive 0, request 43, receive 0, request 0, receive 1, request 11.
+Case 05: stock 27, reserve 49; receive 45, request 77, receive 50, request 32, receive 67, request 46.
+Case 06: stock 9, reserve 16; receive 53, request 37, receive 3, request 22, receive 58, request 43.
+Case 07: stock 34, reserve 11; receive 17, request 27, receive 79, request 43, receive 59, request 79.
+Case 08: stock 86, reserve 49; receive 51, request 77, receive 73, request 57, receive 55, request 11.
+Case 09: stock 111, reserve 53; receive 67, request 0, receive 63, request 17, receive 76, request 82.
+Case 10: stock 10, reserve 38; receive 68, request 25, receive 69, request 71, receive 10, request 53.
+Case 11: stock 71, reserve 41; receive 75, request 92, receive 63, request 14, receive 60, request 84.
+Case 12: stock 145, reserve 27; receive 41, request 50, receive 72, request 93, receive 13, request 34.
+Case 13: stock 64, reserve 18; receive 22, request 42, receive 32, request 65, receive 74, request 90.
+Case 14: stock 42, reserve 38; receive 27, request 44, receive 27, request 70, receive 79, request 66.
+Case 15: stock 98, reserve 13; receive 36, request 3, receive 57, request 19, receive 57, request 45.
+Case 16: stock 141, reserve 27; receive 80, request 55, receive 35, request 92, receive 13, request 1.
+Case 17: stock 155, reserve 25; receive 78, request 5, receive 80, request 66, receive 41, request 17.
+Case 18: stock 101, reserve 49; receive 18, request 57, receive 28, request 11, receive 13, request 17.
+Case 19: stock 69, reserve 48; receive 74, request 4, receive 7, request 80, receive 4, request 78.
+Case 20: stock 3, reserve 29; receive 71, request 7, receive 16, request 33, receive 23, request 80.
+Case 21: stock 131, reserve 40; receive 25, request 67, receive 20, request 8, receive 63, request 56.
+Case 22: stock 81, reserve 16; receive 34, request 7, receive 3, request 45, receive 67, request 69.
+Case 23: stock 4, reserve 19; receive 69, request 56, receive 44, request 36, receive 9, request 32.
+Case 24: stock 90, reserve 6; receive 50, request 60, receive 20, request 13, receive 41, request 10.
+Case 25: stock 157, reserve 30; receive 64, request 24, receive 76, request 1, receive 0, request 38.
+Case 26: stock 6, reserve 34; receive 58, request 80, receive 20, request 88, receive 70, request 70.
+Case 27: stock 107, reserve 54; receive 9, request 31, receive 60, request 23, receive 58, request 38.
+Case 28: stock 62, reserve 35; receive 71, request 82, receive 16, request 38, receive 49, request 91.
+Case 29: stock 71, reserve 29; receive 24, request 69, receive 44, request 77, receive 21, request 77.
+Case 30: stock 77, reserve 15; receive 36, request 20, receive 27, request 67, receive 36, request 56.
+Case 31: stock 39, reserve 27; receive 40, request 73, receive 30, request 86, receive 52, request 31.
+Case 32: stock 10, reserve 14; receive 43, request 42, receive 59, request 42, receive 21, request 50.
+Case 33: stock 13, reserve 10; receive 10, request 82, receive 55, request 88, receive 5, request 87.
+Case 34: stock 0, reserve 45; receive 61, request 89, receive 21, request 85, receive 72, request 14.
+
+Scheduling (G): All tasks are mandatory. Schedule each task at the earliest possible start, with unlimited resources and no overhead. A and B start at time zero. C depends on A; D depends on A and B; E depends on C and D; F depends on B; G depends on E and F; H depends on C and G. Each task starts when all its prerequisites finish and finishes after its specified duration. The project finishes when H finishes. Durations may be zero. Count distinct paths as distinct sequences of tasks, including zero-duration tasks; path length is the sum of durations. Each case lists the durations of A through H in that order.
+For each case answer: 01 project finish; 02 earliest start of E; 03 earliest finish of D; 04 number of distinct longest dependency paths from a starting task to H; 05 project finish if A duration is increased by 2; 06 project finish if B duration is increased by 3; 07 project finish if E duration is set to zero; 08 project finish if F duration is increased by 7; 09 earliest start of H if C duration is increased by 1; 10 project finish if G duration is set to zero. Change only the specified duration for each question.
+Case 01: 0, 0, 0, 0, 0, 0, 0, 1.
+Case 02: 4, 4, 2, 2, 0, 3, 1, 2.
+Case 03: 3, 7, 6, 2, 4, 1, 2, 3.
+Case 04: 4, 0, 0, 4, 0, 8, 0, 2.
+Case 05: 1, 12, 5, 9, 8, 10, 7, 9.
+Case 06: 11, 12, 9, 2, 10, 6, 12, 7.
+Case 07: 9, 10, 8, 6, 7, 11, 11, 9.
+Case 08: 10, 5, 7, 0, 1, 11, 12, 3.
+Case 09: 3, 4, 11, 11, 7, 1, 9, 1.
+Case 10: 2, 0, 12, 4, 0, 7, 10, 5.
+Case 11: 2, 3, 11, 11, 8, 4, 6, 4.
+Case 12: 6, 11, 3, 11, 4, 0, 5, 6.
+Case 13: 9, 1, 5, 0, 1, 4, 11, 8.
+Case 14: 8, 7, 7, 5, 9, 1, 6, 0.
+Case 15: 2, 11, 0, 8, 3, 10, 3, 12.
+Case 16: 4, 7, 2, 1, 9, 1, 1, 1.
+Case 17: 7, 8, 11, 12, 8, 8, 11, 0.
+Case 18: 8, 9, 11, 5, 4, 8, 5, 12.
+Case 19: 5, 11, 7, 2, 7, 8, 9, 5.
+Case 20: 6, 2, 11, 7, 9, 0, 2, 6.
+Case 21: 1, 8, 0, 10, 11, 11, 12, 0.
+Case 22: 9, 8, 9, 8, 7, 0, 2, 5.
+Case 23: 8, 5, 11, 6, 5, 10, 10, 10.
+Case 24: 7, 5, 4, 7, 4, 1, 1, 11.
+Case 25: 8, 1, 8, 7, 8, 8, 5, 12.
+Case 26: 5, 12, 3, 3, 0, 4, 11, 12.
+Case 27: 11, 12, 11, 7, 3, 7, 7, 6.
+Case 28: 1, 7, 3, 0, 0, 4, 7, 11.
+Case 29: 10, 1, 4, 5, 8, 9, 1, 7.
+Case 30: 10, 3, 2, 4, 3, 7, 12, 8.
+Case 31: 11, 8, 6, 9, 5, 0, 7, 10.
+Case 32: 5, 4, 7, 9, 1, 2, 6, 4.
+Case 33: 2, 0, 7, 2, 2, 10, 12, 9.
+
+Decisions (S): Each case specifies stop temperature and pressure thresholds, override temperature and pressure thresholds, and limit temperature and pressure thresholds. Inputs are temperature, pressure, validity, and override; 1 means yes and 0 means no. Evaluate the following rules in order and return the state of the first matching rule. If validity is zero, return HOLD. If temperature is strictly greater than the stop temperature or pressure is at least the stop pressure, return STOP. If override is enabled and temperature is at most the override temperature and pressure is strictly below the override pressure, return RUN. If temperature is at least the limit temperature or pressure is at least the limit pressure, return LIMIT. Otherwise return RUN. The ten input rows for each case are questions 01 through 10 in order.
+Case 01: stop thresholds 101, 40; override thresholds 94, 24; limit thresholds 90, 22.
+102, 40, 0, 1
+94, 23, 1, 1
+89, 21, 1, 0
+50, 4, 1, 0
+89, 40, 1, 0
+94, 24, 1, 1
+89, 22, 1, 0
+90, 21, 1, 0
+98, 28, 1, 0
+101, 39, 1, 1
+Case 02: stop thresholds 68, 39; override thresholds 68, 38; limit thresholds 58, 36.
+68, 38, 1, 1
+67, 36, 1, 1
+68, 37, 1, 1
+69, 39, 0, 1
+57, 36, 1, 0
+68, 38, 1, 1
+57, 35, 1, 0
+57, 39, 1, 0
+58, 35, 1, 0
+29, 16, 0, 0
+Case 03: stop thresholds 96, 36; override thresholds 98, 35; limit thresholds 85, 33.
+98, 35, 1, 1
+98, 34, 1, 1
+21, 36, 1, 1
+97, 36, 0, 1
+85, 32, 1, 0
+84, 33, 1, 0
+96, 35, 1, 1
+84, 32, 1, 0
+92, 38, 1, 0
+84, 36, 1, 0
+Case 04: stop thresholds 38, 32; override thresholds 40, 34; limit thresholds 30, 29.
+37, 35, 0, 1
+38, 31, 1, 1
+39, 32, 0, 1
+30, 28, 1, 0
+29, 28, 1, 0
+29, 29, 1, 0
+29, 32, 1, 0
+40, 33, 1, 1
+25, 34, 1, 1
+40, 34, 1, 1
+Case 05: stop thresholds 67, 39; override thresholds 65, 34; limit thresholds 50, 27.
+65, 33, 1, 1
+60, 28, 1, 1
+44, 30, 0, 0
+68, 39, 0, 1
+67, 38, 1, 1
+65, 34, 1, 1
+50, 26, 1, 0
+49, 39, 1, 0
+49, 27, 1, 0
+49, 26, 1, 0
+Case 06: stop thresholds 91, 51; override thresholds 80, 40; limit thresholds 66, 42.
+65, 41, 1, 0
+82, 39, 1, 0
+80, 39, 1, 1
+83, 14, 1, 0
+66, 41, 1, 0
+92, 51, 0, 1
+65, 42, 1, 0
+91, 50, 1, 1
+80, 40, 1, 1
+65, 51, 1, 0
+Case 07: stop thresholds 105, 73; override thresholds 88, 70; limit thresholds 86, 58.
+54, 14, 1, 1
+106, 73, 0, 1
+105, 72, 1, 1
+85, 57, 1, 0
+86, 57, 1, 0
+88, 69, 1, 1
+85, 73, 1, 0
+88, 70, 1, 1
+85, 58, 1, 0
+92, 69, 1, 0
+Case 08: stop thresholds 101, 68; override thresholds 101, 70; limit thresholds 88, 56.
+88, 55, 1, 0
+87, 68, 1, 0
+101, 70, 1, 1
+101, 69, 1, 1
+89, 41, 0, 0
+101, 67, 1, 1
+102, 68, 0, 1
+87, 56, 1, 0
+87, 55, 1, 0
+105, 59, 1, 1
+Case 09: stop thresholds 108, 32; override thresholds 94, 24; limit thresholds 87, 21.
+94, 24, 1, 1
+109, 32, 0, 1
+87, 20, 1, 0
+86, 21, 1, 0
+95, 30, 1, 0
+86, 20, 1, 0
+94, 23, 1, 1
+108, 31, 1, 1
+86, 32, 1, 0
+71, 7, 0, 1
+Case 10: stop thresholds 57, 59; override thresholds 49, 60; limit thresholds 42, 50.
+49, 60, 1, 1
+58, 59, 0, 1
+49, 59, 1, 1
+41, 59, 1, 0
+20, 30, 1, 0
+41, 50, 1, 0
+41, 49, 1, 0
+57, 58, 1, 1
+42, 49, 1, 0
+60, 45, 1, 0
+Case 11: stop thresholds 106, 56; override thresholds 97, 48; limit thresholds 90, 37.
+65, 10, 0, 0
+89, 36, 1, 0
+93, 49, 1, 1
+107, 56, 0, 1
+106, 55, 1, 1
+97, 47, 1, 1
+97, 48, 1, 1
+90, 36, 1, 0
+89, 56, 1, 0
+89, 37, 1, 0
+Case 12: stop thresholds 62, 67; override thresholds 39, 66; limit thresholds 40, 59.
+40, 58, 1, 0
+39, 65, 1, 1
+48, 0, 0, 0
+43, 57, 1, 1
+39, 59, 1, 0
+39, 58, 1, 0
+39, 67, 1, 0
+63, 67, 0, 1
+62, 66, 1, 1
+39, 66, 1, 1
+Case 13: stop thresholds 36, 43; override thresholds 33, 27; limit thresholds 31, 26.
+30, 43, 1, 0
+38, 11, 0, 1
+32, 27, 1, 1
+36, 42, 1, 1
+30, 25, 1, 0
+37, 43, 0, 1
+33, 26, 1, 1
+31, 25, 1, 0
+30, 26, 1, 0
+33, 27, 1, 1
+Case 14: stop thresholds 69, 48; override thresholds 51, 39; limit thresholds 50, 31.
+61, 35, 1, 1
+70, 48, 0, 1
+17, 25, 0, 0
+51, 38, 1, 1
+50, 30, 1, 0
+69, 47, 1, 1
+49, 31, 1, 0
+49, 48, 1, 0
+51, 39, 1, 1
+49, 30, 1, 0
+Case 15: stop thresholds 82, 70; override thresholds 80, 68; limit thresholds 64, 56.
+63, 56, 1, 0
+80, 67, 1, 1
+64, 62, 1, 0
+82, 69, 1, 1
+80, 68, 1, 1
+63, 70, 1, 0
+61, 22, 1, 1
+83, 70, 0, 1
+63, 55, 1, 0
+64, 55, 1, 0
+Case 16: stop thresholds 85, 55; override thresholds 74, 49; limit thresholds 70, 51.
+69, 50, 1, 0
+65, 49, 1, 0
+85, 54, 1, 1
+80, 45, 0, 0
+86, 55, 0, 1
+69, 55, 1, 0
+70, 50, 1, 0
+69, 51, 1, 0
+74, 48, 1, 1
+74, 49, 1, 1
+Case 17: stop thresholds 55, 63; override thresholds 49, 63; limit thresholds 42, 55.
+42, 54, 1, 0
+31, 40, 1, 1
+57, 52, 1, 0
+55, 62, 1, 1
+56, 63, 0, 1
+41, 54, 1, 0
+41, 55, 1, 0
+49, 62, 1, 1
+49, 63, 1, 1
+41, 63, 1, 0
+Case 18: stop thresholds 45, 76; override thresholds 46, 78; limit thresholds 41, 60.
+45, 75, 1, 1
+46, 76, 0, 1
+46, 78, 1, 1
+41, 59, 1, 0
+40, 76, 1, 0
+48, 75, 1, 1
+44, 55, 0, 0
+46, 77, 1, 1
+40, 59, 1, 0
+40, 60, 1, 0
+Case 19: stop thresholds 112, 57; override thresholds 100, 58; limit thresholds 93, 41.
+93, 46, 1, 0
+93, 40, 1, 0
+92, 41, 1, 0
+92, 40, 1, 0
+31, 18, 1, 1
+113, 57, 0, 1
+100, 57, 1, 1
+112, 56, 1, 1
+92, 57, 1, 0
+100, 58, 1, 1
+Case 20: stop thresholds 63, 30; override thresholds 65, 23; limit thresholds 60, 25.
+63, 29, 1, 1
+59, 24, 1, 0
+65, 22, 1, 1
+60, 24, 1, 0
+59, 34, 1, 1
+59, 30, 1, 0
+59, 25, 1, 0
+64, 30, 0, 1
+65, 23, 1, 1
+3, 7, 0, 1
+Case 21: stop thresholds 50, 25; override thresholds 45, 26; limit thresholds 46, 20.
+45, 19, 1, 0
+41, 22, 1, 1
+45, 20, 1, 0
+50, 24, 1, 1
+45, 26, 1, 1
+45, 25, 1, 0
+12, 1, 0, 1
+46, 19, 1, 0
+45, 25, 1, 1
+51, 25, 0, 1
+Case 22: stop thresholds 101, 70; override thresholds 86, 58; limit thresholds 81, 57.
+102, 70, 0, 1
+86, 58, 1, 1
+80, 56, 1, 0
+81, 56, 1, 0
+80, 70, 1, 0
+83, 64, 1, 1
+101, 69, 1, 1
+80, 57, 1, 0
+86, 57, 1, 1
+102, 19, 1, 0
+Case 23: stop thresholds 71, 39; override thresholds 67, 34; limit thresholds 55, 31.
+67, 34, 1, 1
+54, 39, 1, 0
+55, 30, 1, 0
+51, 29, 1, 0
+67, 33, 1, 1
+54, 30, 1, 0
+72, 39, 0, 1
+54, 31, 1, 0
+71, 38, 1, 1
+57, 42, 1, 0
+Case 24: stop thresholds 57, 53; override thresholds 36, 38; limit thresholds 37, 39.
+36, 39, 1, 0
+36, 53, 1, 0
+57, 52, 1, 1
+37, 38, 1, 0
+36, 37, 1, 1
+40, 50, 1, 1
+58, 53, 0, 1
+36, 38, 1, 1
+36, 38, 1, 0
+22, 43, 0, 1
+Case 25: stop thresholds 94, 39; override thresholds 84, 34; limit thresholds 74, 34.
+95, 39, 0, 1
+94, 38, 1, 1
+73, 34, 1, 0
+84, 33, 1, 1
+73, 39, 1, 0
+74, 33, 1, 0
+99, 38, 0, 1
+98, 36, 1, 0
+84, 34, 1, 1
+73, 33, 1, 0
+Case 26: stop thresholds 112, 56; override thresholds 101, 51; limit thresholds 90, 53.
+107, 52, 1, 1
+89, 52, 1, 0
+89, 53, 1, 0
+51, 61, 0, 0
+89, 56, 1, 0
+101, 50, 1, 1
+112, 55, 1, 1
+101, 51, 1, 1
+90, 52, 1, 0
+113, 56, 0, 1
+Case 27: stop thresholds 82, 36; override thresholds 77, 29; limit thresholds 60, 31.
+60, 30, 1, 0
+82, 35, 1, 1
+68, 40, 1, 0
+77, 29, 1, 1
+77, 28, 1, 1
+59, 31, 1, 0
+28, 5, 1, 1
+83, 36, 0, 1
+59, 36, 1, 0
+59, 30, 1, 0
+Case 28: stop thresholds 77, 44; override thresholds 75, 42; limit thresholds 57, 42.
+57, 41, 1, 0
+78, 44, 0, 1
+61, 15, 1, 1
+59, 45, 1, 1
+75, 41, 1, 1
+56, 42, 1, 0
+75, 42, 1, 1
+56, 41, 1, 0
+56, 44, 1, 0
+77, 43, 1, 1
+Case 29: stop thresholds 74, 56; override thresholds 76, 56; limit thresholds 53, 44.
+35, 37, 1, 0
+53, 43, 1, 0
+74, 55, 1, 1
+52, 44, 1, 0
+75, 56, 0, 1
+76, 55, 1, 1
+61, 52, 1, 1
+52, 43, 1, 0
+52, 56, 1, 0
+76, 56, 1, 1
+Case 30: stop thresholds 65, 74; override thresholds 57, 76; limit thresholds 59, 58.
+57, 75, 1, 1
+65, 73, 1, 1
+59, 57, 1, 0
+57, 76, 1, 1
+54, 47, 0, 1
+66, 74, 0, 1
+58, 74, 1, 0
+58, 58, 1, 0
+58, 57, 1, 0
+64, 57, 1, 0
+Case 31: stop thresholds 44, 80; override thresholds 45, 64; limit thresholds 41, 60.
+44, 79, 1, 1
+40, 80, 1, 0
+45, 80, 0, 1
+15, 14, 1, 0
+40, 59, 1, 0
+45, 63, 1, 1
+40, 60, 1, 0
+45, 64, 1, 1
+38, 78, 1, 1
+41, 59, 1, 0
+Case 32: stop thresholds 104, 70; override thresholds 97, 55; limit thresholds 93, 53.
+91, 71, 1, 0
+93, 52, 1, 0
+104, 69, 1, 1
+92, 70, 1, 0
+97, 55, 1, 1
+105, 70, 0, 1
+43, 63, 1, 1
+92, 53, 1, 0
+92, 52, 1, 0
+97, 54, 1, 1
+Case 33: stop thresholds 43, 36; override thresholds 36, 27; limit thresholds 32, 27.
+31, 26, 1, 0
+43, 35, 1, 1
+44, 28, 1, 1
+19, 18, 0, 0
+31, 36, 1, 0
+36, 26, 1, 1
+32, 26, 1, 0
+36, 27, 1, 1
+31, 27, 1, 0
+44, 36, 0, 1

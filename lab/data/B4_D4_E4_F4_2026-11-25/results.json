@@ -1,0 +1,59 @@
+{
+  "arms": {
+    "B4": {
+      "correct": 1000,
+      "input_chars": 15250,
+      "output_chars": 28300,
+      "total": 1000,
+      "total_chars": 43550,
+      "savings_chars_pct": 0,
+      "token_counts": null,
+      "timing": null
+    },
+    "D4": {
+      "correct": 1000,
+      "input_chars": 7485,
+      "output_chars": 28300,
+      "total": 1000,
+      "total_chars": 35785,
+      "savings_chars_pct": 17.830080367393798,
+      "token_counts": null,
+      "timing": null
+    },
+    "E4": {
+      "correct": 999,
+      "input_chars": 7520,
+      "output_chars": 4039,
+      "total": 1000,
+      "total_chars": 11559,
+      "savings_chars_pct": 73.45809414466132,
+      "token_counts": null,
+      "timing": null
+    },
+    "F4": {
+      "correct": 1000,
+      "input_chars": 15285,
+      "output_chars": 4038,
+      "total": 1000,
+      "total_chars": 19323,
+      "savings_chars_pct": 55.630309988518945,
+      "token_counts": null,
+      "timing": null
+    }
+  },
+  "errors": [
+    {
+      "arm": "E4",
+      "id": "S1004",
+      "expected": "STOP",
+      "actual": "LIMIT"
+    }
+  ],
+  "normalization": "B4/D4 remove line-ending backslashes before parsing and serialize compactly; E4/F4 exclude arm label and line-ending backslashes. F4 and reference reproduced from verified matching B4 values; independent scoring and SHA256 check against local preregistered reference were performed before publication.",
+  "limitations": [
+    "One run per arm; independent contexts and model settings not verified",
+    "No token counts or timing telemetry",
+    "Accuracy over 4000 responses to the same 1000 questions, not 4000 independent questions",
+    "Raw model formatting unavailable for E4/F4"
+  ]
+}
