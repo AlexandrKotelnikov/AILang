@@ -1,5 +1,7 @@
 # AiLang — ATL Context
 
+![AiLang — ATL Context: reversible, local, token-aware](assets/hero.svg)
+
 **Less repeated context. More room for the task.**
 
 An experimental Agent Skill that finds compact, reversible input representations for LLM workflows — and keeps the original whenever compression is not worthwhile.
@@ -22,9 +24,10 @@ LLM workflows frequently repeat the same source material or express structured o
 For Codex, from the project where you want the skill (Git and Node.js 18+):
 
 ```sh
-git clone --depth 1 https://github.com/AlexandrKotelnikov/AILang.git /tmp/ailang-skill
+src=$(mktemp -d)
+git clone --depth 1 https://github.com/AlexandrKotelnikov/AILang.git "$src/AILang"
 mkdir -p .agents/skills
-test ! -e .agents/skills/atl-context && cp -R /tmp/ailang-skill/skills/atl-context .agents/skills/
+test ! -e .agents/skills/atl-context && cp -R "$src/AILang/skills/atl-context" .agents/skills/
 ```
 
 Start a new Codex session and invoke `$atl-context` explicitly. The copy command deliberately refuses to overwrite an existing skill. For a global install use `~/.agents/skills/`; for Claude Code the documented project folder is `.claude/skills/`. These paths follow [OpenAI's installation guidance](https://developers.openai.com/api/reference/cli); host integration has not yet been tested by this project. See [installation and updating](docs/INSTALL.md) for the local rank file and verification.

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
+<title id="title">AiLang — ATL Context</title><desc id="desc">Reversible context encoding, measured routing, original fallback.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101c2c"/><stop offset="1" stop-color="#142e3b"/></linearGradient></defs>
+<rect width="1200" height="350" rx="24" fill="url(#bg)"/>
+<g font-family="system-ui, sans-serif"><text x="58" y="58" font-size="17" font-weight="600" fill="#8ee6c6" letter-spacing="3">AGENT SKILL / PREVIEW 0.2</text>
+<text x="55" y="130" font-size="64" font-weight="700" fill="#f3f8fb">AiLang</text><text x="57" y="175" font-size="32" fill="#a6c5d0">ATL Context</text>
+<text x="57" y="233" font-size="23" fill="#e0e9ee">Less repeated context.</text><text x="57" y="266" font-size="23" fill="#e0e9ee">More room for the task.</text>
+<text x="57" y="315" font-size="16" fill="#8ee6c6">LOCAL  /  REVERSIBLE  /  TOKEN-AWARE</text>
+<g transform="translate(700 53)"><rect width="435" height="66" rx="12" fill="#24394a" stroke="#466173"/><text x="20" y="26" font-size="13" fill="#aac0cf">SOURCE RECORDS</text><text x="20" y="49" font-family="monospace" font-size="20" fill="#ffffff">P001,CAB,AB,BC,B</text>
+<path d="M217 66v32m-6 -8 6 8 6 -8" fill="none" stroke="#8ee6c6" stroke-width="2"/>
+<rect y="102" width="435" height="66" rx="12" fill="#173e40" stroke="#6ad2ad"/><text x="20" y="128" font-size="13" fill="#8ee6c6">REVERSIBLE CANDIDATE</text><text x="20" y="151" font-family="monospace" font-size="20" fill="#fff">P001:CAB/ABBC/B</text>
+<path d="M217 168v32m-6 -8 6 8 6 -8" fill="none" stroke="#8ee6c6" stroke-width="2"/>
+<rect y="204" width="435" height="66" rx="12" fill="#24394a" stroke="#466173"/><text x="20" y="229" font-size="13" fill="#aac0cf">MEASURE &amp; SELECT</text><text x="20" y="253" font-size="17" fill="#fff">Compact if cheaper · otherwise original</text></g></g></svg>
