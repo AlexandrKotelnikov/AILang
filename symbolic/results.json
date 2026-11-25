@@ -1,0 +1,211 @@
+{
+  "version": "0.4.9",
+  "development": 24,
+  "test": 96,
+  "verified": 120,
+  "validFormats": 720,
+  "mutations": 2160,
+  "queries": 3128,
+  "original": 2836,
+  "reduced": 1311,
+  "cse": 153,
+  "dead": 1372,
+  "totals": {
+    "full-direct": {
+      "system": 10176,
+      "input": 24236,
+      "output": 4200,
+      "total": 38612,
+      "passed": 96
+    },
+    "reduced-direct": {
+      "system": 10176,
+      "input": 16611,
+      "output": 4200,
+      "total": 30987,
+      "passed": 96
+    },
+    "full-dense": {
+      "system": 11424,
+      "input": 24236,
+      "output": 576,
+      "total": 36236,
+      "passed": 96
+    },
+    "reduced-dense": {
+      "system": 11424,
+      "input": 16611,
+      "output": 576,
+      "total": 28611,
+      "passed": 96
+    },
+    "reduced-sparse": {
+      "system": 14016,
+      "input": 16611,
+      "output": 544,
+      "total": 31171,
+      "passed": 96
+    },
+    "atl-sparse": {
+      "system": 14592,
+      "input": 16611,
+      "output": 704,
+      "total": 31907,
+      "passed": 96
+    }
+  },
+  "byFamily": {
+    "sparse": {
+      "full-direct": 12242,
+      "reduced-direct": 9712,
+      "full-dense": 11410,
+      "reduced-dense": 8880,
+      "reduced-sparse": 9680,
+      "atl-sparse": 9936
+    },
+    "dense": {
+      "full-direct": 13460,
+      "reduced-direct": 10925,
+      "full-dense": 12746,
+      "reduced-dense": 10211,
+      "reduced-sparse": 11139,
+      "atl-sparse": 11363
+    },
+    "mixed": {
+      "full-direct": 12910,
+      "reduced-direct": 10350,
+      "full-dense": 12080,
+      "reduced-dense": 9520,
+      "reduced-sparse": 10352,
+      "atl-sparse": 10608
+    }
+  },
+  "fixtures": [
+    {
+      "id": 24,
+      "mode": "full-direct",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only the concatenation of both output values for each query in order, each value exactly two decimal digits.",
+      "input": "+,1,2;+,2,1;-,4,5;+,3,6;*,4,86;+,7,2;+,4,2;+,7,1;*,7,16;*,2,83;*,0,78;+,5,1;+,1,9;+,11,5;*,7,53;+,16,15;*,1,74;+,20,6;*,0,3;*,3,10;+,22,23;+,24,4;-,25,5;*,12,70;*,23,21;*,7,46\nO:21,26\nQ:123778,529353,286032,820593,074052,420511,675142,314836,586672,775232,300037,945231,458642,240969,658480,447200,962865,017691,130515,770392,199262,359091,016467,792465",
+      "expected": "150765483532546033380416113563722444723286826922323530145727550323717440895672504841684074912671"
+    },
+    {
+      "id": 24,
+      "mode": "reduced-direct",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only the concatenation of both output values for each query in order, each value exactly two decimal digits.",
+      "input": "+,1,2;-,4,4;*,1,74;+,5,6;*,0,3;*,3,10;+,8,9;+,4,10;-,11,4\nO:7,12\nQ:123778,529353,286032,820593,074052,420511,675142,314836,586672,775232,300037,945231,458642,240969,658480,447200,962865,017691,130515,770392,199262,359091,016467,792465",
+      "expected": "150765483532546033380416113563722444723286826922323530145727550323717440895672504841684074912671"
+    },
+    {
+      "id": 24,
+      "mode": "full-dense",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows in output order, concatenated, each row has four two-digit residues in order constant,x,y,z. The evaluator expands rows for all queries.",
+      "input": "+,1,2;+,2,1;-,4,5;+,3,6;*,4,86;+,7,2;+,4,2;+,7,1;*,7,16;*,2,83;*,0,78;+,5,1;+,1,9;+,11,5;*,7,53;+,16,15;*,1,74;+,20,6;*,0,3;*,3,10;+,22,23;+,24,4;-,25,5;*,12,70;*,23,21;*,7,46\nO:21,26\nQ:123778,529353,286032,820593,074052,420511,675142,314836,586672,775232,300037,945231,458642,240969,658480,447200,962865,017691,130515,770392,199262,359091,016467,792465",
+      "expected": "0074000003000010"
+    },
+    {
+      "id": 24,
+      "mode": "reduced-dense",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows in output order, concatenated, each row has four two-digit residues in order constant,x,y,z. The evaluator expands rows for all queries.",
+      "input": "+,1,2;-,4,4;*,1,74;+,5,6;*,0,3;*,3,10;+,8,9;+,4,10;-,11,4\nO:7,12\nQ:123778,529353,286032,820593,074052,420511,675142,314836,586672,775232,300037,945231,458642,240969,658480,447200,962865,017691,130515,770392,199262,359091,016467,792465",
+      "expected": "0074000003000010"
+    },
+    {
+      "id": 24,
+      "mode": "reduced-sparse",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows separated by /, each row is a single hexadecimal mask digit (bits 1,2,4,8 for constant,x,y,z) followed by exactly two decimal digits for each nonzero coefficient in that order. Omit zero coefficients. The evaluator expands rows for all queries.",
+      "input": "+,1,2;-,4,4;*,1,74;+,5,6;*,0,3;*,3,10;+,8,9;+,4,10;-,11,4\nO:7,12\nQ:123778,529353,286032,820593,074052,420511,675142,314836,586672,775232,300037,945231,458642,240969,658480,447200,962865,017691,130515,770392,199262,359091,016467,792465",
+      "expected": "274/90310"
+    },
+    {
+      "id": 24,
+      "mode": "atl-sparse",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows separated by /, each row is a single hexadecimal mask digit (bits 1,2,4,8 for constant,x,y,z) followed by exactly two decimal digits for each nonzero coefficient in that order. Omit zero coefficients. The evaluator expands rows for all queries. Prefix the answer with ATL:.",
+      "input": "+,1,2;-,4,4;*,1,74;+,5,6;*,0,3;*,3,10;+,8,9;+,4,10;-,11,4\nO:7,12\nQ:123778,529353,286032,820593,074052,420511,675142,314836,586672,775232,300037,945231,458642,240969,658480,447200,962865,017691,130515,770392,199262,359091,016467,792465",
+      "expected": "ATL:274/90310"
+    },
+    {
+      "id": 25,
+      "mode": "full-direct",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only the concatenation of both output values for each query in order, each value exactly two decimal digits.",
+      "input": "+,1,2;+,2,1;-,4,5;+,5,5;*,7,65;+,0,6;*,1,8;+,8,6;*,6,70;+,6,4;*,6,87;+,12,4;*,0,82;*,1,45;+,16,17;*,2,41;+,18,19;*,3,25;+,20,21;+,22,6;*,0,45;*,1,75;+,24,25;*,2,81;+,26,27;*,3,41;+,28,29;+,30,4;-,31,5;*,11,41;*,19,66;*,30,41\nO:23,32\nQ:447090,329171,554395,770393,933172,730612,722081,858749,706138,630087,860644,247865,545978,900355,219506,390622,626205,645538,378634,725480,919344,268427,178552,465840",
+      "expected": "049544200205787963673396560766538757489260556861914404782855149010285691122567046908361206550136"
+    },
+    {
+      "id": 25,
+      "mode": "reduced-direct",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only the concatenation of both output values for each query in order, each value exactly two decimal digits.",
+      "input": "+,1,2;-,4,4;*,0,82;*,1,45;+,6,7;*,2,41;+,8,9;*,3,25;+,10,11;+,5,12;*,0,45;*,1,75;+,14,15;*,2,81;+,16,17;*,3,41;+,18,19;+,4,20;-,21,4\nO:13,22\nQ:447090,329171,554395,770393,933172,730612,722081,858749,706138,630087,860644,247865,545978,900355,219506,390622,626205,645538,378634,725480,919344,268427,178552,465840",
+      "expected": "049544200205787963673396560766538757489260556861914404782855149010285691122567046908361206550136"
+    },
+    {
+      "id": 25,
+      "mode": "full-dense",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows in output order, concatenated, each row has four two-digit residues in order constant,x,y,z. The evaluator expands rows for all queries.",
+      "input": "+,1,2;+,2,1;-,4,5;+,5,5;*,7,65;+,0,6;*,1,8;+,8,6;*,6,70;+,6,4;*,6,87;+,12,4;*,0,82;*,1,45;+,16,17;*,2,41;+,18,19;*,3,25;+,20,21;+,22,6;*,0,45;*,1,75;+,24,25;*,2,81;+,26,27;*,3,41;+,28,29;+,30,4;-,31,5;*,11,41;*,19,66;*,30,41\nO:23,32\nQ:447090,329171,554395,770393,933172,730612,722081,858749,706138,630087,860644,247865,545978,900355,219506,390622,626205,645538,378634,725480,919344,268427,178552,465840",
+      "expected": "8245412545758141"
+    },
+    {
+      "id": 25,
+      "mode": "reduced-dense",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows in output order, concatenated, each row has four two-digit residues in order constant,x,y,z. The evaluator expands rows for all queries.",
+      "input": "+,1,2;-,4,4;*,0,82;*,1,45;+,6,7;*,2,41;+,8,9;*,3,25;+,10,11;+,5,12;*,0,45;*,1,75;+,14,15;*,2,81;+,16,17;*,3,41;+,18,19;+,4,20;-,21,4\nO:13,22\nQ:447090,329171,554395,770393,933172,730612,722081,858749,706138,630087,860644,247865,545978,900355,219506,390622,626205,645538,378634,725480,919344,268427,178552,465840",
+      "expected": "8245412545758141"
+    },
+    {
+      "id": 25,
+      "mode": "reduced-sparse",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows separated by /, each row is a single hexadecimal mask digit (bits 1,2,4,8 for constant,x,y,z) followed by exactly two decimal digits for each nonzero coefficient in that order. Omit zero coefficients. The evaluator expands rows for all queries.",
+      "input": "+,1,2;-,4,4;*,0,82;*,1,45;+,6,7;*,2,41;+,8,9;*,3,25;+,10,11;+,5,12;*,0,45;*,1,75;+,14,15;*,2,81;+,16,17;*,3,41;+,18,19;+,4,20;-,21,4\nO:13,22\nQ:447090,329171,554395,770393,933172,730612,722081,858749,706138,630087,860644,247865,545978,900355,219506,390622,626205,645538,378634,725480,919344,268427,178552,465840",
+      "expected": "f82454125/f45758141"
+    },
+    {
+      "id": 25,
+      "mode": "atl-sparse",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows separated by /, each row is a single hexadecimal mask digit (bits 1,2,4,8 for constant,x,y,z) followed by exactly two decimal digits for each nonzero coefficient in that order. Omit zero coefficients. The evaluator expands rows for all queries. Prefix the answer with ATL:.",
+      "input": "+,1,2;-,4,4;*,0,82;*,1,45;+,6,7;*,2,41;+,8,9;*,3,25;+,10,11;+,5,12;*,0,45;*,1,75;+,14,15;*,2,81;+,16,17;*,3,41;+,18,19;+,4,20;-,21,4\nO:13,22\nQ:447090,329171,554395,770393,933172,730612,722081,858749,706138,630087,860644,247865,545978,900355,219506,390622,626205,645538,378634,725480,919344,268427,178552,465840",
+      "expected": "ATL:f82454125/f45758141"
+    },
+    {
+      "id": 26,
+      "mode": "full-direct",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only the concatenation of both output values for each query in order, each value exactly two decimal digits.",
+      "input": "+,1,2;+,2,1;-,4,5;*,0,29;+,0,3;*,2,81;+,6,2;+,5,2;+,11,4;+,2,3;*,10,15;+,14,5;+,5,9;+,16,14;*,2,46;+,5,6;+,1,1;*,17,81;*,1,65;+,22,6;*,0,21;*,1,64;+,24,25;*,2,54;+,26,27;*,3,82;+,28,29;+,30,4;-,31,5;*,7,26;*,12,93;*,3,20\nO:23,32\nQ:773841,435833,255638,141074,554527,743078,855356,862982,651787,636590,682018,564143,313201,757019,446308,957647,557331,778601,534416,454365,731578,004635,124323,460849,808439,682832,070437,708623,777479,842023,806454,059563,757708,819672,125914,692314,228110,386741,755085,405175,309423,293247,212031,725995,602080,147761,556080,383819",
+      "expected": "588179757301375683375766931461415411210555425133753225714708649183345872502015778965004004508043597155706733887058002821592734642532279404792337722745242538783910764287074024852055378683524549"
+    },
+    {
+      "id": 26,
+      "mode": "reduced-direct",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only the concatenation of both output values for each query in order, each value exactly two decimal digits.",
+      "input": "+,1,2;-,4,4;*,1,65;+,5,6;*,0,21;*,1,64;+,8,9;*,2,54;+,10,11;*,3,82;+,12,13;+,4,14;-,15,4\nO:7,16\nQ:773841,435833,255638,141074,554527,743078,855356,862982,651787,636590,682018,564143,313201,757019,446308,957647,557331,778601,534416,454365,731578,004635,124323,460849,808439,682832,070437,708623,777479,842023,806454,059563,757708,819672,125914,692314,228110,386741,755085,405175,309423,293247,212031,725995,602080,147761,556080,383819",
+      "expected": "588179757301375683375766931461415411210555425133753225714708649183345872502015778965004004508043597155706733887058002821592734642532279404792337722745242538783910764287074024852055378683524549"
+    },
+    {
+      "id": 26,
+      "mode": "full-dense",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows in output order, concatenated, each row has four two-digit residues in order constant,x,y,z. The evaluator expands rows for all queries.",
+      "input": "+,1,2;+,2,1;-,4,5;*,0,29;+,0,3;*,2,81;+,6,2;+,5,2;+,11,4;+,2,3;*,10,15;+,14,5;+,5,9;+,16,14;*,2,46;+,5,6;+,1,1;*,17,81;*,1,65;+,22,6;*,0,21;*,1,64;+,24,25;*,2,54;+,26,27;*,3,82;+,28,29;+,30,4;-,31,5;*,7,26;*,12,93;*,3,20\nO:23,32\nQ:773841,435833,255638,141074,554527,743078,855356,862982,651787,636590,682018,564143,313201,757019,446308,957647,557331,778601,534416,454365,731578,004635,124323,460849,808439,682832,070437,708623,777479,842023,806454,059563,757708,819672,125914,692314,228110,386741,755085,405175,309423,293247,212031,725995,602080,147761,556080,383819",
+      "expected": "0065000021645482"
+    },
+    {
+      "id": 26,
+      "mode": "reduced-dense",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows in output order, concatenated, each row has four two-digit residues in order constant,x,y,z. The evaluator expands rows for all queries.",
+      "input": "+,1,2;-,4,4;*,1,65;+,5,6;*,0,21;*,1,64;+,8,9;*,2,54;+,10,11;*,3,82;+,12,13;+,4,14;-,15,4\nO:7,16\nQ:773841,435833,255638,141074,554527,743078,855356,862982,651787,636590,682018,564143,313201,757019,446308,957647,557331,778601,534416,454365,731578,004635,124323,460849,808439,682832,070437,708623,777479,842023,806454,059563,757708,819672,125914,692314,228110,386741,755085,405175,309423,293247,212031,725995,602080,147761,556080,383819",
+      "expected": "0065000021645482"
+    },
+    {
+      "id": 26,
+      "mode": "reduced-sparse",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows separated by /, each row is a single hexadecimal mask digit (bits 1,2,4,8 for constant,x,y,z) followed by exactly two decimal digits for each nonzero coefficient in that order. Omit zero coefficients. The evaluator expands rows for all queries.",
+      "input": "+,1,2;-,4,4;*,1,65;+,5,6;*,0,21;*,1,64;+,8,9;*,2,54;+,10,11;*,3,82;+,12,13;+,4,14;-,15,4\nO:7,16\nQ:773841,435833,255638,141074,554527,743078,855356,862982,651787,636590,682018,564143,313201,757019,446308,957647,557331,778601,534416,454365,731578,004635,124323,460849,808439,682832,070437,708623,777479,842023,806454,059563,757708,819672,125914,692314,228110,386741,755085,405175,309423,293247,212031,725995,602080,147761,556080,383819",
+      "expected": "265/f21645482"
+    },
+    {
+      "id": 26,
+      "mode": "atl-sparse",
+      "system": "All arithmetic modulo 97, residues 0..96. Nodes 0=1,1=x,2=y,3=z. Each semicolon-separated triple defines the next node in order: operator, left node index, right node index (or literal scalar for *). O lists two output node indices. Q lists query triples x,y,z, each encoded as six decimal digits (two per value, leading zeros). Return only two affine coefficient rows separated by /, each row is a single hexadecimal mask digit (bits 1,2,4,8 for constant,x,y,z) followed by exactly two decimal digits for each nonzero coefficient in that order. Omit zero coefficients. The evaluator expands rows for all queries. Prefix the answer with ATL:.",
+      "input": "+,1,2;-,4,4;*,1,65;+,5,6;*,0,21;*,1,64;+,8,9;*,2,54;+,10,11;*,3,82;+,12,13;+,4,14;-,15,4\nO:7,16\nQ:773841,435833,255638,141074,554527,743078,855356,862982,651787,636590,682018,564143,313201,757019,446308,957647,557331,778601,534416,454365,731578,004635,124323,460849,808439,682832,070437,708623,777479,842023,806454,059563,757708,819672,125914,692314,228110,386741,755085,405175,309423,293247,212031,725995,602080,147761,556080,383819",
+      "expected": "ATL:265/f21645482"
+    }
+  ]
+}
