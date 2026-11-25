@@ -1,0 +1,31 @@
+Solve all 24 independent questions. Do not use external tools or code. Output only the ordered JSON array of objects with exactly the keys id and answer. Use JSON numbers for integer answers and JSON strings for states. Do not output reasoning or markdown.
+Each context below applies to its listed questions.
+Inventory model. Each question is independent and resets to initial stock 120 units. Events in order: receive 35, request dispatch 48, receive 15, request dispatch 70, request dispatch 40. Reserve is 20 units. For each dispatch, ship min(request, max(0, stock-reserve)); reject the remainder permanently. No other changes. In counterfactuals modify only the stated event or reserve, then replay from the beginning. Return an integer.
+I01: Final stock?
+I02: Total shipped?
+I03: Total rejected?
+I04: Units shipped in the third dispatch?
+I05: Final stock if the reserve is 40?
+I06: Total rejected if the reserve is 40?
+I07: Final stock if the first receipt is 0?
+I08: Total rejected if the first receipt is 0?
+
+Project scheduling model. All tasks are mandatory, start at earliest possible times, with unlimited resources and no overhead. A duration 3 and B duration 5 start at time 0. C duration 4 depends on A; D duration 2 depends on A and B; E duration 6 depends on C and D; F duration 3 depends on B; G duration 2 depends on E and F. A task starts when all dependencies finish. Each question resets to this graph. If changing a duration, change only that one. Return an integer.
+G01: Project finish time?
+G02: Earliest start of E?
+G03: Project finish time if B duration becomes 9?
+G04: Project finish time if A duration becomes 6?
+G05: Project finish time if E duration becomes 0?
+G06: Project finish time if F duration becomes 10?
+G07: How many distinct longest dependency paths from a starting task through G in the original graph?
+G08: Earliest finish of D if B duration becomes 2?
+
+Independent operating decisions. Inputs are temperature T, pressure P, sensor validity V (1 valid, 0 invalid), override O (1 enabled, 0 disabled). Apply these rules in strict priority: if V=0 return HOLD; else if T>90 or P>=50 return STOP; else if O=1 and T<=85 and P<45 return RUN; else if T>=80 or P>=45 return LIMIT; otherwise return RUN. Override cannot bypass HOLD or STOP. Boundaries are exact. Return only the uppercase state as a JSON string.
+S01: T=90, P=49, V=1, O=1
+S02: T=91, P=10, V=0, O=1
+S03: T=85, P=44, V=1, O=1
+S04: T=85, P=45, V=1, O=1
+S05: T=20, P=50, V=1, O=1
+S06: T=79, P=44, V=1, O=0
+S07: T=80, P=44, V=1, O=0
+S08: T=86, P=44, V=1, O=1
