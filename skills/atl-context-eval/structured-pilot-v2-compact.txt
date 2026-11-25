@@ -1,0 +1,58 @@
+Solve 120 independent questions without tools or code. Output only an ordered JSON array of objects with exactly keys id and answer; numbers for integers, strings for states. No reasoning or markdown. Order: I, G, S; cases 1 to 4; questions 01 to 10. IDs concatenate family, case digit and two-digit question (e.g. I101). Each question resets to its case.
+I: rows case:stock,reserve; signed events (+receive incl 0,-request q). Ship=min(q,max(0,stock-reserve)); stock-=ship; permanently reject q-ship. No other changes. Replay from start after changing only specified value.
+1:90,15;+30,-42,+12,-61,+24,-40
+2:65,20;+15,-70,+50,-18,+8,-37
+3:130,40;+0,-60,+20,-55,+10,-30
+4:35,10;+75,-30,+0,-80,+40,-45
+I queries: 01 stock_end; 02 shipped_total; 03 rejected_total; 04 shipped_dispatch1; 05 shipped_dispatch3; 06 stock_end(reserve+10); 07 rejected_total(reserve+10); 08 shipped_total(receipt1=0); 09 rejected_total(receipt1=0); 10 rejected_total(request3+15). Unmarked values unchanged.
+G: mandatory earliest-start DAG, unlimited resources, no overhead; task:prerequisites; A:- B:- C:A D:AB E:CD F:B G:EF H:CG. A,B start 0; others start at max prerequisite finish. Project finish=finish H. Rows case:duration A,B,C,D,E,F,G,H.
+1:3,5,4,2,6,3,2,4
+2:6,2,0,5,2,8,3,1
+3:4,4,4,4,0,5,2,2
+4:2,7,3,0,5,1,4,6
+G queries: 01 finish H; 02 start E; 03 finish D; 04 count distinct longest paths from any start to H; 05 finish H(dA+2); 06 finish H(dB+3); 07 finish H(dE=0); 08 finish H(dF+7); 09 start H(dC+1); 10 finish H(dG=0). Change only stated duration.
+S: T,P,V,O=temperature,pressure,validity,override; flags 1=yes,0=no. Case thresholds ts,ps,to,po,tl,pl. First matching: V=0 HOLD; T>ts or P>=ps STOP; O=1 and T<=to and P<po RUN; T>=tl or P>=pl LIMIT; else RUN. Each case header is case:thresholds; ten input rows T,P,V,O ordered 01..10.
+1:90,50,85,45,80,45
+90,49,1,1
+91,0,0,1
+85,44,1,1
+85,45,1,1
+0,50,1,1
+79,44,1,0
+80,44,1,0
+86,44,1,1
+91,0,1,1
+0,0,0,0
+2:100,60,90,50,82,52
+100,59,1,1
+101,0,0,1
+90,49,1,1
+90,50,1,1
+0,60,1,1
+81,51,1,0
+82,51,1,0
+91,49,1,1
+101,0,1,1
+0,0,0,0
+3:75,40,70,35,65,36
+75,39,1,1
+76,0,0,1
+70,34,1,1
+70,35,1,1
+0,40,1,1
+64,35,1,0
+65,35,1,0
+71,34,1,1
+76,0,1,1
+0,0,0,0
+4:95,55,88,48,84,49
+95,54,1,1
+96,0,0,1
+88,47,1,1
+88,48,1,1
+0,55,1,1
+83,48,1,0
+84,48,1,0
+89,47,1,1
+96,0,1,1
+0,0,0,0
