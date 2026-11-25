@@ -27,6 +27,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.4.9: [Symbolic Execution Engine](symbolic/README.md), 120 checked affine graphs, CSE/DCE, six-arm static token comparison and opt-in inference harness (inference pending).
 
+- v0.5.0: [Adaptive Reasoning Compiler pilot](piecewise/README.md), live nonlinear piecewise chains, 112 checked tasks, query-free controls and development-only output-cost routing (static benchmark; inference pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test

@@ -1,0 +1,390 @@
+{
+  "seed": "0x7621afe3",
+  "dev": 32,
+  "test": 80,
+  "checked": 10864,
+  "mutations": 1120,
+  "queries": 2230,
+  "systems": {
+    "direct": "All arithmetic modulo 97. Input gives threshold t and two chains. A,a,b updates v=a*v+b*x; M,a,b updates v=v*(a*x+b). Each chain starts at the integer before its semicolon. Use left chain if x<t, else right. x is an integer 0..96. Return a JSON array of residues in query order.",
+    "dense": "All arithmetic modulo 97. Input gives threshold t and two chains. A,a,b updates v=a*v+b*x; M,a,b updates v=v*(a*x+b). Each chain starts at the integer before its semicolon. Use left chain if x<t, else right. x is an integer 0..96. Return exactly two JSON arrays of five coefficients c0..c4, nested in one array, low degrees first, for the two polynomials modulo 97. Coefficients 0..96.",
+    "atl": "All arithmetic modulo 97. Input gives threshold t and two chains. A,a,b updates v=a*v+b*x; M,a,b updates v=v*(a*x+b). Each chain starts at the integer before its semicolon. Use left chain if x<t, else right. x is an integer 0..96. Return L:c0,c1,c2,c3,c4;R:c0,c1,c2,c3,c4, low degrees first, coefficients 0..96 for the left and right polynomials modulo 97.",
+    "python": "All arithmetic modulo 97. Input gives threshold t and two chains. A,a,b updates v=a*v+b*x; M,a,b updates v=v*(a*x+b). Each chain starts at the integer before its semicolon. Use left chain if x<t, else right. x is an integer 0..96. Return one Python expression in x only, using an if/else conditional and modular Horner polynomials; no prose. Use canonical coefficients 0..96.",
+    "dense_free": "All arithmetic modulo 97. Input gives threshold t and two chains. A,a,b updates v=a*v+b*x; M,a,b updates v=v*(a*x+b). Each chain starts at the integer before its semicolon. Use left chain if x<t, else right. x is an integer 0..96. Return exactly two JSON arrays of five coefficients c0..c4, nested in one array, low degrees first, for the two polynomials modulo 97. Coefficients 0..96.",
+    "atl_free": "All arithmetic modulo 97. Input gives threshold t and two chains. A,a,b updates v=a*v+b*x; M,a,b updates v=v*(a*x+b). Each chain starts at the integer before its semicolon. Use left chain if x<t, else right. x is an integer 0..96. Return L:c0,c1,c2,c3,c4;R:c0,c1,c2,c3,c4, low degrees first, coefficients 0..96 for the left and right polynomials modulo 97.",
+    "python_free": "All arithmetic modulo 97. Input gives threshold t and two chains. A,a,b updates v=a*v+b*x; M,a,b updates v=v*(a*x+b). Each chain starts at the integer before its semicolon. Use left chain if x<t, else right. x is an integer 0..96. Return one Python expression in x only, using an if/else conditional and modular Horner polynomials; no prose. Use canonical coefficients 0..96."
+  },
+  "means": {
+    "1": {
+      "direct": 3,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    },
+    "2": {
+      "direct": 5,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    },
+    "4": {
+      "direct": 9,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    },
+    "8": {
+      "direct": 17,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    },
+    "16": {
+      "direct": 33,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    },
+    "32": {
+      "direct": 65,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    },
+    "64": {
+      "direct": 129,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    },
+    "96": {
+      "direct": 193,
+      "dense": 21,
+      "atl": 23,
+      "python": 43,
+      "dense_free": 21,
+      "atl_free": 23,
+      "python_free": 43
+    }
+  },
+  "rows": {
+    "direct": {
+      "system": 6000,
+      "input": 18354,
+      "output": 4540,
+      "total": 28894
+    },
+    "dense": {
+      "system": 8400,
+      "input": 18354,
+      "output": 1680,
+      "total": 28434
+    },
+    "atl": {
+      "system": 8800,
+      "input": 18354,
+      "output": 1840,
+      "total": 28994
+    },
+    "python": {
+      "system": 7760,
+      "input": 18354,
+      "output": 3440,
+      "total": 29554
+    },
+    "dense_free": {
+      "system": 8400,
+      "input": 13654,
+      "output": 1680,
+      "total": 23734
+    },
+    "atl_free": {
+      "system": 8800,
+      "input": 13654,
+      "output": 1840,
+      "total": 24294
+    },
+    "python_free": {
+      "system": 7760,
+      "input": 13654,
+      "output": 3440,
+      "total": 24854
+    },
+    "adaptive": {
+      "system": 7200,
+      "input": 14074,
+      "output": 1180,
+      "total": 22454
+    },
+    "adaptive_same": {
+      "system": 6900,
+      "input": 18354,
+      "output": 1300,
+      "total": 26554
+    }
+  },
+  "groups": [
+    {
+      "n": 1,
+      "direct": 2614,
+      "dense": 3094,
+      "atl": 3164,
+      "python": 3234,
+      "dense_free": 3044,
+      "atl_free": 3114,
+      "python_free": 3184,
+      "adaptive": 2614,
+      "adaptive_same": 2614,
+      "choices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    },
+    {
+      "n": 2,
+      "direct": 2588,
+      "dense": 3048,
+      "atl": 3118,
+      "python": 3188,
+      "dense_free": 2978,
+      "atl_free": 3048,
+      "python_free": 3118,
+      "adaptive": 2588,
+      "adaptive_same": 2588,
+      "choices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    },
+    {
+      "n": 4,
+      "direct": 2686,
+      "dense": 3106,
+      "atl": 3176,
+      "python": 3246,
+      "dense_free": 2996,
+      "atl_free": 3066,
+      "python_free": 3136,
+      "adaptive": 2686,
+      "adaptive_same": 2686,
+      "choices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    },
+    {
+      "n": 8,
+      "direct": 2786,
+      "dense": 3126,
+      "atl": 3196,
+      "python": 3266,
+      "dense_free": 2936,
+      "atl_free": 3006,
+      "python_free": 3076,
+      "adaptive": 2786,
+      "adaptive_same": 2786,
+      "choices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    },
+    {
+      "n": 16,
+      "direct": 3052,
+      "dense": 3232,
+      "atl": 3302,
+      "python": 3372,
+      "dense_free": 2882,
+      "atl_free": 2952,
+      "python_free": 3022,
+      "adaptive": 2882,
+      "adaptive_same": 3052,
+      "choices": {
+        "direct": 0,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 10,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 10,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    },
+    {
+      "n": 32,
+      "direct": 3884,
+      "dense": 3744,
+      "atl": 3814,
+      "python": 3884,
+      "dense_free": 3074,
+      "atl_free": 3144,
+      "python_free": 3214,
+      "adaptive": 3074,
+      "adaptive_same": 3744,
+      "choices": {
+        "direct": 0,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 10,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 0,
+        "dense": 10,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    },
+    {
+      "n": 64,
+      "direct": 4990,
+      "dense": 4210,
+      "atl": 4280,
+      "python": 4350,
+      "dense_free": 2900,
+      "atl_free": 2970,
+      "python_free": 3040,
+      "adaptive": 2900,
+      "adaptive_same": 4210,
+      "choices": {
+        "direct": 0,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 10,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 0,
+        "dense": 10,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    },
+    {
+      "n": 96,
+      "direct": 6294,
+      "dense": 4874,
+      "atl": 4944,
+      "python": 5014,
+      "dense_free": 2924,
+      "atl_free": 2994,
+      "python_free": 3064,
+      "adaptive": 2924,
+      "adaptive_same": 4874,
+      "choices": {
+        "direct": 0,
+        "dense": 0,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 10,
+        "atl_free": 0,
+        "python_free": 0
+      },
+      "sameChoices": {
+        "direct": 0,
+        "dense": 10,
+        "atl": 0,
+        "python": 0,
+        "dense_free": 0,
+        "atl_free": 0,
+        "python_free": 0
+      }
+    }
+  ],
+  "oracle": 22454
+}
