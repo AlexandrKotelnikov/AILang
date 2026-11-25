@@ -33,6 +33,8 @@ Experimental language for compact prompts, generated reasoning notes, memory and
 
 - v0.5.2: [Semantic Fidelity Engine](fidelity/README.md), 120 controlled-language tasks, 5,120 mutations, gold-model equivalence audit and checksum-verified static token comparison (inference pending).
 
+- v0.5.3: [Semantic Projection Audit](projection/README.md), replicated 5,120 mutations; complete pair-projection verification for 2-CNF against gold, explicit 3-CNF counterexample (inference pending).
+
 Quick start:
 ```sh
 node reasoning/run.mjs --self-test
